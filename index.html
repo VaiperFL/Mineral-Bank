@@ -14,7 +14,6 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Bebas+Neue&display=swap" rel="stylesheet">
 
-
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -22,105 +21,49 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-
-
- <!-- SECCION 2 -->
-    <!-- Vendor CSS Files -->
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  
-    <!-- Main CSS File -->
-    <link href="assets/css/main.css" rel="stylesheet">
-
-
-
-     <!-- SECCION 2 -->
-
 </head>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap">
 
-<body class="index-page">
+<body>
+  <!-- Contenedor para el header -->
+  <div id="header-container"></div>
 
-  <header id="header" class="header d-flex align-items-center sticky-top">
-    <div class="container position-relative d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <h1 class="sitename" style="font-family: 'Conneqt', sans-serif;">Mineral Bank</h1>
-      </a>
-
-      <nav id="navmenu" class="navmenu d-flex align-items-center">
-        <ul>
-          <li><a href="#hero" class="active">Inicio<br></a></li>
-          <li class="dropdown"><a href="#menu"><span>Servicios</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Cajas de seguridad</a></li>
-              <li><a href="#">Archivos digitales sólidos</a></li>
-              <li><a href="#">Archivos escriturales</a></li>
-              <li><a href="#">Archivos judiciales</a></li>
-              <li><a href="#">Restaurante</a></li>
-              <li><a href="#">Cafetería</a></li>
-              <li><a href="#">Calendario de eventos</a></li>
-              <li><a href="#">Membresía</a></li>
-              <li><a href="#">Sala de reunión</a></li>
-              <li><a href="#">Alianza productiva</a></li>
-              <li><a href="#">Fideicomiso productivo</a></li>
-              <li><a href="#">Desarollo de proyectos</a></li>
-            </ul>
-          </li>  
-          <li class="dropdown"><a href="#events"><span>Eventos</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Calendario de eventos</a></li>
-              <li><a href="#">Solicitar promocion de eventos</a></li>
-            </ul>
-          </li>
-          <li><a href="#gallery">Noticias</a></li>
-          <li><a href="#gallery">Galeria</a></li>
-          <li><a href="#contact">Contacto</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-        
-        <!-- Botón de Inicio de Sesión -->
-        <a href="login.html" class="btn-login" style="margin-left: 20px; padding: 10px 20px; background-color: #c91212; color: white; border-radius: 5px; text-decoration: none;">Inicio de Sesión</a>
-      </nav>
-    </div>
-  </header>
-
-
+  <!-- Resto de tu contenido principal -->
   <main class="main">
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+      <div class="container">
+        <div class="row gy-4 justify-content-center justify-content-lg-between">
+          <div class="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center">
+            <h1 data-aos="fade-up">
+              MINERAL BANK
+              <br>
+              <span class="tagline" style="font-family: 'Montserrat', sans-serif;">Seguridad, Innovación y Confianza.</span>
+            </h1>
 
-
-
-
-
-<!-- Hero Section -->
-<section id="hero" class="hero section">
-  <div class="container">
-    <div class="row gy-4 justify-content-center justify-content-lg-between">
-      <div class="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center">
-        <h1 data-aos="fade-up">
-          MINERAL BANK
-          <br>
-          <span class="tagline" style="font-family: 'Montserrat', sans-serif;">Seguridad, Innovación y Confianza.</span>
-        </h1>
-
-        <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
-          <!-- Botones o contenido adicional aquí -->
+            <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
+              <!-- Botones o contenido adicional aquí -->
+            </div>
+          </div>
+          <div class="col-lg-5 order-1 order-lg-2 hero-img" data-aos="zoom-out">
+            <img src="assets/img/LOGOS/logo mineral bank.png" class="img-fluid animated" alt="">
+          </div>
         </div>
       </div>
-      <div class="col-lg-5 order-1 order-lg-2 hero-img" data-aos="zoom-out">
-        <img src="assets/img/LOGOS/logo mineral bank.png" class="img-fluid animated" alt="">
-      </div>
-    </div>
-  </div>
+    </section><!-- /Hero Section -->
+  </main>
 
-</section><!-- /Hero Section -->
-
-
+  <script>
+    // Cargar el header
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-container').innerHTML = data;
+      })
+      .catch(error => console.error('Error cargando el header:', error));
+  </script>
+</body>
 
 
     <!-- Menu Section -->
@@ -562,65 +505,15 @@
 
   </main>
 
-  <footer id="footer" class="footer">
-
-    <div class="container">
-      <div class="row gy-3">
-        <div class="col-lg-3 col-md-6 d-flex">
-          <i class="bi bi-geo-alt icon"></i>
-          <div class="address">
-            <h4>Dirección</h4>
-            <p>25 de mayo,81</p>
-            <p>Argentina, Buenos Aires</p>
-            <p></p>
-          </div>
-
-        </div>
-
-        <div class="col-lg-3 col-md-6 d-flex">
-          <i class="bi bi-telephone icon"></i>
-          <div>
-            <h4>Contacto</h4>
-            <p>
-              <strong>Teléfono:</strong> <span>+1 3364 412031<br>
-              <strong>Email:</strong> <span>MineralBank@hotmail.com</span><br>
-            </p>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 d-flex">
-          <i class="bi bi-clock icon"></i>
-          <div>
-            <h4>Horario</h4>
-            <p>
-              <strong>Lunes-Domingo:</strong> <span>00AM - 23PM</span><br>
-              
-            </p>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 d-flex justify-content-center">
-          <div>
-            <h4 style="text-align: center;">Redes</h4>
-            <div class="social-links d-flex justify-content-center">
-              <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-              <a href="https://www.facebook.com/mineralbank.ar?paipv=0&eav=AfbNqUE8kxRS5tqD-9BeC_9B2zD_ZJV8rRdqLpbkW14TueLcyVx52HAWWbYW3YSuHIY&_rdr" class="facebook"><i class="bi bi-facebook"></i></a>
-              <a href="https://www.instagram.com/mineralbank/" class="instagram"><i class="bi bi-instagram"></i></a>
-              <a href="https://www.linkedin.com/company/ltm-s-a/" class="linkedin"><i class="bi bi-linkedin"></i></a>
-            </div>
-          </div>
-        </div>
-        
-    </div>
-
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Mineral Bank</strong> <span>Todos los derechos reservados</span></p>
-      <div class="credits">
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+      });
+  </script>
   
-        
-      </div>
-    </div>
-
-  </footer>
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

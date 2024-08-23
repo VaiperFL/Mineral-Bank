@@ -25,16 +25,25 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/membresia.css" rel="stylesheet">
 
-<body>
+  <body class="index-page">
 
+    <!-- Cargar el header -->
+    <div id="header-placeholder"></div>
+    <script>
+      fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('header-placeholder').innerHTML = data;
+        });
+    </script>
  
     <!-- ======= Pricing Section ======= -->
     <section id="pricing" class="pricing">
       <div class="container">
 
         <div class="section-title">
-          <h2>MEMBRESIAS</h2>
-          <p>membresia.</p>
+          <p>MEMBRESIAS</p>
+
         </div>
 
         <div class="row">
@@ -126,8 +135,18 @@
       </div>
     </section><!-- End Pricing Section -->
 
-   
+  </main>
 
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+      });
+  </script>
+  
+  
 </body>
 
 </html>
