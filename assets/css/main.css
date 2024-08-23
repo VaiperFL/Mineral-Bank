@@ -55,7 +55,7 @@ h1 span {
 
 
 :root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
+  --background-color: #f8f8f810; /* Background color for the entire website, including individual sections */
   --default-color: #212529; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #000000; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #ce1212; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
@@ -809,9 +809,9 @@ section,
 }
 
 /*--------------------------------------------------------------
-# About Section
+# about 
 --------------------------------------------------------------*/
-/* Sección "About" */
+/* Section Title" */
 .about h3 {
   font-family: 'Montserrat', sans-serif; /* Añadir Montserrat Regular aquí */
   font-weight: 400; /* Cambiar el peso a normal, si quieres Montserrat Regular */
@@ -845,6 +845,7 @@ section,
   font-family: 'Montserrat', sans-serif; /* Añadir Montserrat Regular aquí */
 }
 
+/*videos */
 .about .content ul {
   list-style: none;
   padding: 0;
@@ -868,6 +869,22 @@ section,
 .about .content p:last-child {
   margin-bottom: 0;
 }
+.gslide-video.fullscreen::before {
+  background: rgba(0, 0, 0, 0.3); /* Ajusta la opacidad para el modo pantalla completa */
+}
+
+
+
+/* boton */
+.goverlay {
+  display: none; /* Añade esta línea para esconder el overlay si no quieres eliminarlo del todo */
+}
+
+.glightbox-loading {
+  display: none !important;
+}
+
+
 
 .about .play-btn {
   width: 94px;
@@ -879,6 +896,7 @@ section,
   left: calc(50% - 47px);
   top: calc(50% - 47px);
   overflow: hidden;
+  z-index: 100; /* Añadido para que esté por encima */
 }
 
 .about .play-btn:before {
@@ -897,6 +915,7 @@ section,
   top: -15%;
   left: -15%;
   background: rgba(198, 16, 0, 0);
+  z-index: 999; /* Añadido para que esté por encima */
 }
 
 .about .play-btn:after {
@@ -910,9 +929,10 @@ section,
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
   border-left: 15px solid #fff;
-  z-index: 100;
+  z-index: 2; /* Añadido para que esté por encima */
   transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
+
 
 .about .play-btn:hover:before {
   content: "";
@@ -931,6 +951,7 @@ section,
   border-radius: 0;
 }
 
+
 .about .play-btn:hover:after {
   border-left: 15px solid var(--accent-color);
   transform: scale(20);
@@ -947,6 +968,7 @@ section,
     opacity: 0;
   }
 }
+
 
 /*--------------------------------------------------------------
 # Why Us Section
@@ -1095,6 +1117,18 @@ body {
 /*--------------------------------------------------------------
 # Menu Section
 --------------------------------------------------------------*/
+
+
+.menu-item img {
+  transition: transform 0.3s ease;
+}
+
+.menu-item:hover img {
+  transform: scale(1.1);
+}
+
+
+
 .menu .tab-content .row {
   display: flex;
   flex-wrap: wrap;

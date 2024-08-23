@@ -132,16 +132,16 @@
               </div><!-- Menu Item -->
 
               <div class="col-lg-3 menu-item">
-                <a href="assets/img/menu/MEMBRECIA-02.png" class="glightbox"><img src="assets/img/menu/CALENDARIO DE EVENTOS-02.png" class="menu-img img-fluid" alt="" style="max-width: 500px;"></a>
+                <a href="assets/img/menu/CALENDARIO DE EVENTOS-02.png" class="glightbox"><img src="assets/img/menu/CALENDARIO DE EVENTOS-02.png" class="menu-img img-fluid" alt="" style="max-width: 500px;"></a>
               
                 </p>
               </div><!-- Menu Item -->
               <div class="col-lg-3 menu-item">
-                <a href="assets/img/menu/SOLICITAR PROMOCION DE EVENTO-02.png" class="glightbox"><img src="assets/img/menu/MEMBRECIA-02.png" class="menu-img img-fluid" alt="" style="max-width: 500px;"></a>
+                <a href="membresia.html">
+               <img src="assets/img/menu/MEMBRECIA-02.png" class="menu-img img-fluid" alt="" style="max-width: 500px;"></a>
          
-                </p>
-
-                </p>
+                </a>
+                
               </div><!-- Menu Item -->
               <div class="col-lg-3 menu-item">
                 <a href="assets/img/menu/SALA DE REUNION CONFIDENCIAL-02.png" class="glightbox"><img src="assets/img/menu/SALA DE REUNION CONFIDENCIAL-02.png" class="menu-img img-fluid" alt="" style="max-width: 500px;"></a>
@@ -210,6 +210,7 @@
 
             " class="img-fluid" alt="">
             <a href="https://www.youtube.com/watch?v=6SKLZoaAkEo" class="glightbox play-btn"></a>
+        
           </div>
         </div>
       </div>
@@ -219,7 +220,8 @@
 
 
 <!-- Video Grid Section -->
-<section class="video-grid">
+ 
+<section class="video-grid" data-aos="fade-up"> 
   <div class="container">
     <div class="row">
       <!-- Video 1 -->
@@ -505,15 +507,15 @@
 
   </main>
 
-  <div id="footer-placeholder"></div>
-  <script>
-    fetch('footer.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('footer-placeholder').innerHTML = data;
-      });
-  </script>
-  
+<div id="footer-placeholder"></div>
+<script>
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer-placeholder').innerHTML = data;
+    });
+</script>
+<a href="membresia.html">
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
@@ -537,7 +539,7 @@
     <script src="assets/vendor/php-email-form/validate.js"></script>
     <script src="assets/vendor/aos/aos.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
     <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
     <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
