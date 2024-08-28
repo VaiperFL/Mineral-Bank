@@ -55,8 +55,8 @@ h1 span {
 
 
 :root { 
-  --background-color: #f8f8f810; /* Background color for the entire website, including individual sections */
-  --default-color: #212529; /* Default color used for the majority of the text content across the entire website */
+  --background-color: hwb(0 100% 0% / 0.014); /* Background color for the entire website, including individual sections */
+  --default-color: #09a0e6b2; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #000000; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #ce1212; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --contrast-color: #ffffff; /* The contrast color is used for elements when the background color is one of the heading, accent, or default colors. Its purpose is to ensure proper contrast and readability when placed over these more dominant colors */
@@ -74,7 +74,7 @@ h1 span {
 
 
 :root {
-  --alt-background-color: #1f1f24;
+  --alt-background-color: #241f1f;
 }
 
 /* Smooth scroll */
@@ -676,6 +676,36 @@ section,
 /*--------------------------------------------------------------
 #  Section Titles
 --------------------------------------------------------------*/
+
+/* Sección de Título */
+.about  {
+  color: #000000; /* Aplica el color negro */
+  font-weight: 500; /* Ajusta el peso de la fuente si es necesario */
+}
+
+/* Otros estilos aplicables a la sección 'about' */
+.about .book-a-table h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: #000000; /* Asegúrate de que el color sea negro */
+  font-size: 34px;
+}
+
+.about .book-a-table p {
+  font-family: 'Montserrat', sans-serif;
+  color: #000000; /* Cambia el color a negro */
+  font-weight: 500;
+  font-size: 28px;
+}
+
+.about .content ul li {
+  color: #000000; /* Aplica el color negro a los elementos de la lista */
+}
+
+.about .content p {
+  color: #000000; /* Asegúrate de que el color de cualquier párrafo sea negro */
+}
+
+
 .section-title {
   text-align: center;
   padding-bottom: 60px;
@@ -969,10 +999,7 @@ section,
   }
 }
 
-
-/*--------------------------------------------------------------
-# Why Us Section
---------------------------------------------------------------*/
+/* Why Us Section */
 :root {
   --default-font: 'Montserrat', sans-serif;
 }
@@ -986,10 +1013,19 @@ body {
   font-family: 'Montserrat', sans-serif; /* Asegura Montserrat en toda la sección */
 }
 
-.why-us .why-box {
-  color: var(--contrast-color);
+.why-us .why-box,
+.why-us .icon-box {
   background: var(--accent-color);
+  color: var(--contrast-color);
   padding: 30px;
+  border-radius: 10px; /* Bordes redondeados para un efecto más suave */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave alrededor de las cajas */
+  transition: box-shadow 0.3s ease; /* Transición suave para la sombra */
+}
+
+.why-us .why-box:hover,
+.why-us .icon-box:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra más intensa al hacer hover */
 }
 
 .why-us .why-box h3 {
@@ -1011,7 +1047,6 @@ body {
   padding: 40px 30px;
   width: 100%;
   height: 100%;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
   display: flex;
   flex-direction: column;
   align-items: center; /* Alinea el contenido dentro de las cajas */
@@ -1059,7 +1094,6 @@ body {
   color: var(--contrast-color);
   background: var(--accent-color);
 }
-
 
 /*--------------------------------------------------------------
 # Stats Section
@@ -1243,8 +1277,7 @@ body {
 
 
 /*--------------------------------------------------------------
-# Book A Table Section
---------------------------------------------------------------*/
+/* Book A Table Section */
 .book-a-table .reservation-img {
   min-height: 500px;
   background-size: cover;
@@ -1315,9 +1348,9 @@ body {
   padding: 10px 15px;
   box-shadow: none;
   border-radius: 0;
-  color: var(--default-color);
+  color: #000000; /* Cambiado a negro */
   background-color: color-mix(in srgb, var(--background-color), transparent 20%);
-  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+  border: 1px solid #000000; /* Aumento del grosor del borde a 3px, color celeste */
 }
 
 .book-a-table .php-email-form input[type=text]:focus,
@@ -1326,7 +1359,7 @@ body {
 .book-a-table .php-email-form input[type=date]:focus,
 .book-a-table .php-email-form input[type=time]:focus,
 .book-a-table .php-email-form textarea:focus {
-  border-color: var(--accent-color);
+  border-color: #ff0000; /* Celeste para el borde en foco */
 }
 
 .book-a-table .php-email-form input[type=text]::placeholder,
@@ -1335,7 +1368,7 @@ body {
 .book-a-table .php-email-form input[type=date]::placeholder,
 .book-a-table .php-email-form input[type=time]::placeholder,
 .book-a-table .php-email-form textarea::placeholder {
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
+  color: color-mix(in srgb, #000000, transparent 70%); /* Cambiado a negro */
 }
 
 .book-a-table .php-email-form button[type=submit] {
@@ -1414,8 +1447,9 @@ body {
 # Contact Section
 --------------------------------------------------------------*/
 .contact .info-item {
-  box-shadow: 0px 0px 20px color-mix(in srgb, var(--default-color), transparent 90%);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra más prominente */
   padding: 20px 30px;
+  
 }
 
 .contact .info-item .icon {
@@ -1437,32 +1471,47 @@ body {
   font-weight: 700;
   margin: 0 0 5px 0;
   font-family: var(--default-font);
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: #000; /* Color del título */
 }
 
 .contact .info-item p {
   padding: 0;
   margin-bottom: 0;
-  font-size: 14px;
+  font-size: 16px; /* Aumentado el tamaño de la fuente */
+  color: #000; /* Color del texto */
+  font-weight: 500; /* Añadido un peso de fuente ligeramente mayor */
 }
 
-.contact .info-item .social-links a {
-  font-size: 24px;
-  display: inline-block;
-  line-height: 1;
-  margin: 4px 6px 0 0;
-  transition: 0.3s;
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
+.contact .info-item .info-item-address,
+.contact .info-item .info-item-phone,
+.contact .info-item .info-item-email,
+.contact .info-item .info-item-hours {
+  border-left: 4px solid #00BFFF; /* Añadido un borde a la izquierda */
+  padding-left: 15px; /* Espaciado a la izquierda del texto */
+  margin-bottom: 10px; /* Espaciado inferior entre las secciones */
+  background-color: #f0f8ff; /* Color de fondo muy claro */
+  border-radius: 5px; /* Bordes redondeados para un aspecto más suave */
 }
 
-.contact .info-item .social-links a:hover {
-  color: var(--accent-color);
+.contact .info-item .info-item-address h3,
+.contact .info-item .info-item-phone h3,
+.contact .info-item .info-item-email h3,
+.contact .info-item .info-item-hours h3 {
+  color: #000; /* Color del título en cada sección de info-item */
+}
+
+.contact .info-item .info-item-address p,
+.contact .info-item .info-item-phone p,
+.contact .info-item .info-item-email p,
+.contact .info-item .info-item-hours p {
+  color: #000; /* Color del texto en cada sección de info-item */
 }
 
 .contact .php-email-form {
-  box-shadow: 0px 0px 20px color-mix(in srgb, var(--default-color), transparent 90%);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra más prominente en el formulario */
   padding: 30px;
   margin-top: 30px;
+  
 }
 
 @media (max-width: 575px) {
@@ -1514,13 +1563,14 @@ body {
 .contact .php-email-form input[type=text],
 .contact .php-email-form input[type=email],
 .contact .php-email-form textarea {
-  color: var(--default-color);
+  color: #000; /* Color del texto de los campos de formulario */
   background-color: color-mix(in srgb, var(--background-color), transparent 50%);
   border-color: color-mix(in srgb, var(--default-color), transparent 80%);
   font-size: 14px;
   padding: 10px 15px;
   box-shadow: none;
   border-radius: 0;
+  border: 1px solid #00000046; /* Borde negro en los campos del formulario */
 }
 
 .contact .php-email-form input[type=text]:focus,
@@ -1532,7 +1582,7 @@ body {
 .contact .php-email-form input[type=text]::placeholder,
 .contact .php-email-form input[type=email]::placeholder,
 .contact .php-email-form textarea::placeholder {
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
+  color: #000; /* Color del texto de los placeholders */
 }
 
 .contact .php-email-form button[type=submit] {
