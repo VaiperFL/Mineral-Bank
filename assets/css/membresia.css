@@ -392,5 +392,69 @@
       transform: rotate(360deg);
     }
   }
-  
-  
+
+  /*--------------------------------------------------------------
+  # descripcion
+  --------------------------------------------------------------*/
+  .plan-container {
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenedor principal */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    width: 80%;
+    max-width: 1200px;
+}
+
+.plan {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido de cada plan */
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.text-section {
+    flex: 1;
+    text-align: center; /* Mantiene el texto centrado */
+}
+
+.text-section h2 {
+    font-size: 35px;
+}
+
+.text-section h3 {
+    font-size: 24px;
+}
+
+/* Oro - color dorado */
+h2.oro {
+    color: gold;
+}
+
+/* Plata - color plateado */
+h2.plata {
+    color: silver;
+}
+
+/* Cobre - color cobre */
+h2.cobre {
+    color: #b87333; /* Tono de cobre */
+}
+
+/* Hierro - color gris oscuro */
+h2.hierro {
+    color: #43464b; /* Tono de hierro */
+}
+
+/* Alineación a la izquierda solo para las listas */
+ol {
+    color: black;
+    padding-left: 20px; /* Añade un padding para la indentación */
+    text-align: left; /* Alinea los elementos de la lista a la izquierda */
+    width: 100%; /* Asegura que las listas ocupen todo el ancho disponible */
+}
+
+li {
+    margin-bottom: 5px;
+}
