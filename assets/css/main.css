@@ -728,7 +728,7 @@ section,
   color: var(--heading-color);
   margin: 10px 0 0 0;
   font-size: 48px;
-  font-weight: 700; /* Asegúrate de que esté en negrita */
+  font-weight: 550; /* Asegúrate de que esté en negrita */
   font-family: 'Montserrat', sans-serif; /* Aplica Montserrat Bold */
 }
 
@@ -1394,54 +1394,6 @@ body {
   }
 }
 
-/*--------------------------------------------------------------
-# Gallery Section
---------------------------------------------------------------*/
-.gallery {
-  --background-color: color-mix(in srgb, var(--default-color), transparent 94%);
-  overflow: hidden;
-}
-
-.gallery .swiper-wrapper {
-  height: auto;
-}
-
-.gallery .swiper-pagination {
-  margin-top: 20px;
-  position: relative;
-}
-
-.gallery .swiper-pagination .swiper-pagination-bullet {
-  background-color: color-mix(in srgb, var(--default-color), transparent 85%);
-  border: 0;
-  width: 12px;
-  height: 12px;
-  opacity: 1;
-}
-
-.gallery .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: var(--accent-color);
-  opacity: 1;
-}
-
-.gallery .swiper-slide-active {
-  text-align: center;
-}
-
-@media (min-width: 992px) {
-  .gallery .swiper-wrapper {
-    padding: 40px 0;
-  }
-
-  .gallery .swiper-slide-active {
-    background: var(--background-color);
-    border: 6px solid var(--accent-color);
-    padding: 4px;
-    z-index: 1;
-    transform: scale(1.2);
-    transition: none;
-  }
-}
 
 /*--------------------------------------------------------------
 # Contact Section
