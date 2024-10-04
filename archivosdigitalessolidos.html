@@ -4,77 +4,214 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
+  
   <meta content="" name="description">
   <meta content="" name="keywords">
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icosns.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/membresia.css" rel="stylesheet">
-
-  <body class="index-page">
-
-    <!-- Cargar el header -->
-    <div id="header-placeholder"></div>
-    <script>
-      fetch('header.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('header-placeholder').innerHTML = data;
-        });
-    </script>
+    <!-- Favicons -->
+    <link href="assets/img/LOGOS/logo mineatura.png" rel="icon">
+    <link href="assets/img/LOGOS/logo mineatura apple.png" rel="apple-touch-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Bebas+Neue&display=swap" rel="stylesheet">
+  
+   <!-- css -->
+    <link rel="stylesheet" href="assets/archivosdigitalessolidos/solido3.css" media="screen">
+<link rel="stylesheet" href="assets/archivosdigitalessolidos/digitalessolidos2.css" media="screen">
+<link rel="stylesheet" href="assets/archivosdigitalessolidos/archivosdigitalessolidos.css" media="screen">
+<link rel="stylesheet" href="assets/css/header.css"> <!-- Asegúrate de que este sea tu archivo CSS -->
 
     
-<div id="footer-placeholder"></div>
-<script>
-  fetch('footer.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('footer-placeholder').innerHTML = data;
-    });
-</script>
-<a href="membresia.html">
+    
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  </head>
+  <body class="u-body u-xl-mode">
+    <div id="header-container"></div>
+
+    <script>
+        // Función para cargar el header
+        function loadHeader() {
+            const headerContainer = document.getElementById('header-container');
+
+            fetch('header.html') // Cambia 'header.html' si tu archivo tiene otro nombre
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Error al cargar el header');
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    headerContainer.innerHTML = data; // Carga el contenido del header en el contenedor
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+        }
+
+        loadHeader(); // Llama a la función al cargar la página
+    </script>
+   
+    <!------- seccion 1-------->
+              </div>
+            </div>
+            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+          </div>
+        </nav>
+      </div></header> 
+    <section class="u-clearfix u-image u-section-1" id="sec-9406">
+      <div class="u-clearfix u-sheet u-valign-bottom-xl u-sheet-1">
+        <div class="u-container-style u-group u-palette-1-dark-3 u-group-1">
+          <div class="u-container-layout u-valign-middle-md u-valign-middle-sm u-valign-middle-xs u-container-layout-1">
+            <h1 class="u-text u-title u-text-1">Archivos digitales solidos</h1>
+            <p class="u-large-text u-text u-text-variant u-text-2">Cajas de seguridad para resguardo de archivos</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-section-2" id="sec-3d93">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-opacity u-opacity-80 u-palette-1-dark-3 u-shape u-shape-rectangle u-shape-1"></div>
+        <img src="assets/img/archivosdigitalessolidos/1903.jpg" alt="" class="u-image u-image-default u-image-1" data-image-width="1021" data-image-height="1080">
+        <div class=" u-group-1">
+
+        </div>
+        <div class="u-container-style u-expanded-width-xs u-group u-group-2">
+          <div class="u-container-layout">
+            <div class="u-palette-1-light-2- u-shape-2"></div>
+            <h2 class="u-text u-text-3">Integridad y Preservación de Datos 
+            </h2>
+            <p class="u-text u-text-4"> entendemos la importancia de almacenar y gestionar la información digital de manera segura, eficiente y accesible. Por eso, hemos desarrollado soluciones avanzadas de archivos digitales con formato sólido, diseñadas específicamente para satisfacer las necesidades de protección y preservación de datos a largo plazo.</p>
+            <a href="membresia.html" class="u-btn u-button-style u-btn-1">Membresias</a>
+          </div>
+        </div>
+          </div>
+        </div>
+      </div>
+
+        <!-- ICONO-->
+   
 
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+        <div class="icon-section">
+          <div class="icon-container">
+            <img src="assets/img/archivosdigitalessolidos/maxima seguridad-05.svg" alt="Icono 1">
+            <p>MAXIMA SEGURIDAD</p>
+          </div>
+          <div class="icon-container">
+            <img src="assets/img/archivosdigitalessolidos/encriptada-05.svg" alt="Icono 2">
+            <p>REGISTRO DE ACCESO</p>
+          </div>
+          <div class="icon-container">
+            <img src="assets/img/archivosdigitalessolidos/confiable-05 (1).svg" alt="Icono 3">
+            <p>CONFIABLE</p>
+          </div>
+          <div class="icon-container">
+            <img src="assets/img/archivosdigitalessolidos/archivossolidos-05.svg" alt="Icono 4">
+            <p>ACCESIBLE</p>
+          </div>
+          <div class="icon-container">
+            <img src="assets/img/archivosdigitalessolidos/24hs-05.svg" alt="Icono 4">
+            <p>24 Hrs</p>
+          </div>
+        </div>
+        
 
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+ <!-- Numeracion-->
 
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    </section>
+    <section class="u-clearfix u-section-4" id="sec-bb2e">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class=" u-shape-rectangle u-shape-1"></div>
+        <div class="u-align-left u-container-align-left u-container-style u-expanded-width-sm u-expanded-width-xs u-group u-group-1">
+          <div class="u-container-layout u-container-layout-1">
+            <div class=" u-shape-2"></div>
+            <h2 class="u-text u-text-1">Como tener <br> una caja de seguridad?
+            </h2>
+          </div>
+        </div>
+        <img class="u-image u-image-1" src="assets/img/archivosdigitalessolidos/apretonde mano.png">
+        <div class="u-align-left u-container-align-left u-container-style u-expanded-width-sm u-expanded-width-xs u-group u-group-2">
+          <div class="u-container-layout u-valign-middle-md u-valign-middle-sm">
+            <p class="u-text u-text-2">Adquirir una de las 4 membresias </p>
+            <p class="u-text u-text-palette-2-base u-text-3">01</p>
+          </div>
+        </div>
+        <div class="u-align-left u-container-align-left u-container-style u-expanded-width-sm u-expanded-width-xs u-group u-group-3">
+          <div class="u-container-layout u-valign-middle-md u-valign-middle-sm">
+            <p class="u-text u-text-4">Elegir el tipo de caja de seguridad</p>
+            <p class="u-text u-text-palette-2-base u-text-5">02</p>
+          </div>
+        </div>
+        <div class="u-align-left u-container-align-left u-container-style u-expanded-width-sm u-expanded-width-xs u-group u-group-4">
+          <div class="u-container-layout u-valign-middle-md u-valign-middle-sm">
+            <p class="u-text u-text-6">Traer el material a resguardar</p>
+            <p class="u-text u-text-palette-2-base u-text-7">03</p>
+          </div>
+        </div>
+      </div>
 
-    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  
-    <!-- Main JS File -->
-    <script src="assets/js/main.js"></script>
+       <!-- seccion inferior-->
+    </section>
+    <section class="u-clearfix u-grey-5 u-section-5" id="sec-e326">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-clearfix u-expanded-width u-gutter-30 u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-row">
+              <div class="u-size-30 u-size-60-md">
+                <div class="u-layout-col">
+                  <div class="u-size-30">
+                    <div class="u-layout-row">
+                      <div class="u-container-style u-image u-layout-cell u-right-cell u-size-30 u-image-1">
+                        <div class="u-container-layout"></div>
+                      </div>
+                      <div class="u-container-style u-image u-layout-cell u-size-30 u-image-2">
+                        <div class="u-container-layout"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="u-size-30">
+                    <div class="u-layout-row">
+                      <div class="u-container-style u-image u-layout-cell u-right-cell u-size-30 u-image-3">
+                        <div class="u-container-layout"></div>
+                      </div>
+                      <div class="u-container-style u-image u-layout-cell u-size-30 u-image-4">
+                        <div class="u-container-layout"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="u-size-30 u-size-60-md">
+                <div class="u-layout-col">
+                  <div class="u-container-style u-layout-cell u-left-cell u-size-60 u-layout-cell-5">
+                    <div class="u-container-layout">
+                      <div class="u-palette-1-light-2 u-shape u-shape-rectangle u-shape-1"></div>
+                      <h2 class="u-text u-text-1">Soluciones de almacenamiento <br><br> La opción más segura
+                      </h2>
+                      <p class="u-text u-text-2">Una vez que la caja esté ocupada, contará con una tarjeta para retirar los objetos, la cual será gestionada exclusivamente por el personal autorizado para garantizar la máxima seguridad. Además, se llevará un registro detallado de cada acceso para asegurar un control adicional <br>
+                        <br> Descubre nuestras cajas ultra-reforzadas e indestructibles, diseñadas para almacenar hasta 1000 objetos de manera segura y eficiente<br>
+                        <br> ¿Qué esperas para obtener la tuya?
+                      </p>
+                      <a href="galeria.html" class="u-btn u-button-style u-btn-1">aprende más</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="height: 100px;"></div> <!-- Ajusta la altura según sea necesario -->
+
+    </section>
+
+  <!-- footer -->
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+      });
+  </script>
 
 </body>
 
