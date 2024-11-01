@@ -1,0 +1,193 @@
+/*------------------- CAJA DE SEGURIDAD -------------------*/
+
+
+
+body {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+  
+.why-we-best-section {
+    position: relative;
+    padding: 50px 0;
+    z-index: 1;
+  }
+  
+  .why-we-best-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* El fondo azul cubrirá el 50% de la sección */
+    height: 70%;
+    background-color: #b80a0a; /* Fondo azul */
+    z-index: -1; /* El fondo azul estará detrás del contenido */
+  }
+  
+  .why-we-best-section .best-content-wrapper {
+    background-color: white;
+    padding: 30px;
+    border-radius: 1px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 2; /* Para que el contenido esté por encima del fondo azul */
+  }
+  
+  .why-we-best-section .best-content-wrapper h5 {
+    color: #b80a0a;
+    margin-top: 15px;
+  }
+  
+  .why-we-best-section .best-content-wrapper p {
+    color: #000000;
+  }
+  
+  .why-we-best-section .best-list-item {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .why-we-best-section .best-list-item li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  
+  .why-we-best-section .best-list-item img.icon {
+    width: 90px;
+    margin-right: 20px;
+  }
+  
+  .why-we-best-section .best-image img {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho de la columna */
+    height: 100%; 
+    object-fit: cover; 
+    border-radius: 0px;
+  }
+  
+  .why-we-best-section .theme-title-one h2 {
+    font-size: 36px;
+    color: #ffffff;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .why-we-best-section .theme-title-one p {
+    font-size: 16px;
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  .why-we-best-section .row {
+    display: flex;
+    align-items: stretch;
+    gap: 0; 
+    height: 100%; 
+  }
+  
+  .col-lg-6.col-12.best-image {
+    padding: 0; 
+  }
+  
+  .col-lg-6.col-12 {
+    padding: 0;
+    display: flex;
+    align-items: center; 
+  }
+  
+  
+  
+  /*------------------- CAJA 3 FOTOS ------------------*/
+  
+  
+  .photo-section {
+    display: flex;
+    justify-content: space-between; /* Espaciado entre las fotos */
+    padding: 50px 0; /* Espaciado superior e inferior */
+  }
+  
+  .photo-item {
+    flex: 1; 
+    margin: 0 10px;
+    text-align: center; 
+  }
+  
+  .photo-item img {
+    width: 300px; /* Tamaño de la imagen  */
+    height: 300px; 
+    border-radius: 50%; /* Hace que la imagen sea redonda */
+    border: 4px solid #b80a0a; /* Borde azul alrededor de la imagen */
+    object-fit: cover; 
+  }
+  
+  .photo-item p {
+    color: #555555; /* Color del texto */
+    font-size: 14px;
+    margin-top: 10px; /
+  }
+  
+  
+  /*--------------- contactanos---------------*/
+  
+  
+  
+  .two-column-section {
+    display: flex;
+    justify-content: space-between; /* Espacio entre texto e imagen */
+    align-items: center;
+    padding: 40px 0; /* Espaciado superior e inferior */
+  }
+  
+  .text-section {
+    flex: 1; 
+    margin-right: 20px; 
+  }
+  
+  .text-section h2 {
+    color: #b80a0a;
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  
+  .text-section p {
+    color: #555555; /* Color del subtítulo */
+    font-size: 16px; /* Tamaño del subtítulo */
+    margin-bottom: 20px; 
+  }
+  
+  /* Estilo del botón de contacto */
+  .contact-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #b80a0a; /* Fondo azul */
+    color: white;
+    font-size: 16px;
+    border-radius: 5px; /* Bordes redondeados */
+    text-decoration: none; 
+    transition: background-color 0.3s; 
+  }
+  
+  .contact-button:hover {
+    background-color: #004080; /* Cambio de color al pasar el ratón */
+  }
+  
+  /* Imagen a la derecha del texto */
+  .image-section {
+    flex: 1; 
+  }
+  
+  .image-section img {
+    width: 100%; 
+    height: auto; 
+    border-radius: 5px;
+  }
+  
+.text-section {
+    flex: 1;
+    text-align: center; /* Mantiene el texto centrado */
+}

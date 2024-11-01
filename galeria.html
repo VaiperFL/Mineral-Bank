@@ -15,44 +15,32 @@
   
 
        <!-- css -->
-    <link rel="stylesheet" href="assets/css/galeria.css" media="screen">
-<link rel="stylesheet" href="assets/css/galeria2.css.css" media="screen">
-<link rel="stylesheet" href="assets/css/Página-1.css" media="screen">
-    <script class="u-script" type="text/javascript" src="assets/js/jquery.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="assets/js/galeria.js" defer=""></script>
-    <link rel="stylesheet" href="assets/css/header.css"> <!-- Asegúrate de que este sea tu archivo CSS -->
+<link rel="stylesheet" href="assets/galeria/Página-1.css" media="screen">
 
     
 
   </head>
-  
 
 </head>
 <body class="u-body u-xl-mode">
   <div id="header-container"></div>
+  <div id="header-container"></div>
+      <!-- Cargar el header -->
+      <div id="header-placeholder"></div>
+      <script>
+        fetch('header.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('header-placeholder').innerHTML = data;
+          });
+      </script>
+      
 
-  <script>
-      // Función para cargar el header
-      function loadHeader() {
-          const headerContainer = document.getElementById('header-container');
-
-          fetch('header.html') // Cambia 'header.html' si tu archivo tiene otro nombre
-              .then(response => {
-                  if (!response.ok) {
-                      throw new Error('Error al cargar el header');
-                  }
-                  return response.text();
-              })
-              .then(data => {
-                  headerContainer.innerHTML = data; // Carga el contenido del header en el contenedor
-              })
-              .catch(error => {
-                  console.error(error);
-              });
-      }
-
-      loadHeader(); // Llama a la función al cargar la página
-  </script>
+      		<!--
+			=====================================================
+       TITULO PRINCIPAL
+       	=====================================================
+			-->
  
     </div>
   <section class="skrollable skrollable-between u-align-center u-clearfix u-container-align-center u-image u-shading u-section-1" src="" id="carousel_74d8" data-image-width="1980" data-image-height="1131">
@@ -77,29 +65,35 @@
         </div>
       </div>
     </header>
-        <!-- Iconos -->
+
+
+   		<!--
+			=====================================================
+            ICONOS
+       	=====================================================
+			-->
     </section>
     <section class="u-clearfix u-section-2" id="sec-cf32">
       <div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-expanded-width u-list u-list-1">
           <div class="u-repeater u-repeater-1">
             <div class="u-align-center u-container-align-center u-container-style u-list-item u-palette-2-base u-repeater-item u-shape-rectangle u-list-item-1"   data-animation-delay="0">
-              <div class="u-container-layout u-similar-container u-valign-middle u-container-layout-1"><span class="u-align-center u-file-icon u-icon u-text-white u-icon-1"><img src="assets/img/galeria/icono/soporte.png" alt=""></span>
-                <h4 class="u-align-center u-custom-font u-text u-text-font u-text-1">atencion personalizada</h4>
+              <div class="u-container-layout u-similar-container u-valign-middle u-container-layout-1"><span class="u-align-center u-file-icon u-icon u-text-white u-icon-1"><img src="assets/galeria/imagenes/icono/soporte.png" alt=""></span>
+                <h4 class="u-align-center u-custom-font u-text u-text-font u-text-1">Atencion personalizada</h4>
               </div>
             </div>
             <div class="u-align-center u-container-align-center u-container-style u-list-item u-palette-2-base u-repeater-item u-shape-rectangle u-list-item-2" data-animation-delay="0">
-              <div class="u-container-layout u-similar-container u-valign-middle u-container-layout-2"><span class="u-align-center u-file-icon u-icon u-text-white u-icon-2"><img src="assets/img/galeria/icono/sala.png" alt=""></span>
+              <div class="u-container-layout u-similar-container u-valign-middle u-container-layout-2"><span class="u-align-center u-file-icon u-icon u-text-white u-icon-2"><img src="assets/galeria/imagenes/icono/sala.png" alt=""></span>
                 <h4 class="u-align-center u-custom-font u-text u-text-font u-text-2">Salas insonoras </h4>
               </div>
             </div>
             <div class="u-align-center u-container-align-center u-container-style u-list-item u-palette-2-base u-repeater-item u-shape-rectangle u-list-item-3"  data-animation-delay="0">
-              <div class="u-container-layout u-similar-container u-valign-middle u-container-layout-3"><span class="u-align-center u-file-icon u-icon u-text-white u-icon-3"><img src="assets/img/galeria/icono/cata.png" alt=""></span>
+              <div class="u-container-layout u-similar-container u-valign-middle u-container-layout-3"><span class="u-align-center u-file-icon u-icon u-text-white u-icon-3"><img src="assets/galeria/imagenes/icono/cata.png" alt=""></span>
                 <h4 class="u-align-center u-custom-font u-text u-text-font u-text-3">Cata de vinos </h4>
               </div>
             </div>
             <div class="u-align-center u-container-align-center u-container-style u-list-item u-palette-2-base u-repeater-item u-shape-rectangle u-list-item-4"  data-animation-delay="0">
-              <div class="u-container-layout u-similar-container u-valign-middle u-container-layout-4"><span class="u-align-center u-file-icon u-icon u-text-white u-icon-4"><img src="assets/img/galeria/icono/eventos.png" alt=""></span>
+              <div class="u-container-layout u-similar-container u-valign-middle u-container-layout-4"><span class="u-align-center u-file-icon u-icon u-text-white u-icon-4"><img src="assets/galeria/imagenes/icono/eventos.png" alt=""></span>
                 <h4 class="u-align-center u-custom-font u-text u-text-font u-text-4"> Eventos especiales</h4>
               </div>
             </div>
@@ -108,6 +102,13 @@
       </div>
     </section>
     
+
+
+     		<!--
+			=====================================================
+           RESTAURANTE
+       	=====================================================
+			-->
     <section class="u-align-center u-clearfix u-container-align-center u-section-3" id="sec-237f">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h2 class="u-align-center u-text u-text-default u-text-1"> RESTAURANTE</h2>
@@ -115,21 +116,21 @@
           <div class="u-gallery-inner u-gallery-inner-1">
             <div class="u-effect-fade u-effect-hover-zoom u-gallery-item">
               <div class="u-back-slide" data-image-width="1380" data-image-height="920">
-                <img class="u-back-image u-expanded" src="assets/img/galeria/10.jpeg" alt="Sample Headline">
+                <img class="u-back-image u-expanded" src="assets/galeria/imagenes/10.jpeg" alt="Sample Headline">
               </div>
               <div class="u-over-slide u-shading u-over-slide-1">
               </div>
             </div>
             <div class="u-effect-fade u-effect-hover-zoom u-gallery-item">
               <div class="u-back-slide" data-image-width="1480" data-image-height="833">
-                <img class="u-back-image u-expanded" src="assets/img/galeria/5.jpg" alt="Sample Headline">
+                <img class="u-back-image u-expanded" src="assets/galeria/imagenes/5.jpg" alt="Sample Headline">
               </div>
               <div class="u-over-slide u-shading u-over-slide-2">
               </div>
             </div>
             <div class="u-effect-fade u-effect-hover-zoom u-gallery-item">
               <div class="u-back-slide" data-image-width="740" data-image-height="833">
-                <img class="u-back-image u-expanded" src="assets/img/galeria/11.png" alt="Sample Headline">
+                <img class="u-back-image u-expanded" src="assets/galeria/imagenes/11.png" alt="Sample Headline">
               </div>
               <div class="u-over-slide u-shading u-over-slide-3">
 
@@ -137,19 +138,19 @@
             </div>
             <div class="u-effect-fade u-effect-hover-zoom u-gallery-item">
               <div class="u-back-slide" data-image-width="800" data-image-height="800">
-                <img class="u-back-image u-expanded" src="assets/img/galeria/galeria1.jpg">
+                <img class="u-back-image u-expanded" src="assets/galeria/imagenes/galeria1.jpg">
               </div>
               <div class="u-over-slide u-shading u-over-slide-4"></div>
             </div>
             <div class="u-effect-fade u-effect-hover-zoom u-gallery-item">
               <div class="u-back-slide" data-image-width="1380" data-image-height="920">
-                <img class="u-back-image u-expanded" src="assets/img/galeria/galeria2.jpg">
+                <img class="u-back-image u-expanded" src="assets/galeria/imagenes/galeria2.jpg">
               </div>
               <div class="u-over-slide u-shading u-over-slide-5"></div>
             </div>
             <div class="u-effect-fade u-effect-hover-zoom u-gallery-item">
               <div class="u-back-slide" data-image-width="800" data-image-height="1200">
-                <img class="u-back-image u-expanded" src="assets/img/galeria/galeria3.jpg">
+                <img class="u-back-image u-expanded" src="assets/galeria/imagenes/galeria3.jpg">
               </div>
               <div class="u-over-slide u-shading u-over-slide-6"></div>
             </div>
@@ -165,8 +166,11 @@
       
       
     
-      
-        <!-- Segundo cuadro -->
+		<!--
+			=====================================================
+       SEGUNDO CUADRO
+       	=====================================================
+			-->
       <div class="u-clearfix u-sheet u-sheet-1">
         <h2 class="u-align-center u-text u-text-default u-text-1" data-animation-delay="0"> Un lugar para disfrutar</h2>
         <p class="u-align-center u-text u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="250"> Atencion personalizada, calidad y excelencia en sus productos.</p>
@@ -236,7 +240,11 @@
         </div>
       </div>
 
-         <!-- seccion 3 -->
+       		<!--
+			=====================================================
+       SECCION 3
+       	=====================================================
+			-->
     </section>
     <section class="u-align-center u-clearfix u-container-align-center u-section-5" id="sec-d633">
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
@@ -245,7 +253,7 @@
           <div class="u-repeater u-repeater-1">
             <div class="u-align-center u-container-align-center u-container-style u-list-item u-repeater-item">
               <div class="u-container-layout u-similar-container u-container-layout-1">
-                <img alt="" class="u-expanded-width u-image u-image-default u-image-1" data-image-width="700" data-image-height="652" src="assets/img/galeria/eventos/Cocina del interior argentino.jpg">
+                <img alt="" class="u-expanded-width u-image u-image-default u-image-1" data-image-width="700" data-image-height="652" src="assets/galeria/imagenes/eventos/Cocina del interior argentino.jpg">
                 <div class="u-align-center u-container-align-center u-container-style u-group u-palette-2-base u-group-1">
                   <div class="u-container-layout u-valign-middle u-container-layout-2">
                     <h4 class="u-align-center u-text u-text-default u-text-2"> SABADOS</h4>
@@ -255,7 +263,7 @@
             </div>
             <div class="u-align-center u-container-align-center u-container-align-center-sm u-container-align-center-xl u-container-align-center-xs u-container-style u-list-item u-repeater-item">
               <div class="u-container-layout u-similar-container u-container-layout-3">
-                <img alt="" class="u-expanded-width u-image u-image-default u-image-2" data-image-width="700" data-image-height="652" src="assets/img/galeria/eventos/pasarela.jpg">
+                <img alt="" class="u-expanded-width u-image u-image-default u-image-2" data-image-width="700" data-image-height="652" src="assets/galeria/imagenes/eventos/pasarela.jpg">
                 <div class="u-align-center u-container-align-center u-container-style u-group u-palette-2-base u-group-2">
                   <div class="u-container-layout u-valign-middle u-container-layout-4">
                     <h4 class="u-align-center u-text u-text-default u-text-5"> Desfile de moda</h4>
@@ -266,7 +274,7 @@
             </div>
             <div class="u-align-center u-container-align-center u-container-style u-list-item u-repeater-item">
               <div class="u-container-layout u-similar-container u-container-layout-5">
-                <img alt="" class="u-expanded-width u-image u-image-default u-image-3" data-image-width="700" data-image-height="652" src="assets/img/galeria/eventos/orador.jpeg">
+                <img alt="" class="u-expanded-width u-image u-image-default u-image-3" data-image-width="700" data-image-height="652" src="assets/galeria/imagenes/eventos/orador.jpeg">
                 <div class="u-align-center u-container-align-center u-container-style u-group u-palette-2-base u-group-3">
                   <div class="u-container-layout u-valign-middle u-container-layout-6">
                     <h4 class="u-align-center u-text u-text-default u-text-8">Orador de marketing</h4>
@@ -281,7 +289,11 @@
             </section>
             
             
-       <!-- footer -->
+     		<!--
+			=====================================================
+       FOOTER
+       	=====================================================
+			-->
           <div id="footer-placeholder"></div>
           <script>
             fetch('footer.html')

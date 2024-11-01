@@ -1,0 +1,132 @@
+/* Estilos generales */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f1ea;
+    color: #5d4037;
+}
+
+header {
+    background-color: #8d6e63;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 1.8rem;
+    color: white;
+    font-family: 'Caveat', cursive; /* Fuente cursiva estilo cafetería */
+}
+
+header .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+header .cta {
+    background-color: #d7ccc8;
+    padding: 10px 20px;
+    color: #5d4037;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #efebe9;
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    color: #5d4037;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: #6d4c41;
+}
+
+.hero-img {
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Sección de Servicios */
+.services {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 20px;
+    background-color: #ffecb3;
+}
+
+.service-card {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    width: 25%;
+}
+
+.service-img {
+    border-radius: 15px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    color: #795548;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    color: #6d4c41;
+}
+
+/* Sección de Contacto */
+.contact {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #d7ccc8;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    color: #5d4037;
+}
+
+.contact-btn {
+    background-color: #8d6e63;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.contact-btn:hover {
+    background-color: #6d4c41;
+}
+
+/* Footer */
+.footer {
+    background-color: #5d4037;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}

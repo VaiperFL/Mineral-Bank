@@ -5,76 +5,256 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <meta content="" name="description">
-  <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="./assets/imagenes/LOGOS/logo mineatura.png" rel="icon">
+  <link href="./assets/imagenes/LOGOS/logo mineatura apple.png" rel="apple-touch-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Bebas+Neue&display=swap" rel="stylesheet">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icosns.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/membresia.css" rel="stylesheet">
-
-  <body class="index-page">
-
-    <!-- Cargar el header -->
-    <div id="header-placeholder"></div>
-    <script>
-      fetch('header.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('header-placeholder').innerHTML = data;
-        });
-    </script>
-
-    
-<div id="footer-placeholder"></div>
-<script>
-  fetch('footer.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('footer-placeholder').innerHTML = data;
-    });
-</script>
-<a href="membresia.html">
-
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+   
+   <!-- Google Fonts -->
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
   
-    <!-- Main JS File -->
-    <script src="assets/js/main.js"></script>
+
+      <!--- CSS --->
+    <link rel="stylesheet" href="./assets/sala de reunion confidencial/estructura.css" media="screen">
+<link rel="stylesheet" href="./assets/sala de reunion confidencial/index.css" media="screen">
+  
+    
+    
+    
+    
+
+
+
+</head>
+<body class="u-body u-xl-mode">
+  <div id="header-container"></div>
+
+  <script>
+    // Función para cargar el header
+    function loadHeader() {
+        const headerContainer = document.getElementById('header-container');
+
+        fetch('header.html') 
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Error al cargar el header');
+                }
+                return response.text();
+            })
+            .then(data => {
+                headerContainer.innerHTML = data; 
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    }
+
+    loadHeader(); 
+</script>
+
+
+
+	<!--
+			=====================================================
+        Título principal 
+     =====================================================
+			-->
+  <body data-home-page="Casa.html" data-home-page-title="Casa" data-path-to-root="/" data-include-products="false" class="u-body u-xl-mode" data-lang="es">
+    <section class="skrollable skrollable-between u-align-center u-clearfix u-container-align-center u-valign-middle u-white u-section-1" src="" id="carousel_0ac8">
+      <img class="u-expanded-width u-image u-image-1" src="./assets/sala de reunion confidencial/imagenes/42.png" data-image-width="1920" data-image-height="1047">
+      <h2 class="u-text u-text-default u-text-white u-text-1 bold-highlight">SALA DE REUNION CONFIDENCIAL<br></h2>
+    </h2>
+
+
+    	<!--
+			=====================================================
+       2da sección
+     =====================================================
+			-->
+    </section>
+    <section class="u-align-center u-clearfix u-container-align-center u-grey-10 u-section-2" id="sec-58b8">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h2 class="u-align-left-sm u-align-left-xs u-text u-text-default-xl u-text-1"> REUNIONES PRIVADAS Y SEGURAS</h2>
+        <div class="data-layout-selected u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-row">
+              <div class="u-container-style u-layout-cell u-left-cell u-size-20 u-layout-cell-1">
+                <div class="u-container-layout u-valign-top u-container-layout-1">
+                  <h3 class="u-text u-text-2"> Espacio Privado</h3>
+                  <p class="u-text u-text-default u-text-3"><b>Un lugar seguro para conversaciones</b>
+                    <br>
+                    <br>Nuestra sala de reunión confidencial está diseñada para resguardar la privacidad, garantizando que cada conversación se mantenga segura y privada.<br>
+                  </p>
+                  <a href="membresia.html" class="u-active-none u-align-center u-border-1 u-border-active-palette-2-base u-border-hover-palette-2-base u-border-no-left u-border-no-right u-border-no-top u-border-palette-2-base u-bottom-left-radius-0 u-bottom-right-radius-0 u-btn u-button-style u-hover-none u-none u-radius-0 u-text-active-palette-2-base u-text-body-color u-text-hover-palette-2-base u-top-left-radius-0 u-top-right-radius-0 u-btn-1">más</a>
+                </div>
+              </div>
+              <div class="u-container-style u-layout-cell u-size-20 u-layout-cell-2">
+                <div class="u-container-layout u-container-layout-2">
+                  <h3 class="u-text u-text-4"> Tecnología Avanzada</h3>
+                  <p class="u-text u-text-default u-text-5">
+                    <span style="font-weight: 700;">Equipamiento para el Éxito.&nbsp;</span>
+                    <br>
+                    <br> Con un sistema de videoconferencia de alta definición y pizarras interactivas, la sala está equipada para facilitar presentaciones y colaboración eficaz. 
+                  </p>
+                  <a href="membresia.html" class="u-active-none u-align-center u-border-1 u-border-active-palette-2-base u-border-hover-palette-2-base u-border-no-left u-border-no-right u-border-no-top u-border-palette-2-base u-bottom-left-radius-0 u-bottom-right-radius-0 u-btn u-button-style u-hover-none u-none u-radius-0 u-text-active-palette-2-base u-text-body-color u-text-hover-palette-2-base u-top-left-radius-0 u-top-right-radius-0 u-btn-2">más</a>
+                </div>
+              </div>
+              <div class="u-container-style u-layout-cell u-right-cell u-size-20 u-layout-cell-3">
+                <div class="u-container-layout u-container-layout-3">
+                  <h3 class="u-text u-text-6"> Ambiente Inspirador</h3>
+                  <p class="u-text u-text-default u-text-7">
+                    <span style="font-weight: 700;"> Fomenta la Creatividad</span>
+                    <br>
+                    <br> Diseñada para inspirar, la sala ofrece un entorno cómodo y acogedor que promueve el pensamiento creativo y la toma de decisiones efectivas. 
+                  </p>
+                  <a href="membresia.html" class="u-active-none u-align-center u-border-1 u-border-active-palette-2-base u-border-hover-palette-2-base u-border-no-left u-border-no-right u-border-no-top u-border-palette-2-base u-bottom-left-radius-0 u-bottom-right-radius-0 u-btn u-button-style u-hover-none u-none u-radius-0 u-text-active-palette-2-base u-text-body-color u-text-hover-palette-2-base u-top-left-radius-0 u-top-right-radius-0 u-btn-3">más</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+       	<!--
+			=====================================================
+       3er sección
+     =====================================================
+			-->
+    </section>
+    <section class="u-align-center u-clearfix u-container-align-center u-grey-10 u-valign-bottom u-section-3" id="sec-8ad4">
+      <h2 class="u-align-center u-text u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1500"> Confidencialidad y Comodidad</h2>
+      <p class="u-align-center u-text u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500"> Un Espacio Seguro para Conversaciones Clave</p>
+      <div class="data-layout-selected u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+        <div class="u-layout">
+          <div class="u-layout-col">
+            <div class="u-size-20">
+              <div class="u-layout-row">
+                <div class="u-container-align-center u-container-style u-image u-layout-cell u-size-30 u-image-1" data-image-width="1380" data-image-height="920" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="250">
+                  <div class="u-container-layout u-container-layout-1"></div>
+                </div>
+                <div class="u-black u-container-align-left u-container-style u-layout-cell u-size-30 u-layout-cell-6">
+                  <div class="u-container-layout u-container-layout-6">
+                    <h3 class="u-align-left u-text u-text-7" style="text-align: center;"> Espacio Dedicado a la Innovación</h3>
+                    <p class="u-align-left u-text u-text-8" style="text-align: center;"> En nuestra sala de reunión confidencial, cada encuentro se convierte en una oportunidad para innovar.</p>
+                </div>
+                </div>
+              </div>
+            </div>
+            <div class="u-size-20">
+              <div class="u-layout-row">
+                <div class="u-black u-container-align-left u-container-style u-layout-cell u-size-30 u-layout-cell-6">
+                  <div class="u-container-layout u-container-layout-6">
+                    <h3 class="u-align-left u-text u-text-7" style="text-align: center;"> La Seguridad que Necesitas para Tu Negocio</h3>
+                    <p class="u-align-left u-text u-text-8" style="text-align: center;"> La confidencialidad es clave en el mundo empresarial. Nuestra sala de reunión proporciona un entorno seguro y controlado donde se pueden abordar temas delicados sin temor a la exposición
+                    </p>
+                </div>
+                </div>
+                <div class="u-container-align-center u-container-style u-image u-layout-cell u-size-30 u-image-2" data-image-width="1380" data-image-height="920" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
+                  <div class="u-container-layout u-container-layout-4"></div>
+                </div>
+              </div>
+            </div>
+            <div class="u-size-20">
+              <div class="u-layout-row">
+                <div class="u-container-align-center u-container-style u-image u-layout-cell u-size-30 u-image-3" data-image-width="1380" data-image-height="920" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="750">
+                  <div class="u-container-layout u-container-layout-5"></div>
+                </div>
+                <div class="u-black u-container-align-left u-container-style u-layout-cell u-size-30 u-layout-cell-6">
+                  <div class="u-container-layout u-container-layout-6">
+                    <h3 class="u-align-left u-text u-text-7" style="text-align: center;"> Un Refugio para Conversaciones Estratégicas</h3>
+                    <p class="u-align-left u-text u-text-8" style="text-align: center;"> La sala de reunión confidencial es un espacio diseñado para resguardar la privacidad de tus diálogos más importantes. Con un enfoque en la seguridad y la comodidad, este entorno permite a los equipos discutir estrategias y tomar decisiones sin preocupaciones.</p>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+       	<!--
+			=====================================================
+       4ta sección
+     =====================================================
+			-->
+    </section>
+    <section class="u-align-center u-clearfix u-container-align-center u-grey-5 u-section-4" id="carousel_d044">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="custom-expanded u-border-20 u-border-palette-1-light-1 u-shape u-shape-rectangle u-shape-1"></div>
+        <div class="data-layout-selected u-clearfix u-gutter-20 u-layout-wrap u-layout-wrap-1">
+          <div class="u-gutter-0 u-layout">
+            <div class="u-layout-row">
+              <div class="u-align-center u-container-align-center u-container-style u-layout-cell u-size-44 u-white u-layout-cell-1">
+                <div class="u-container-layout u-container-layout-1">
+                  <h3 class="u-text u-text-default u-text-1"> Reservas y Contacto</h3>
+                  <p class="u-text u-text-grey-40 u-text-2"> Para asegurar el uso de la sala de reunión confidencial, se recomienda hacer reservas con anticipación. Para más información sobre disponibilidad y requisitos, contáctanos y estaremos encantados de asistirte.</p>
+                  <a href="contacto.html" class="u-active-palette-3-dark-3 u-border-none u-btn u-btn-round u-button-style u-hover-palette-3-dark-3 u-palette-1-base u-radius-11 u-btn-1">SABER MAS</a>
+                </div>
+              </div>
+              <div class="u-container-style u-layout-cell u-size-16 u-layout-cell-2">
+                <div class="u-container-layout u-container-layout-2"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      
+
+       	<!--
+			=====================================================
+       5ta sección
+     =====================================================
+			-->
+    </section>
+    <section class="u-clearfix u-palette-1-base u-section-5" id="carousel_a626">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="data-layout-selected u-clearfix u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-row">
+              <div class="u-container-style u-image u-layout-cell u-size-20-lg u-size-20-xl u-size-30-md u-size-30-sm u-size-30-xs u-image-1" data-image-width="1004" data-image-height="871">
+                <div class="u-container-layout u-container-layout-1"></div>
+              </div>
+              <div class="u-align-center u-black u-container-align-center u-container-style u-layout-cell u-size-20-lg u-size-20-xl u-size-30-md u-size-30-sm u-size-30-xs u-layout-cell-2">
+                <div class="u-container-layout u-container-layout-2">
+                  <h3 class="u-text u-text-default u-text-1"> Fácil Proceso de Reserva</h3>
+                  <p class="u-text u-text-default u-text-2"> Contáctanos a través de nuestro formulario en línea o llámanos directamente para asegurar tu espacio en la sala de reunión confidencial. </p>
+                </div>
+              </div>
+              <div class="u-align-center u-container-align-center u-container-style u-layout-cell u-size-20-lg u-size-20-xl u-size-60-md u-size-60-sm u-size-60-xs u-white u-layout-cell-3">
+                <div class="u-container-layout u-valign-top u-container-layout-3">
+                  <h3 class="u-text u-text-default u-text-3"> Flexibilidad de Horarios</h3>
+                  <p class="u-text u-text-default u-text-4"> Ofrecemos disponibilidad en diversos horarios para adaptarnos a tus necesidades y asegurar que puedas tener la reunión en el momento que lo requieras. </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+    
+
+  <!-------------------
+         footer 
+  ------------------------->
+
+
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+      });
+  </script>
 
 </body>
 

@@ -5,92 +5,289 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <meta content="" name="description">
-  <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="./assets/imagenes/LOGOS/logo mineatura.png" rel="icon">
+  <link href="./assets/imagenes/LOGOS/logo mineatura apple.png" rel="apple-touch-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Bebas+Neue&display=swap" rel="stylesheet">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+   <!-- Google Fonts -->
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
   
-  <body class="index-page">
 
-    <!-- Cargar el header -->
-    <div id="header-placeholder"></div>
-    <script>
-      fetch('header.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('header-placeholder').innerHTML = data;
-        });
-    </script>
+
+   <!--- CSS --->
+<link rel="stylesheet" href="./assets/desarollo de proyecto/index.css" media="screen">
+<link rel="stylesheet" href="./assets/desarollo de proyecto/estructura.css" media="screen">
+
 
     
-<div id="footer-placeholder"></div>
-<script>
-  fetch('footer.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('footer-placeholder').innerHTML = data;
-    });
+    
+    		<!--
+			=====================================================
+        Header
+     =====================================================
+			-->
+<body class="u-body u-xl-mode">
+  <div id="header-container"></div>
+
+  <script>
+    // Función para cargar el header
+    function loadHeader() {
+        const headerContainer = document.getElementById('header-container');
+
+        fetch('header.html') 
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Error al cargar el header');
+                }
+                return response.text();
+            })
+            .then(data => {
+                headerContainer.innerHTML = data; 
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    }
+
+    loadHeader(); 
 </script>
-<a href="membresia.html">
-
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
 
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  </head>
+  <body data-home-page="Página-1.html" data-home-page-title="Página 1" data-path-to-root="/" data-include-products="false" class="u-body u-xl-mode" data-lang="es"><header class="u-clearfix u-header u-header" id="sec-124f"><div class="u-clearfix u-sheet u-sheet-1">
+        <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
+          <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
+            <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
+              <svg class="u-svg-link" viewBox="0 0 24 24"><use xlink:href="#menu-hamburger"></use></svg>
+</g></svg>
 
-    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  
-    <!-- Main JS File -->
-    <script src="assets/js/main.js"></script>
+          </div>
+          <div class="u-nav-container-collapse">
+            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+              <div class="u-inner-container-layout u-sidenav-overflow">
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href=""></a>
+</li></ul>
+              </div>
+            </div>
+            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+          </div>
+        </nav>
+      </div></header>
+
+
+
+      
+		<!--
+			=====================================================
+        portada
+     =====================================================
+			-->
+    <section class="u-align-center u-clearfix u-container-align-center u-section-1" id="carousel_1d57">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="data-layout-selected u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-row">
+              <div class="u-align-left u-container-align-center-xs u-container-align-left u-container-style u-layout-cell u-size-27-xl u-size-29-lg u-size-60-md u-size-60-sm u-size-60-xs u-layout-cell-1">
+                <div class="u-container-layout u-valign-middle u-container-layout-1">
+                  <h6 class="u-align-center-xs u-text u-text-1">Estrategias Personalizadas</h6>
+                  <h2 class="u-align-center-xs u-text u-text-2">
+                    <span style="font-weight: 700;"></span>Desarollo de proyectos 
+                  </h2>
+                  </p>
+                  <a href="contacto.html" class="u-active-black u-align-center u-border-2 u-border-grey-75 u-btn u-btn-round u-button-style u-hover-black u-none u-radius-10 u-text-active-white u-text-hover-white u-btn-2">Contacto</a>
+                </div>
+              </div>
+              <div class="u-align-left u-container-align-left u-container-style u-image u-image-contain u-layout-cell u-radius-10 u-size-31-lg u-size-33-xl u-size-60-md u-size-60-sm u-size-60-xs u-image-1" data-image-width="1000" data-image-height="1077">
+                <div class="u-container-layout u-container-layout-2"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+              
+		<!--
+			=====================================================
+        iconos
+     =====================================================
+			-->
+     
+        <div class="u-expanded-width u-list u-list-1">
+          <div class="u-repeater u-repeater-1">
+            <div class="u-align-left u-container-align-center-xs u-container-align-left u-container-style u-list-item u-repeater-item u-white u-list-item-1">
+              <div class="u-container-layout u-similar-container u-container-layout-3"><span class="u-align-center-xs u-file-icon u-icon u-icon-1"><img src="./assets/desarollo de proyecto/imagenes/marketing.png" alt=""></span>
+                <h4 class="u-align-center-xs u-custom-font u-font-roboto-condensed u-text u-text-4">Marketing</h4>
+              </div>
+            </div>
+            <div class="u-align-left u-container-align-center-xs u-container-align-left u-container-style u-list-item u-repeater-item u-video-cover u-white">
+              <div class="u-container-layout u-similar-container u-container-layout-4"><span class="u-align-center-xs u-file-icon u-icon u-icon-2"><img src="./assets/desarollo de proyecto/imagenes/crecimiento-02.png" alt=""></span>
+                <h4 class="u-align-center-xs u-custom-font u-font-roboto-condensed u-text u-text-5"> Crecimiento </h4>
+              </div>
+            </div>
+            <div class="u-align-left u-container-align-center-xs u-container-align-left u-container-style u-list-item u-repeater-item u-video-cover u-white">
+              <div class="u-container-layout u-similar-container u-container-layout-5"><span class="u-align-center-xs u-file-icon u-icon u-icon-3"><img src="./assets/desarollo de proyecto/imagenes/desarrollo-02.png" alt=""></span>
+                <h4 class="u-align-center-xs u-custom-font u-font-roboto-condensed u-text u-text-5"> Desarrollo </h4>
+              </div>
+            </div>
+            <div class="u-align-left u-container-align-center-xs u-container-align-left u-container-style u-list-item u-repeater-item u-video-cover u-white">
+              <div class="u-container-layout u-similar-container u-container-layout-6"><span class="u-align-center-xs u-file-icon u-icon u-icon-4"><img src="./assets/desarollo de proyecto/imagenes/atencion-02.png" alt=""></span>
+                <h4 class="u-align-center-xs u-custom-font u-font-roboto-condensed u-text u-text-7">Atencion</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+
+            
+		<!--
+			=====================================================
+        Estrategias Personalizadas
+     =====================================================
+			-->
+
+    </section>
+    <section class="u-clearfix u-section-3" id="carousel_8204">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="data-layout-selected u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-row">
+              <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-1">
+                <div class="u-container-layout u-container-layout-1">
+                  <h5 class="u-custom-font u-font-montserrat u-text u-text-1">Enfoque</h5>
+                  <h2 class="u-text u-text-2"> Estrategias Personalizadas</h2>
+                  <p class="u-text u-text-3"> Cada proyecto comienza con una evaluación exhaustiva para entender su contexto y objetivos. Esto nos permite crear un plan estratégico que aborde los desafíos específicos y maximice las oportunidades. </p>
+                  <ul class="u-custom-list u-text u-text-default u-text-4">
+                    <li>
+                      <div class="u-list-icon u-text-palette-3-base">
+                        <div  version="1.1" xml:space="preserve" class="u-svg-content">►</div>
+                      </div> Análisis de Necesidades
+                    </li>
+                    <li>
+                      <div class="u-list-icon u-text-palette-3-base">
+                        <div  version="1.1" xml:space="preserve" class="u-svg-content">►</div>
+                      </div> Definición de Objetivos Claros
+                    </li>
+                    <li>
+                      <div class="u-list-icon u-text-palette-3-base">
+                        <div version="1.1" xml:space="preserve" class="u-svg-content">►</div>
+                      </div> Diseño de Planes de Acción
+                    </li>
+                    <li>
+                      <div class="u-list-icon u-text-palette-3-base">
+                        <div  version="1.1" xml:space="preserve" class="u-svg-content">►</div>
+                      </div>Adaptación Continua
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-2">
+                <div class="u-container-layout u-valign-bottom-xl u-valign-middle-lg u-valign-middle-md u-valign-top-sm u-valign-top-xs u-container-layout-2">
+                  <img class="u-expanded-width u-image u-image-default u-image-1" src="./assets/desarollo de proyecto/imagenes/foto1.jpg" alt="" data-image-width="1333" data-image-height="2000">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+             
+		<!--
+			=====================================================
+        Desarrollo de Proyectos
+     =====================================================
+			-->
+    <section class="u-clearfix u-grey-10 u-section-4" id="sec-e948">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="data-layout-selected u-clearfix u-layout-wrap u-layout-wrap-1">
+          <div class="u-gutter-0 u-layout">
+            <div class="u-layout-col">
+              <div class="u-size-30 u-size-60-md">
+                <div class="u-layout-row">
+                  <div class="u-align-right u-container-align-right u-container-style u-layout-cell u-size-9 u-layout-cell-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
+                    <div class="u-container-layout u-valign-top u-container-layout-1">
+                    </div>
+                  </div>
+                  <div class="u-align-left u-container-align-left u-container-style u-layout-cell u-size-51 u-layout-cell-2" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
+                    <div class="u-container-layout u-valign-top u-container-layout-2">
+                      <h2 class="u-text u-text-2">Potencia el Desarrollo </h2>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="u-size-30 u-size-60-md">
+                <div class="u-layout-row">
+                  <div class="u-align-left u-container-align-left u-container-style u-layout-cell u-size-31 u-layout-cell-3" data-animation-name="customAnimationIn" data-animation-duration="1750" data-animation-delay="750">
+                    <div class="u-container-layout u-valign-top u-container-layout-3">
+                      <p class="u-spacing-20 u-text u-text-4">
+                        <span style="font-weight: 700;"></span> Al elegir trabajar con nosotros, estás asegurando que tu proyecto no solo se desarrolle con las mejores prácticas, sino que también tenga un impacto significativo y duradero en tu organización y en la comunidad. Estamos aquí para ayudarte a transformar tus ideas en realidades efectivas y exitosas.
+                        <br>
+                      </p>
+                    </div>
+
+                    
+                  </div>
+                    <div class="u-container-layout u-valign-top u-container-layout-4">
+                      <p class="u-spacing-20 u-text u-text-5">
+                        <span style="font-weight: 700;">01.</span> Asesoría Integral<br>
+                        <span style="font-weight: 700;">02.</span> Recursos Especializados<br>
+                        <span style="font-weight: 700;">03.</span> Red de Colaboraciones<br>
+                        <span style="font-weight: 700;">04.</span>&nbsp;Monitoreo y Evaluación Continua<br>
+                        <span style="font-weight: 700;">05.</span> Formación y Capacitación<span style="font-weight: 700;">
+                          <br>06. 
+                        </span> Compromiso con la Sostenibilidad
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+         
+		<!--
+			=====================================================
+       Contacto
+     =====================================================
+			-->
+    <section id="contact">
+      <div class="contact-container">
+        <h2 class="contact-title">CONTACTO</h2>
+        <form action="#" class="contact-form">
+          <input type="email" placeholder="email" class="contact-input" required>
+          <button type="submit" class="contact-button">RECIBIR INFORMACION</button>
+        </form>
+      </div>
+    </section>
+    
+
+
+
+  <!-------------------
+         footer 
+  ------------------------->
+
+
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+      });
+  </script>
 
 </body>
 

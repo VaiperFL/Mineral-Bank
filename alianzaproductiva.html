@@ -5,39 +5,234 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <meta content="" name="description">
-  <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/LOGOS/logo mineatura.png" rel="icon">
-  <link href="assets/img/LOGOS/logo mineatura apple.png" rel="apple-touch-icon">
+  <link href="./assets/imagenes/LOGOS/logo mineatura.png" rel="icon">
+  <link href="./assets/imagenes/LOGOS/logo mineatura apple.png" rel="apple-touch-icon">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Bebas+Neue&display=swap" rel="stylesheet">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+   
+   <!-- Google Fonts -->
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
+  
+   <!--- CSS --->
+<link rel="stylesheet" href="./assets/alianza productiva/general.css" media="screen">
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icosns.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <!-- Template Main CSS File -->
-  <link href="assets/css/membresia.css" rel="stylesheet">
+
+
 </head>
-
-  <body class="index-page">
-    <!-- Contenedor para el header -->
+<body class="u-body u-xl-mode">
   <div id="header-container"></div>
 
-    <!-- Cargar el header -->
-    <div id="header-placeholder"></div>
-    <script>
-      fetch('header.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('header-placeholder').innerHTML = data;
-        });
-    </script>
- 
+  <script>
+    // Función para cargar el header
+    function loadHeader() {
+        const headerContainer = document.getElementById('header-container');
+
+        fetch('header.html') 
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Error al cargar el header');
+                }
+                return response.text();
+            })
+            .then(data => {
+                headerContainer.innerHTML = data; 
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    }
+
+    loadHeader(); 
+</script>
+
+
+		<!--
+			=====================================================
+        Título principal 
+     =====================================================
+			-->
+              </div>
+            </div>
+            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+          </div>
+        </nav>
+      </div></header>
+    <section class="u-clearfix u-image u-shading u-section-1" id="sec-6d0f" data-image-width="2626" data-image-height="1478">
+      <div class="u-clearfix u-sheet u-valign-middle-lg u-sheet-1">
+        <div class="custom-expanded u-container-style u-group u-shape-rectangle u-group-1">
+          <div class="u-container-layout u-container-layout-1">
+            <h1 class="u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="2000" data-animation-delay="0">Alianza </h1>
+            <h2 class="u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="2000" data-animation-delay="0">Productiva </h2>
+            <h5 class="u-text u-text-body-alt-color u-text-3"> Unión de Esfuerzos para Impulsar Proyectos de Impacto</h5>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+		<!--
+			=====================================================
+      Proyectos sostenibles 
+   	=====================================================
+			-->
+
+    <section class="u-clearfix u-container-align-center-lg u-container-align-center-md u-container-align-center-sm u-container-align-center-xs u-section-2" id="sec-a5c6">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h6 class="u-text u-text-default u-text-2"> Proyectos Sostenibles</h6>
+        <div class="u-border-2 u-border-grey-dark-1 u-expanded-width u-line u-line-horizontal u-line-1" data-animation-name="customAnimationIn" data-animation-duration="3000"></div>
+        <h2 class="u-text u-text-3">Desarrollo de proyectos.</h2>
+      </div>
+    </section>
+    <section class="u-clearfix u-section-3" id="sec-46bf">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-text u-text-default u-text-1"> Formar parte de la Alianza Productiva es una oportunidad para contribuir al desarrollo sostenible y el crecimiento económico. A través de la colaboración, las empresas e instituciones pueden maximizar su impacto social y económico, creando sinergias que beneficien a la comunidad.</p>
+        <div class="u-expanded-width u-list u-list-1">
+          <div class="u-repeater u-repeater-1">
+            <div class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-border-no-top u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-container-layout-1">
+                <h5 class="u-text u-text-default u-text-2"> Cómo Ser Parte</h5>
+                <p class="u-text u-text-3"> Para unirse a la Alianza, las empresas deben completar un proceso de inscripción que incluye la presentación de sus propuestas de proyectos y la aceptación de los términos de colaboración.</p>
+              </div>
+            </div>
+            <div class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-border-no-top u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-container-layout-2">
+                <h5 class="u-text u-text-default u-text-4"> Cómo Iniciar</h5>
+                <p class="u-text u-text-5"> Iniciar la participación implica asistir a reuniones informativas y talleres para entender mejor las oportunidades de inversión y colaboración disponibles.</p>
+              </div>
+            </div>
+            <div class="u-border-1 u-border-grey-40 u-border-no-left u-border-no-right u-border-no-top u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-container-layout-3">
+                <h5 class="u-text u-text-default u-text-6"> Compromiso Continuo</h5>
+                <p class="u-text u-text-7"> Mantener un compromiso continuo con la Alianza, participando activamente en las actividades, proyectos y evaluaciones de impacto, asegurando que se cumplan los objetivos establecidos.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+		<!--
+			=====================================================
+           Cuadro imagen 
+    	=====================================================
+			-->
+
+
+          <section class="u-clearfix u-image u-section-10" id="carousel_51b7">
+            <div class="u-clearfix u-sheet u-sheet-1">
+              <div class="u-align-right u-container-align-right u-container-style u-group u-group-1">
+                <div class="u-container-layout u-valign-middle u-container-layout-1">
+                  <h2 class="u-custom-font u-font-roboto-slab u-text u-text-body-alt-color u-text-1">Transforma tu Futuro </h2>
+                  <h5 class="u-custom-font u-font-courier-new u-text u-text-body-alt-color u-text-2">Oportunidades y Crecimiento</h5>
+                </div>
+              </div>
+            </div>
+          
+
+
+
+
+		<!--
+			=====================================================
+               Cuadro caracteristicas 
+    	=====================================================
+			-->
+
+    </section>
+    <section class="u-clearfix u-palette-3-base u-section-4" id="sec-e255">
+      <div class="u-clearfix u-sheet u-valign-middle-md u-valign-middle-sm u-valign-middle-xs u-sheet-1">
+        <div class="u-expanded-width u-list u-list-1">
+          <div class="u-repeater u-repeater-1">
+            <div class="u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-container-layout-1">
+                <h5 class="u-text u-text-default u-text-1"> Público General</h5>
+                <p class="u-text u-text-default u-text-2"> Abierto a todos los interesados en el desarrollo</p>
+              </div>
+            </div>
+            <div class="u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-container-layout-2">
+                <h5 class="u-text u-text-default u-text-3"> Empresas</h5>
+                <p class="u-text u-text-default u-text-4"> Inversores potenciales para proyectos sostenibles.</p>
+              </div>
+            </div>
+            <div class="u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-container-layout-3">
+                <h5 class="u-text u-text-default u-text-5"> Organizaciones</h5>
+                <p class="u-text u-text-default u-text-6"> Colaboración para maximizar impacto social.</p>
+              </div>
+            </div>
+            <div class="u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-container-layout-4">
+                <h5 class="u-text u-text-default u-text-7"> Emprendedores</h5>
+                <p class="u-text u-text-default u-text-8"> Oportunidades de apoyo y recursos para iniciar.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+
+
+
+		<!--
+			=====================================================
+       Caminos hacia el éxito y la colaboración 
+       	=====================================================
+			-->
+
+    <section class="business-section">
+      <div class="container">
+          <h1>Caminos hacia el Éxito y la Colaboración</h1>
+          <p class="subtitle">Ventajas Clave para Participantes y Colaboradores.</p>
+          <p class="description">
+            Formar parte de esta colaboración ofrece una serie de ventajas importantes que favorecen tanto el crecimiento de las empresas como el impacto positivo en la comunidad. Los participantes tienen acceso a recursos especializados que les permiten maximizar sus proyectos, además de fortalecer su compromiso con la responsabilidad social y ambiental. A través de una gestión transparente y confiable, se asegura que cada esfuerzo realizado contribuya al desarrollo sostenible y al éxito colectivo de todas las partes involucradas.
+          </p>
+          <div class="features">
+              <div class="feature-item">
+                  <div class="icon">
+                      <!--  ícono  -->
+                      <img src="./assets/alianza productiva/imagenes/personal-02.png" alt="Best Quality Project">
+                  </div>
+                  <h3>Especialistas Capacitados</h3>
+              </div>
+              
+              <div class="divider"></div>
+              
+              <div class="feature-item">
+                  <div class="icon">
+                      <img src="./assets/alianza productiva/imagenes/calidad-02.png" alt="Get Free Consultation">
+                  </div>
+                  <h3>Excelencia Garantizada</h3>
+              </div>
+          </div>
+          <a href="#" class="quote-button">mas informacion</a>
+      </div>
+  </section>
+
+
+
+  <!-------------------
+         footer 
+  ------------------------->
+
+
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+      });
+  </script>
+
+</body>
+
+</html>

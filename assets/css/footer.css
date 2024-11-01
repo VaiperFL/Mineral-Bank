@@ -1,7 +1,7 @@
 /*--------------------------------------------------------------
 # Global Footer
 --------------------------------------------------------------*/
-.footer {
+#footer.footer {
   --background-color: var(--alt-background-color);
   --default-color: #ffff;
   --heading-color: #ffff;
@@ -13,24 +13,24 @@
   position: relative;
 }
 
-.footer .icon {
+#footer .icon {
   color: var(--accent-color);
   margin-right: 15px;
   font-size: 24px;
   line-height: 0;
 }
 
-.footer h4 {
+#footer h4 {
   font-size: 16px;
   font-weight: 700;
   margin-bottom: 15px;
 }
 
-.footer .address p {
+#footer .address p {
   margin-bottom: 0px;
 }
 
-.footer .social-links a {
+#footer .social-links a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -44,21 +44,21 @@
   transition: 0.3s;
 }
 
-.footer .social-links a:hover {
+#footer .social-links a:hover {
   color: var(--accent-color);
   border-color: var(--accent-color);
 }
 
-.footer .copyright {
+#footer .copyright {
   padding-top: 20px;
   border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
-.footer .copyright p {
+#footer .copyright p {
   margin-bottom: 0;
 }
 
-.footer .credits {
+#footer .credits {
   margin-top: 5px;
   font-size: 13px;
 }

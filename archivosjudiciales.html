@@ -4,122 +4,237 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
+  
   <meta content="" name="description">
   <meta content="" name="keywords">
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- Favicons -->
+    <link href="assets/img/LOGOS/logo mineatura.png" rel="icon">
+    <link href="assets/img/LOGOS/logo mineatura apple.png" rel="apple-touch-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Bebas+Neue&display=swap" rel="stylesheet">
+  
+   <!-- css -->
+<link rel="stylesheet" href="assets/archivos judiciales/estructura.css"screen">
+       
+     
+    
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+</head>
+<body class="u-body u-xl-mode">
+  <div id="header-container"></div>
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icosns.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <script>
+    // Función para cargar el header
+    function loadHeader() {
+        const headerContainer = document.getElementById('header-container');
 
-  <!-- Template Main CSS File -->
-  <link href="assets/css/membresia.css" rel="stylesheet">
+        fetch('header.html') 
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Error al cargar el header');
+                }
+                return response.text();
+            })
+            .then(data => {
+                headerContainer.innerHTML = data; 
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    }
 
-  <body class="index-page">
-
-    <!-- Cargar el header -->
-    <div id="header-placeholder"></div>
-    <script>
-      fetch('header.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('header-placeholder').innerHTML = data;
-        });
-    </script>
-
-
-
-
-
-
-
-
-
-
-
+    loadHeader(); 
+</script>
 
 
 
+		<!--
+			=====================================================
+       seccion 1
+      =====================================================
+			-->
+   
+    <section class="u-clearfix u-image u-section-1" id="sec-9406">
+      <div class="u-clearfix u-sheet u-valign-bottom-xl u-sheet-1">
+        <div class="u-container-style u-group u-palette-1-dark-3 u-group-1">
+          <div class="u-container-layout u-valign-middle-md u-valign-middle-sm u-valign-middle-xs u-container-layout-1">
+            <h1 class="u-text u-title u-text-1">Archivos judiciales</h1>
+            <p class="u-large-text u-text u-text-variant u-text-2">Seguridad y Confidencialidad</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-section-2" id="sec-3d93">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-opacity u-opacity-80 u-palette-1-dark-3 u-shape u-shape-rectangle u-shape-1"></div>
+        <img src="./assets/archivos judiciales/imagenes/1.jpg" alt="" class="u-image u-image-default u-image-1" data-image-width="1021" data-image-height="1080">
+        <div class=" u-group-1">
+
+        </div>
+        <div class="u-container-style u-expanded-width-xs u-group u-group-2">
+          <div class="u-container-layout">
+            <div class="u-palette-1-light-2- u-shape-2"></div>
+            <h2 class="u-text u-text-3">Protección y Eficiencia en la Gestión Documental
+            </h2>
+            <p class="u-text u-text-4"> La organización de documentos es esencial para garantizar que toda la información esté disponible de manera rápida y precisa. Los sistemas de archivo estructurados permiten no solo la localización eficiente de documentos, sino también una reducción significativa en los errores administrativos.</p>
+            <a href="membresia.html" class="u-btn u-button-style u-btn-1">Membresias</a>
+          </div>
+        </div>
+          </div>
+        </div>
+      </div>
 
 
 
 
+		<!--
+			=====================================================
+           ICONO
+     =====================================================
+			-->
+  
+
+        <div class="icon-section">
+          <div class="icon-container">
+            <img src="./assets/archivos digitales solidos/imagenes/maxima seguridad-05.svg" alt="Icono 1">
+            <p>MAXIMA SEGURIDAD</p>
+          </div>
+          <div class="icon-container">
+            <img src="./assets/archivos digitales solidos/imagenes/encriptada-05.svg" alt="Icono 2">
+            <p>REGISTRO DE ACCESO</p>
+          </div>
+          <div class="icon-container">
+            <img src="./assets/archivos digitales solidos/imagenes/confiable-05 (1).svg" alt="Icono 3">
+            <p>CONFIABLE</p>
+          </div>
+          <div class="icon-container">
+            <img src="./assets/archivos digitales solidos/imagenes/archivossolidos-05.svg" alt="Icono 4">
+            <p>ACCESIBLE</p>
+          </div>
+          <div class="icon-container">
+            <img src="./assets/archivos digitales solidos/imagenes/24hs-05.svg" alt="Icono 4">
+            <p>24 Hrs</p>
+          </div>
+        </div>
+        
 
 
 
+		<!--
+			=====================================================
+      Numeracion
+    =====================================================
+			-->
+
+    </section>
+    <section class="u-clearfix u-section-4" id="sec-bb2e">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class=" u-shape-rectangle u-shape-1"></div>
+        <div class="u-align-left u-container-align-left u-container-style u-expanded-width-sm u-expanded-width-xs u-group u-group-1">
+          <div class="u-container-layout u-container-layout-1">
+            <div class=" u-shape-2"></div>
+            <h2 class="u-text u-text-1">¿Cómo tener acceso seguro a tus archivos?   <br> 
+            </h2>
+          </div>
+        </div>
+        <img class="u-image u-image-1" src="./assets/archivos digitales solidos/imagenes/apretonde mano.png">
+        <div class="u-align-left u-container-align-left u-container-style u-expanded-width-sm u-expanded-width-xs u-group u-group-2">
+          <div class="u-container-layout u-valign-middle-md u-valign-middle-sm">
+            <p class="u-text u-text-2">Adquirir 1 membresia </p>
+            <p class="u-text u-text-palette-2-base u-text-3">01</p>
+          </div>
+        </div>
+        <div class="u-align-left u-container-align-left u-container-style u-expanded-width-sm u-expanded-width-xs u-group u-group-3">
+          <div class="u-container-layout u-valign-middle-md u-valign-middle-sm">
+            <p class="u-text u-text-4">Elegir el tipo de caja </p>
+            <p class="u-text u-text-palette-2-base u-text-5">02</p>
+          </div>
+        </div>
+        <div class="u-align-left u-container-align-left u-container-style u-expanded-width-sm u-expanded-width-xs u-group u-group-4">
+          <div class="u-container-layout u-valign-middle-md u-valign-middle-sm">
+            <p class="u-text u-text-6">Traer el material a resguardar</p>
+            <p class="u-text u-text-palette-2-base u-text-7">03</p>
+          </div>
+        </div>
+      </div>
 
 
+      
+		<!--
+			=====================================================
+           seccion inferior
+          =====================================================
+			-->
+    </section>
+    <section class="u-clearfix u-grey-5 u-section-5" id="sec-e326">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-clearfix u-expanded-width u-gutter-30 u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-row">
+              <div class="u-size-30 u-size-60-md">
+                <div class="u-layout-col">
+                  <div class="u-size-30">
+                    <div class="u-layout-row">
+                      <div class="u-container-style u-image u-layout-cell u-right-cell u-size-30 u-image-1">
+                        <div class="u-container-layout"></div>
+                      </div>
+                      <div class="u-container-style u-image u-layout-cell u-size-30 u-image-2">
+                        <div class="u-container-layout"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="u-size-30">
+                    <div class="u-layout-row">
+                      <div class="u-container-style u-image u-layout-cell u-right-cell u-size-30 u-image-3">
+                        <div class="u-container-layout"></div>
+                      </div>
+                      <div class="u-container-style u-image u-layout-cell u-size-30 u-image-4">
+                        <div class="u-container-layout"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="u-size-30 u-size-60-md">
+                <div class="u-layout-col">
+                  <div class="u-container-style u-layout-cell u-left-cell u-size-60 u-layout-cell-5">
+                    <div class="u-container-layout">
+                      <div class="u-palette-1-light-2 u-shape u-shape-rectangle u-shape-1"></div>
+                      <h2 class="u-text u-text-1">  <br><br> Seguridad avanzada en el resguardo de tus archivos.
+                      </h2>
+                      <p class="u-text u-text-2">La confidencialidad es vital en la gestión documental; por eso, se implementan sistemas de encriptación y acceso restringido para proteger los datos sensibles. <br>
+                        <br> Mantener un acceso restringido a la documentación legal es fundamental para preservar la integridad de los procesos judiciales. Solo el personal autorizado puede interactuar con ciertos documentos críticos, lo cual evita filtraciones y garantiza que la información se maneje de forma ética y responsable. Además, se implementan sistemas de registro que monitorean quién accede a qué información y en qué momento, proporcionando una trazabilidad completa que permite supervisar el uso de estos documentos y detectar irregularidades si llegaran a ocurrir.<br>
+                        <br> ¿Qué esperas para obtener la tuya?
+                      </p>
+                      <a href="membresia.html" class="u-btn u-button-style u-btn-1">aprende más</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="height: 100px;"></div> <!-- Ajusta la altura según sea necesario -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    </section>
 
 
 
     
-<div id="footer-placeholder"></div>
-<script>
-  fetch('footer.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('footer-placeholder').innerHTML = data;
-    });
-</script>
-<a href="membresia.html">
-
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  
-    <!-- Main JS File -->
-    <script src="assets/js/main.js"></script>
+		<!--
+			=====================================================
+         footer 
+     =====================================================
+			-->
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+      });
+  </script>
 
 </body>
 
