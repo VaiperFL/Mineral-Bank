@@ -11,40 +11,83 @@
   <!-- Favicons -->
   <link href="assets/img/LOGOS/logo mineatura.png" rel="icon">
   <link href="assets/img/LOGOS/logo mineatura apple.png" rel="apple-touch-icon">
+
+    <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Bebas+Neue&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="./assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="./assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="./assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="./assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="./assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="./assets/css/header.css" rel="stylesheet">
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/scrollbutton.css" rel="stylesheet">
 
+
+  
 </head>
 <body>
 
   
 			<!-- 
 			=============================================
-           Contenedor para el header
+          HEADER
 			============================================== 
 			-->
 
-  <div id="header-container"></div>
-      <!-- Cargar el header -->
-      <div id="header-placeholder"></div>
-      <script>
-        fetch('header.html')
-          .then(response => response.text())
-          .then(data => {
-            document.getElementById('header-placeholder').innerHTML = data;
-          });
-      </script>
+
+      <header id="header" class="header d-flex align-items-center sticky-top">
+        <div class="container position-relative d-flex align-items-center justify-content-between">
+          <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+            <h1 class="sitename" style="font-family: 'Conneqt', sans-serif;">Mineral Bank</h1>
+          </a>
       
-  <!-- Resto de tu contenido principal -->
+          <nav id="navmenu" class="navmenu d-flex align-items-center">
+            <ul>
+              <li><a href="index.html" class="active">Inicio</a></li>
+              <li class="dropdown"><a href="#menu"><span>Servicios</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="cajadeseguridad.html">Cajas de seguridad</a></li>
+                  <li><a href="archivosdigitalessolidos.html">Archivos digitales sólidos</a></li>
+                  <li><a href="archivosescriturales.html">Archivos escriturales</a></li>
+                  <li><a href="archivosjudiciales.html">Archivos judiciales</a></li>
+                  <li><a href="restaurante.html">Restaurante</a></li>
+                  <li><a href="cafeteria.html">Cafetería</a></li>
+                  <li><a href="calendariodeevento.html">Calendario de eventos</a></li>
+                  <li><a href="membresia.html">Membresía</a></li>
+                  <li><a href="saladereunionconfidencial.html">Sala de reunión</a></li>
+                  <li><a href="alianzaproductiva.html">Alianza productiva</a></li>
+                  <li><a href="fideicomisoproductivo.html">Fideicomiso productivo</a></li>
+                  <li><a href="desarollodeproyecto.html">Desarrollo de proyectos</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href=""><span>Eventos</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="calendariodeevento.html">Calendario de eventos</a></li>
+                  <li><a href="solicitarpromociondeeventos.html">Solicitar promoción de eventos</a></li>
+                </ul>
+              </li>
+              <li><a href="noticias.html">Noticias</a></li>
+              <li><a href="galeria.html">Galería</a></li>
+              <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            
+            <!-- Botón de Inicio de Sesión -->
+            <a href="login.html" class="btn-login" style="margin-left: 20px; padding: 10px 20px; background-color: #c91212; color: white; border-radius: 5px; text-decoration: none;">Inicio de Sesión</a>
+          </nav>
+        </div>
+      </header>
+      
+
+
+
+  <!-- Resto del contenido  -->
+
   <main class="main">
     <!-- Hero Section -->
     <section id="hero" class="hero section">
@@ -66,6 +109,7 @@
           </div>
         </div>
       </div>
+
     </section><!-- /Hero Section -->
   </main>
 
@@ -578,16 +622,18 @@
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
 
+  
+   
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="./assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="./assets/vendor/php-email-form/validate.js"></script>
+  <script src="./assets/vendor/aos/aos.js"></script>
+  <script src="./assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="./assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="./assets/vendor/swiper/swiper-bundle.min.js"></script>
 
   <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="./assets/js/main.js"></script>
 
 
 </body>

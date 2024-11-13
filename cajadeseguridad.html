@@ -4,146 +4,184 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
+  
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
- 
+  <link href="assets/img/LOGOS/logo mineatura.png" rel="icon">
+  <link href="assets/img/LOGOS/logo mineatura apple.png" rel="apple-touch-icon">
 
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Bebas+Neue&display=swap" rel="stylesheet">
 
-
-  <!-- CSS  -->
+  <!-- Vendor CSS Files -->
+  <link href="./assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="./assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="./assets/css/header.css" rel="stylesheet">
   <link href="./assets/caja de seguridad/principal.css" rel="stylesheet">
+  
+</head>
 
-  <body class="index-page">
+<body class="index-page">
 
-    <!-- Cargar el header -->
-    <div id="header-placeholder"></div>
-    <script>
-      fetch('header.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('header-placeholder').innerHTML = data;
-        });
-    </script>
 
-    
-
-		<!--
-			=====================================================
-				CAJA DE SEGURIDAD
-			=====================================================
+  
+			<!-- 
+			=============================================
+          HEADER
+			============================================== 
 			-->
 
-      <div class="why-we-best-section">
-        <div class="container">
-          <div class="theme-title-one">
-            <h2>CAJAS DE SEGURIDAD</h2>
-            <p>Nuestro objetivo principal es apoyar y promover la protección de bienes valiosos, ayudando a los usuarios a obtener la máxima 
-              tranquilidad y seguridad mediante el uso de cajas de seguridad de alta calidad.</p>
-          </div>
-          <div class="row">
-            <div class="col-lg-6 col-12">
-              <!-- Contenedor de contenido con fondo blanco -->
-              <div class="best-content-wrapper">
-                <ul class="best-list-item">
-                  <li>
-                    <img src="./assets/caja de seguridad/imagenes/maxima seguirdad-02.svg" class="icon" alt="Icon">
-                    <div class="content">
-                      <h5>Maxima seguridad</h5>
-                      <p> Tecnología avanzada y sistemas de protección robustos que garantizan la integridad de los activos y la información de nuestros clientes. </p>
-                    </div>
-                  </li>
-                  <li>
-                    <img src="./assets/caja de seguridad/imagenes/24hr-02.svg" class="icon" alt="Icon">
-                    <div class="content">
-                      <h5>Soporte las 24 Hrs</h5>
-                      <p>Entendemos que las necesidades de nuestros clientes pueden surgir en cualquier momento.Por eso ofrecemos soporte las 24 horas del día, los 7 días de la semana.</p>
-                    </div>
-                  </li>
-                  <li>
-                    <img src="./assets/caja de seguridad/imagenes/calidad.svg" class="icon" alt="Icon">
-                    <div class="content">
-                      <h5>Calidad y resguardo</h5>
-                      <p> Ofrecemos servicios que no solo cumplen con los más altos estándares, sino que también protegen los intereses de nuestros clientes, promoviendo la proteccion de bienes valiosos, con una maxima tranquilidad mediante el uso de cajas de seguridad de alta calidad. </p>
-                    </div>
-                  </li>
+
+      <header id="header" class="header d-flex align-items-center sticky-top">
+        <div class="container position-relative d-flex align-items-center justify-content-between">
+          <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+            <h1 class="sitename" style="font-family: 'Conneqt', sans-serif;">Mineral Bank</h1>
+          </a>
+      
+          <nav id="navmenu" class="navmenu d-flex align-items-center">
+            <ul>
+              <li><a href="index.html" class="active">Inicio</a></li>
+              <li class="dropdown"><a href="#menu"><span>Servicios</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="cajadeseguridad.html">Cajas de seguridad</a></li>
+                  <li><a href="archivosdigitalessolidos.html">Archivos digitales sólidos</a></li>
+                  <li><a href="archivosescriturales.html">Archivos escriturales</a></li>
+                  <li><a href="archivosjudiciales.html">Archivos judiciales</a></li>
+                  <li><a href="restaurante.html">Restaurante</a></li>
+                  <li><a href="cafeteria.html">Cafetería</a></li>
+                  <li><a href="calendariodeevento.html">Calendario de eventos</a></li>
+                  <li><a href="membresia.html">Membresía</a></li>
+                  <li><a href="saladereunionconfidencial.html">Sala de reunión</a></li>
+                  <li><a href="alianzaproductiva.html">Alianza productiva</a></li>
+                  <li><a href="fideicomisoproductivo.html">Fideicomiso productivo</a></li>
+                  <li><a href="desarollodeproyecto.html">Desarrollo de proyectos</a></li>
                 </ul>
-              </div>
-            </div>
-            <div class="col-lg-6 col-12 best-image">
-              <img src="./assets/caja de seguridad/imagenes/principal.jpg" alt="Best Services" class="img-fluid">
-            </div>
+              </li>
+              <li class="dropdown"><a href=""><span>Eventos</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="calendariodeevento.html">Calendario de eventos</a></li>
+                  <li><a href="solicitarpromociondeeventos.html">Solicitar promoción de eventos</a></li>
+                </ul>
+              </li>
+              <li><a href="noticias.html">Noticias</a></li>
+              <li><a href="galeria.html">Galería</a></li>
+              <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            
+            <!-- Botón de Inicio de Sesión -->
+            <a href="login.html" class="btn-login" style="margin-left: 20px; padding: 10px 20px; background-color: #c91212; color: white; border-radius: 5px; text-decoration: none;">Inicio de Sesión</a>
+          </nav>
+        </div>
+      </header>
+      
+
+
+
+  <!--
+    =====================================================
+      CAJA DE SEGURIDAD
+    =====================================================
+  -->
+
+  <div class="why-we-best-section">
+    <div class="container">
+      <div class="theme-title-one">
+        <h2>CAJAS DE SEGURIDAD</h2>
+        <p>Nuestro objetivo principal es apoyar y promover la protección de bienes valiosos, ayudando a los usuarios a obtener la máxima tranquilidad y seguridad mediante el uso de cajas de seguridad de alta calidad.</p>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 col-12">
+          <!-- Contenedor de contenido con fondo blanco -->
+          <div class="best-content-wrapper">
+            <ul class="best-list-item">
+              <li>
+                <img src="./assets/caja de seguridad/imagenes/maxima seguirdad-02.svg" class="icon" alt="Icon">
+                <div class="content">
+                  <h5>Maxima seguridad</h5>
+                  <p>Tecnología avanzada y sistemas de protección robustos que garantizan la integridad de los activos y la información de nuestros clientes.</p>
+                </div>
+              </li>
+              <li>
+                <img src="./assets/caja de seguridad/imagenes/24hr-02.svg" class="icon" alt="Icon">
+                <div class="content">
+                  <h5>Soporte las 24 Hrs</h5>
+                  <p>Entendemos que las necesidades de nuestros clientes pueden surgir en cualquier momento. Por eso ofrecemos soporte las 24 horas del día, los 7 días de la semana.</p>
+                </div>
+              </li>
+              <li>
+                <img src="./assets/caja de seguridad/imagenes/calidad.svg" class="icon" alt="Icon">
+                <div class="content">
+                  <h5>Calidad y resguardo</h5>
+                  <p>Ofrecemos servicios que no solo cumplen con los más altos estándares, sino que también protegen los intereses de nuestros clientes, promoviendo la protección de bienes valiosos con una máxima tranquilidad mediante el uso de cajas de seguridad de alta calidad.</p>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
-      </div>
-      
-
-		<!--
-			=====================================================
-				3 fotos
-			=====================================================
-			-->
-
-      <div class="photo-section">
-        <div class="photo-item">
-          <img src="./assets/caja de seguridad/imagenes/13.jpg" alt="Descripción de la imagen 1">
-          <p>Fabricadas con materiales de alta resistencia, de gran durabilidad y resistencia a impactos. Son ideales para proteger objetos de valor en un lugar discreto y seguro</p>
-        </div>
-        <div class="photo-item">
-          <img src="./assets/caja de seguridad/imagenes/1903.jpg" alt="Descripción de la imagen 2">
-          <p>Cerraduras de alta seguridad, que pueden incluir combinaciones mecanicas, cerraduras electronicas y sistemas biometricos</p>
-        </div>
-        <div class="photo-item">
-          <img src="./assets/caja de seguridad/imagenes/entradavehicular.1199.jpg" alt="Descripción de la imagen 3">
-          <p> ofrecen la máxima protección para tus bienes más valiosos. Ya sea que necesites resguardar documentos importantes, joyas o cualquier objeto de valor, nuestras instalaciones garantizan privacidad y seguridad las 24 horas del día. </p> <!-- Puedes cambiar este texto si es necesario -->
+        <div class="col-lg-6 col-12 best-image">
+          <img src="./assets/caja de seguridad/imagenes/principal.jpg" alt="Best Services" class="img-fluid">
         </div>
       </div>
-
-      
-	<!--
-			=====================================================
-			contactanos
-			=====================================================
-			-->
-
-<!-- Sección de títulos, subtítulos y botón -->
-<div class="two-column-section">
-  <div class="text-section">
-    <!-- Primer Título y subtítulo -->
-    <h2>Protege lo que más valoras</h2>
-    <p>Te ofrecemos cajas de seguridad diseñadas para resguardar lo que más te importa con alta resistencia y tecnología de punta.</p>
-
-    <!-- Segundo Título y subtítulo -->
-    <h2>No dejes lo importante al azar</h2>
-    <p>Asegura tu futuro ya con nuestros servicios personalizados y de máxima confianza.</p>
-
-    <!-- Botón de contacto -->
-    <a href="contacto.html" class="contact-button">Contáctanos</a>
+    </div>
   </div>
 
-  <!-- Imagen a la derecha del texto -->
-  <div class="image-section">
-    <img src="./assets/caja de seguridad/imagenes/11.jpg" alt="Descripción de la imagen">
+  <!--
+    =====================================================
+      3 fotos
+    =====================================================
+  -->
+
+  <div class="photo-section">
+    <div class="photo-item">
+      <img src="./assets/caja de seguridad/imagenes/13.jpg" alt="Descripción de la imagen 1">
+      <p>Fabricadas con materiales de alta resistencia, de gran durabilidad y resistencia a impactos. Son ideales para proteger objetos de valor en un lugar discreto y seguro.</p>
+    </div>
+    <div class="photo-item">
+      <img src="./assets/caja de seguridad/imagenes/1903.jpg" alt="Descripción de la imagen 2">
+      <p>Cerraduras de alta seguridad, que pueden incluir combinaciones mecánicas, cerraduras electrónicas y sistemas biométricos.</p>
+    </div>
+    <div class="photo-item">
+      <img src="./assets/caja de seguridad/imagenes/entradavehicular.1199.jpg" alt="Descripción de la imagen 3">
+      <p>Ofrecen la máxima protección para tus bienes más valiosos. Ya sea que necesites resguardar documentos importantes, joyas o cualquier objeto de valor, nuestras instalaciones garantizan privacidad y seguridad las 24 horas del día.</p>
+    </div>
   </div>
-</div>
 
+  <!--
+    =====================================================
+    Contáctanos
+    =====================================================
+  -->
 
-<div id="footer-placeholder"></div>
-<script>
-  fetch('footer.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('footer-placeholder').innerHTML = data;
-    });
-</script>
-<a href="membresia.html">
+  <div class="two-column-section">
+    <div class="text-section">
+      <h2>Protege lo que más valoras</h2>
+      <p>Te ofrecemos cajas de seguridad diseñadas para resguardar lo que más te importa con alta resistencia y tecnología de punta.</p>
 
+      <h2>No dejes lo importante al azar</h2>
+      <p>Asegura tu futuro ya con nuestros servicios personalizados y de máxima confianza.</p>
+
+      <a href="contacto.html" class="contact-button">Contáctanos</a>
+    </div>
+
+    <div class="image-section">
+      <img src="./assets/caja de seguridad/imagenes/11.jpg" alt="Descripción de la imagen">
+    </div>
+  </div>
+
+  <!-- Cargar el footer -->
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+      });
+  </script>
+
+  <a href="membresia.html">Membresía</a>
 
 </body>
-
 </html>

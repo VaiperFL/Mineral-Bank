@@ -1,55 +1,11 @@
-
-
-
-/*  Hero Section */
-#hero h1 {
-  font-size: 4rem; 
-  line-height: 1.2; /* Espaciado entre líneas */
-  white-space: nowrap; /* Asegura que el texto no se divida en varias líneas */
-  margin: 0; /* Elimina el margen por defecto */
-  margin-left: -70px; /* Ajusta este valor para mover el texto más a la izquierda */
-}
-
-.tagline {
-  display: block;
-  margin-left: -100px; /* Ajusta el valor según sea necesario */
-  margin-top: 20px; /* Ajusta el valor para el espacio deseado */
-}
-
-
-
-/* Definir Montserrat */
-@font-face {
-  font-family: 'Montserrat';
-  src: url('assets/fonts/Montserrat-Regular.woff2') format('woff2'),
-       url('assets/fonts/Montserrat-Regular.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-}
-/* Definir Montserrat */
-@font-face {
-  font-family: 'Montserrat';
-  src: url('assets/fonts/Montserrat-Regular.woff2') format('woff2'),
-       url('assets/fonts/Montserrat-Regular.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-}
-
 /* Aplicar Montserrat a todo el contenido del navmenu */
 #navmenu {
   font-family: 'Montserrat', sans-serif;
 }
 
-
+/* Si necesitas aplicar estilos adicionales */
 #navmenu a {
   font-family: 'Montserrat', sans-serif;
-}
-
-
-/* seguridad, innovacion etc */
-h1 span {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2.5rem; /* Ajusta el tamaño según sea necesario */
 }
 
 #header{
@@ -68,6 +24,15 @@ h1 span {
   --nav-dropdown-hover-color: #ce1212; 
 }
 
+/* Colores de navegación - Las siguientes variables de color se usan específicamente para el menú de navegación. Son distintas de los colores globales para permitir más opciones de personalización */
+:root {
+  --nav-color: #000000;  /* El color predeterminado de los enlaces del menú de navegación principal */
+  --nav-hover-color: #dd0a0a; /* Aplicado a los enlaces del menú de navegación principal cuando se pasa el ratón sobre ellos o están activos */
+  --nav-dropdown-background-color: #ffffff; /* Usado como color de fondo para los elementos desplegables que aparecen al pasar el ratón sobre los elementos de navegación principales */
+  --nav-dropdown-color: #000000; /* Usado para los enlaces de navegación de los elementos desplegables en el menú de navegación */
+  --nav-dropdown-hover-color: #ce1212; /* Similar a --nav-hover-color, este color se aplica a los enlaces de navegación desplegables cuando se pasa el ratón sobre ellos */
+}
+
 
 
 :root {
@@ -79,20 +44,13 @@ h1 span {
   scroll-behavior: smooth;
 }
 
+/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #000000;  
-  --nav-hover-color: #dd0a0a; 
-  --nav-dropdown-background-color: #ffffff; 
-  --nav-dropdown-color: #000000; 
-  --nav-dropdown-hover-color: #ce1212;
-}
-
-
-
-
-
-:root {
-  scroll-behavior: smooth;
+  --nav-color: #000000;  /* El color predeterminado de los enlaces principales del menú de navegación */
+  --nav-hover-color: #dd0a0a; /* Aplicado a los enlaces principales del menú de navegación cuando se pasa el cursor sobre ellos o están activos */
+  --nav-dropdown-background-color: #ffffff; /* Utilizado como el color de fondo para los elementos desplegables que aparecen al pasar el cursor sobre los elementos de navegación principales */
+  --nav-dropdown-color: #000000; /* Usado para los enlaces de navegación de los elementos desplegables en el menú de navegación */
+  --nav-dropdown-hover-color: #ce1212; /* Similar a --nav-hover-color, este color se aplica a los enlaces de navegación desplegables cuando se pasa el cursor sobre ellos */
 }
 
 /*--------------------------------------------------------------
@@ -124,13 +82,17 @@ h5,
 h6 {
   color: var(--heading-color);
 }
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
 
 .header {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background-color: #ffffff; /* Cambia --background-color a un color sólido */
   padding: 20px 0;
-  transition: all 0.5s;
   z-index: 997;
+  position: fixed; /* Mantiene el header estático en la parte superior */
+  width: 100%; /* Para ocupar todo el ancho de la página */
 }
 
 .header .logo {
@@ -453,4 +415,20 @@ h6 {
   .mobile-nav-active .navmenu>ul {
     display: block;
   }
+}
+.menu .tab-content .tab-header {
+  padding: 30px 0;
+}
+
+.menu .tab-content .tab-header p {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  margin-bottom: 0;
+}
+
+.menu .tab-content .tab-header h3 {
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--accent-color);
 }

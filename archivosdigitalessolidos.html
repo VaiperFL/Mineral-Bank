@@ -11,9 +11,14 @@
     <!-- Favicons -->
     <link href="assets/img/LOGOS/logo mineatura.png" rel="icon">
     <link href="assets/img/LOGOS/logo mineatura apple.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Bebas+Neue&display=swap" rel="stylesheet">
   
    <!-- css -->
+   <link href="./assets/css/header.css" rel="stylesheet">
+   <link href="./assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+   <link href="./assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
 <link rel="stylesheet" href="assets/archivos digitales solidos/archivosdigitalessolidos.css" media="screen">
 
     
@@ -21,31 +26,58 @@
 
 </head>
 <body class="u-body u-xl-mode">
-  <div id="header-container"></div>
 
-  <script>
-    // Función para cargar el header
-    function loadHeader() {
-        const headerContainer = document.getElementById('header-container');
 
-        fetch('header.html') 
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Error al cargar el header');
-                }
-                return response.text();
-            })
-            .then(data => {
-                headerContainer.innerHTML = data; 
-            })
-            .catch(error => {
-                console.error(error);
-            });
-    }
+			<!-- 
+			=============================================
+          HEADER
+			============================================== 
+			-->
 
-    loadHeader(); 
-</script>
 
+      <header id="header" class="header d-flex align-items-center sticky-top">
+        <div class="container position-relative d-flex align-items-center justify-content-between">
+          <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+            <h1 class="sitename" style="font-family: 'Conneqt', sans-serif;">Mineral Bank</h1>
+          </a>
+      
+          <nav id="navmenu" class="navmenu d-flex align-items-center">
+            <ul>
+              <li><a href="index.html" class="active">Inicio</a></li>
+              <li class="dropdown"><a href="#menu"><span>Servicios</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="cajadeseguridad.html">Cajas de seguridad</a></li>
+                  <li><a href="archivosdigitalessolidos.html">Archivos digitales sólidos</a></li>
+                  <li><a href="archivosescriturales.html">Archivos escriturales</a></li>
+                  <li><a href="archivosjudiciales.html">Archivos judiciales</a></li>
+                  <li><a href="restaurante.html">Restaurante</a></li>
+                  <li><a href="cafeteria.html">Cafetería</a></li>
+                  <li><a href="calendariodeevento.html">Calendario de eventos</a></li>
+                  <li><a href="membresia.html">Membresía</a></li>
+                  <li><a href="saladereunionconfidencial.html">Sala de reunión</a></li>
+                  <li><a href="alianzaproductiva.html">Alianza productiva</a></li>
+                  <li><a href="fideicomisoproductivo.html">Fideicomiso productivo</a></li>
+                  <li><a href="desarollodeproyecto.html">Desarrollo de proyectos</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href=""><span>Eventos</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="calendariodeevento.html">Calendario de eventos</a></li>
+                  <li><a href="solicitarpromociondeeventos.html">Solicitar promoción de eventos</a></li>
+                </ul>
+              </li>
+              <li><a href="noticias.html">Noticias</a></li>
+              <li><a href="galeria.html">Galería</a></li>
+              <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            
+            <!-- Botón de Inicio de Sesión -->
+            <a href="login.html" class="btn-login" style="margin-left: 20px; padding: 10px 20px; background-color: #c91212; color: white; border-radius: 5px; text-decoration: none;">Inicio de Sesión</a>
+          </nav>
+        </div>
+      </header>
+      
 
 
 		<!--
