@@ -1,0 +1,55 @@
+
+
+   /*------ LOOP ---------*/
+
+
+/* Contenedor principal */
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #f3f3f3;
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* Estilo del texto en movimiento */
+.marquee-text {
+  display: inline-block;
+  animation: marquee 15s linear infinite;
+  font-size: 24px;
+  color: #333;
+}
+
+/* Contenedor principal */
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #f3f3f3;
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* Estilo del texto en movimiento */
+.marquee-text {
+  display: inline-block;
+  animation: marquee 20s linear infinite;
+  font-size: 24px;
+  color: #333;
+}
+
+/* Animación del loop */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+/* Contenedor principal */
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #f3f3f3;
+  padding: 20px 0;
+  text-align: center;
+}
+
+
+

@@ -1,3 +1,66 @@
+
+
+/* Estilos para la sección de contacto */
+#contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  background-color: #f2f2f2; /* Puedes ajustar el color de fondo si lo deseas */
+}
+
+.contact-container {
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333; /* Ajusta el color del texto */
+  letter-spacing: 0.1em;
+}
+
+/* Estilos para el formulario */
+.contact-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-input {
+  padding: 15px 30px;
+  border-radius: 50px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  width: 300px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.contact-input:focus {
+  border-color: #000;
+}
+
+/* Estilos para el botón */
+.contact-button {
+  padding: 15px 30px;
+  margin-left: 10px;
+  background-color: #333; /* Color de fondo del botón */
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: #555;
+}
+
+
+
 earfix::after {
     clear: both;
     display: block;

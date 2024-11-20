@@ -1,7 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
 
-<link rel="stylesheet" href="assets/cafeteria/cafeteria.css">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/LOGOS/logo mineatura.png" rel="icon">
+  <link href="assets/img/LOGOS/logo mineatura apple.png" rel="apple-touch-icon">
 
 
+ <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Bebas+Neue&display=swap" rel="stylesheet">
+
+  <!--  CSS  -->
+  <link href="./assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="./assets/css/header.css" rel="stylesheet">
+  <link href="./assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+ <link rel="stylesheet" href="./assets/restaurante/restaurante.css">
+ <script src="./assets/restaurante/java.js"></script>
 
 
 
@@ -9,30 +29,471 @@
 </head>
 <body>
 
+    
+			<!-- 
+			=============================================
+          HEADER
+			============================================== 
+			-->
 
-    <!-- Sección de Servicios -->
-    <section class="services">
-        <div class="service-card">
-            <div class="service-icon">
-                <i class="fas fa-mug-hot"></i>
-            </div>
-            <h3>El Mejor Café</h3>
-            <p>Seleccionamos los mejores granos para ofrecerte un café inigualable en cada taza.</p>
-        </div>
-        <div class="service-card">
-            <div class="service-icon">
-                <i class="fas fa-leaf"></i>
-            </div>
-            <h3>Ambiente Natural</h3>
-            <p>Disfruta de un entorno rodeado de naturaleza, perfecto para relajarte y disfrutar.</p>
-        </div>
-        <div class="service-card">
-            <div class="service-icon">
-                <i class="fas fa-cookie-bite"></i>
-            </div>
-            <h3>Delicias Gourmet</h3>
-            <p>Postres y repostería artesanal para complementar tu experiencia de café.</p>
+
+            <header id="header" class="header d-flex align-items-center sticky-top">
+                <div class="container position-relative d-flex align-items-center justify-content-between">
+                  <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+                    <h1 class="sitename" style="font-family: 'Conneqt', sans-serif;">Mineral Bank</h1>
+                  </a>
+              
+                  <nav id="navmenu" class="navmenu d-flex align-items-center">
+                    <ul>
+                      <li><a href="index.html" class="active">Inicio</a></li>
+                      <li class="dropdown"><a href="#menu"><span>Servicios</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                          <li><a href="cajadeseguridad.html">Cajas de seguridad</a></li>
+                          <li><a href="archivosdigitalessolidos.html">Archivos digitales sólidos</a></li>
+                          <li><a href="archivosescriturales.html">Archivos escriturales</a></li>
+                          <li><a href="archivosjudiciales.html">Archivos judiciales</a></li>
+                          <li><a href="restaurante.html">Restaurante</a></li>
+                          <li><a href="cafeteria.html">Cafetería</a></li>
+                          <li><a href="calendariodeevento.html">Calendario de eventos</a></li>
+                          <li><a href="membresia.html">Membresía</a></li>
+                          <li><a href="saladereunionconfidencial.html">Sala de reunión</a></li>
+                          <li><a href="alianzaproductiva.html">Alianza productiva</a></li>
+                          <li><a href="fideicomisoproductivo.html">Fideicomiso productivo</a></li>
+                          <li><a href="desarollodeproyecto.html">Desarrollo de proyectos</a></li>
+                        </ul>
+                      </li>
+                      <li class="dropdown"><a href=""><span>Eventos</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                          <li><a href="calendariodeevento.html">Calendario de eventos</a></li>
+                          <li><a href="solicitarpromociondeeventos.html">Solicitar promoción de eventos</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="noticias.html">Noticias</a></li>
+                      <li><a href="galeria.html">Galería</a></li>
+                      <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                    <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+                    
+                    <!-- Botón de Inicio de Sesión -->
+                    <a href="login.html" class="btn-login" style="margin-left: 20px; padding: 10px 20px; background-color: #c91212; color: white; border-radius: 5px; text-decoration: none;">Inicio de Sesión</a>
+                  </nav>
+                </div>
+              </header>
+              
+        
+        
+        
+			<!-- 
+			=============================================
+                     RESTAURANTE
+			============================================== 
+			-->
+    <section class="restaurant-section">
+        <div class="overlay">
+            <h1>RESTAURANTE</h1>
+            <a href="#" class="menu-button">DESCARGAR MENU</a>
         </div>
     </section>
 
-      
+    <div class="menu-container">
+        <div class="menu-title">
+            <h2>MENU</h2>
+            <div class="title-underline"></div>
+        </div>
+
+        
+			<!-- 
+			=============================================
+                     CATEGIRUAS DEL MENU
+			============================================== 
+			-->
+            <!-- Contenedor Principal del Menú -->
+<div class="menu-container">
+
+    <!-- Categorías del Menú -->
+    <div class="menu-categories">
+        <div class="category-item active" data-category="menu-del-dia">
+            <span>MENÚ </span>
+        </div>
+        <div class="category-item" data-category="menu">
+            <span>MENÚ DEL DÍA</span>
+        </div>
+        <div class="category-item" data-category="desayuno-merienda">
+            <span>DESAYUNO/MERIENDA</span>
+        </div>
+        <div class="category-item" data-category="bebidas">
+            <span>BEBIDAS</span>
+        </div>
+    </div>
+
+
+   <!-- MENÚ -->
+<div class="menu-items hidden" id="menu-del-dia">
+    <div class="menu-item">
+        <img src="./assets/restaurante/imagenes/comida/3.png" alt="Carne con huevo">
+        <div class="item-details">
+            <h3 class="item-title">Carne con huevo</h3>
+            <p class="item-description">Carne condimentada con huevo, cebolla, tomate, cilantro y pimientos.</p>
+        </div>
+        <p class="item-price">$15.99</p>
+    </div>
+    <div class="menu-item">
+        <img src="./assets/restaurante/imagenes/comida/3.png" alt="Carne con huevo">
+        <div class="item-details">
+            <h3 class="item-title">Carne con huevo</h3>
+            <p class="item-description">Carne condimentada con huevo, cebolla, tomate, cilantro y pimientos.</p>
+        </div>
+        <p class="item-price">$10.99</p>
+    </div>
+    <div class="menu-item">
+        <img src="./assets/restaurante/imagenes/comida/3.png" alt="Carne con huevo">
+        <div class="item-details">
+            <h3 class="item-title">Carne con huevo</h3>
+            <p class="item-description">Carne condimentada con huevo, cebolla, tomate, cilantro y pimientos.</p>
+        </div>
+        <p class="item-price">$10.99</p>
+    </div>
+    <div class="menu-item">
+        <img src="./assets/restaurante/imagenes/comida/3.png" alt="Carne con huevo">
+        <div class="item-details">
+            <h3 class="item-title">Carne con huevo</h3>
+            <p class="item-description">Carne condimentada con huevo, cebolla, tomate, cilantro y pimientos.</p>
+        </div>
+        <p class="item-price">$10.99</p>
+    </div>
+    <div class="menu-item">
+        <img src="./assets/restaurante/imagenes/comida/3.png" alt="Carne con huevo">
+        <div class="item-details">
+            <h3 class="item-title">Carne con huevo</h3>
+            <p class="item-description">Carne condimentada con huevo, cebolla, tomate, cilantro y pimientos.</p>
+        </div>
+        <p class="item-price">$10.99</p>
+    </div>
+    <div class="menu-item">
+        <img src="./assets/restaurante/imagenes/comida/3.png" alt="Carne con huevo">
+        <div class="item-details">
+            <h3 class="item-title">Carne con huevo</h3>
+            <p class="item-description">Carne condimentada con huevo, cebolla, tomate, cilantro y pimientos.</p>
+        </div>
+        <p class="item-price">$10.99</p>
+    </div>
+    <div class="menu-item">
+        <img src="./assets/restaurante/imagenes/comida/3.png" alt="Carne con huevo">
+        <div class="item-details">
+            <h3 class="item-title">Carne con huevo</h3>
+            <p class="item-description">Carne condimentada con huevo, cebolla, tomate, cilantro y pimientos.</p>
+        </div>
+        <p class="item-price">$10.99</p>
+    </div>
+    <div class="menu-item">
+        <img src="./assets/restaurante/imagenes/comida/3.png" alt="Carne con huevo">
+        <div class="item-details">
+            <h3 class="item-title">Carne con huevo</h3>
+            <p class="item-description">Carne condimentada con huevo, cebolla, tomate, cilantro y pimientos.</p>
+        </div>
+        <p class="item-price">$10.99</p>
+    </div>
+    <div class="menu-item">
+        <img src="./assets/restaurante/imagenes/comida/3.png" alt="Carne con huevo">
+        <div class="item-details">
+            <h3 class="item-title">Carne con huevo</h3>
+            <p class="item-description">Carne condimentada con huevo, cebolla, tomate, cilantro y pimientos.</p>
+        </div>
+        <p class="item-price">$10.99</p>
+    </div>
+    <div class="menu-item">
+        <img src="./assets/restaurante/imagenes/comida/3.png" alt="Carne con huevo">
+        <div class="item-details">
+            <h3 class="item-title">Carne con huevo</h3>
+            <p class="item-description">Carne condimentada con huevo, cebolla, tomate, cilantro y pimientos.</p>
+        </div>
+        <p class="item-price">$10.99</p>
+    </div>
+</div>
+
+    <!--  MENÚ DEL DÍA -->
+    <div class="menu-items" id="menu" style="display: none;">
+        <div class="menu-item">
+            <img src="./assets/restaurante/imagenes/comida/1.png" alt="Hamburguesa especial">
+            <div class="item-details">
+                <h3 class="item-title">Hamburguesa especial</h3>
+                <p class="item-description">Hamburguesa con doble carne, queso cheddar, lechuga y tomate.</p>
+            </div>
+            <p class="item-price">$12.99</p>
+        </div>
+        <div class="menu-item">
+            <img src="./assets/restaurante/imagenes/comida/2.png" alt="Ensalada mixta">
+            <div class="item-details">
+                <h3 class="item-title">Ensalada mixta</h3>
+                <p class="item-description">Ensalada fresca con una mezcla de vegetales y aderezo de la casa.</p>
+            </div>
+            <p class="item-price">$8.99</p>
+        </div>
+        <div class="menu-item">
+            <img src="./assets/restaurante/imagenes/comida/2.png" alt="Ensalada mixta">
+            <div class="item-details">
+                <h3 class="item-title">Ensalada mixta</h3>
+                <p class="item-description">Ensalada fresca con una mezcla de vegetales y aderezo de la casa.</p>
+            </div>
+            <p class="item-price">$8.99</p>
+        </div>
+        <div class="menu-item">
+            <img src="./assets/restaurante/imagenes/comida/2.png" alt="Ensalada mixta">
+            <div class="item-details">
+                <h3 class="item-title">Ensalada mixta</h3>
+                <p class="item-description">Ensalada fresca con una mezcla de vegetales y aderezo de la casa.</p>
+            </div>
+            <p class="item-price">$8.99</p>
+        </div>
+        <div class="menu-item">
+            <img src="./assets/restaurante/imagenes/comida/2.png" alt="Ensalada mixta">
+            <div class="item-details">
+                <h3 class="item-title">Ensalada mixta</h3>
+                <p class="item-description">Ensalada fresca con una mezcla de vegetales y aderezo de la casa.</p>
+            </div>
+            <p class="item-price">$8.99</p>
+        </div>
+        <div class="menu-item">
+            <img src="./assets/restaurante/imagenes/comida/2.png" alt="Ensalada mixta">
+            <div class="item-details">
+                <h3 class="item-title">Ensalada mixta</h3>
+                <p class="item-description">Ensalada fresca con una mezcla de vegetales y aderezo de la casa.</p>
+            </div>
+            <p class="item-price">$8.99</p>
+        </div>
+        <div class="menu-item">
+            <img src="./assets/restaurante/imagenes/comida/2.png" alt="Ensalada mixta">
+            <div class="item-details">
+                <h3 class="item-title">Ensalada mixta</h3>
+                <p class="item-description">Ensalada fresca con una mezcla de vegetales y aderezo de la casa.</p>
+            </div>
+            <p class="item-price">$8.99</p>
+        </div>
+        <div class="menu-item">
+            <img src="./assets/restaurante/imagenes/comida/2.png" alt="Ensalada mixta">
+            <div class="item-details">
+                <h3 class="item-title">Ensalada mixta</h3>
+                <p class="item-description">Ensalada fresca con una mezcla de vegetales y aderezo de la casa.</p>
+            </div>
+            <p class="item-price">$8.99</p>
+        </div>
+    </div>
+    
+
+    <!-- DESAYUNO/MERIENDA -->
+    <div class="menu-items" id="desayuno-merienda" style="display: none;">
+        <div class="menu-item">
+            <img src="./assets/restaurante/imagenes/comida/4.png" alt="Tostadas con café">
+            <div class="item-details">
+                <h3 class="item-title">Tostadas con café</h3>
+                <p class="item-description">Tostadas integrales acompañadas de un café expreso.</p>
+            </div>
+            <p class="item-price">$5.99</p>
+        </div>
+        <div class="menu-item">
+            <img src="./assets/restaurante/imagenes/comida/5.png" alt="Croissants con jugo">
+            <div class="item-details">
+                <h3 class="item-title">Croissants con jugo</h3>
+                <p class="item-description">Croissants recién horneados acompañados de jugo natural.</p>
+            </div>
+            <p class="item-price">$6.99</p>
+        </div>
+        <div class="menu-item">
+            <img src="./assets/restaurante/imagenes/comida/5.png" alt="Croissants con jugo">
+            <div class="item-details">
+                <h3 class="item-title">Croissants con jugo</h3>
+                <p class="item-description">Croissants recién horneados acompañados de jugo natural.</p>
+            </div>
+            <p class="item-price">$6.99</p>
+        </div>
+        <div class="menu-item">
+            <img src="./assets/restaurante/imagenes/comida/5.png" alt="Croissants con jugo">
+            <div class="item-details">
+                <h3 class="item-title">Croissants con jugo</h3>
+                <p class="item-description">Croissants recién horneados acompañados de jugo natural.</p>
+            </div>
+            <p class="item-price">$6.99</p>
+        </div>
+        <div class="menu-item">
+            <img src="./assets/restaurante/imagenes/comida/5.png" alt="Croissants con jugo">
+            <div class="item-details">
+                <h3 class="item-title">Croissants con jugo</h3>
+                <p class="item-description">Croissants recién horneados acompañados de jugo natural.</p>
+            </div>
+            <p class="item-price">$6.99</p>
+        </div>
+        <div class="menu-item">
+            <img src="./assets/restaurante/imagenes/comida/5.png" alt="Croissants con jugo">
+            <div class="item-details">
+                <h3 class="item-title">Croissants con jugo</h3>
+                <p class="item-description">Croissants recién horneados acompañados de jugo natural.</p>
+            </div>
+            <p class="item-price">$6.99</p>
+        </div>
+        <div class="menu-item">
+            <img src="./assets/restaurante/imagenes/comida/5.png" alt="Croissants con jugo">
+            <div class="item-details">
+                <h3 class="item-title">Croissants con jugo</h3>
+                <p class="item-description">Croissants recién horneados acompañados de jugo natural.</p>
+            </div>
+            <p class="item-price">$6.99</p>
+        </div>
+    </div>
+
+    <!-- BEBIDAS -->
+    <div class="menu-items" id="bebidas" style="display: none;">
+        <div class="menu-item">
+            <img src="./assets/restaurante/imagenes/comida/6.png" alt="Limonada">
+            <div class="item-details">
+                <h3 class="item-title">Limonada</h3>
+                <p class="item-description">Refrescante limonada con menta y hielo.</p>
+            </div>
+            <p class="item-price">$3.99</p>
+        </div>
+        <div class="menu-item">
+            <img src="./assets/restaurante/imagenes/comida/7.png" alt="Café latte">
+            <div class="item-details">
+                <h3 class="item-title">Café latte</h3>
+                <p class="item-description">Café con leche espumosa, ideal para cualquier momento del día.</p>
+            </div>
+            <p class="item-price">$4.99</p>
+        </div>
+        <div class="menu-item">
+            <img src="./assets/restaurante/imagenes/comida/7.png" alt="Café latte">
+            <div class="item-details">
+                <h3 class="item-title">Café latte</h3>
+                <p class="item-description">Café con leche espumosa, ideal para cualquier momento del día.</p>
+            </div>
+            <p class="item-price">$4.99</p>
+        </div>
+        <div class="menu-item">
+            <img src="./assets/restaurante/imagenes/comida/7.png" alt="Café latte">
+            <div class="item-details">
+                <h3 class="item-title">Café latte</h3>
+                <p class="item-description">Café con leche espumosa, ideal para cualquier momento del día.</p>
+            </div>
+            <p class="item-price">$4.99</p>
+        </div>
+        <div class="menu-item">
+            <img src="./assets/restaurante/imagenes/comida/7.png" alt="Café latte">
+            <div class="item-details">
+                <h3 class="item-title">Café latte</h3>
+                <p class="item-description">Café con leche espumosa, ideal para cualquier momento del día.</p>
+            </div>
+            <p class="item-price">$4.99</p>
+        </div>
+        <div class="menu-item">
+            <img src="./assets/restaurante/imagenes/comida/7.png" alt="Café latte">
+            <div class="item-details">
+                <h3 class="item-title">Café latte</h3>
+                <p class="item-description">Café con leche espumosa, ideal para cualquier momento del día.</p>
+            </div>
+            <p class="item-price">$4.99</p>
+        </div>
+    </div>
+</div>      
+            </div>
+        </div>
+
+
+        	<!-- 
+			=============================================
+                     3° SECCION
+			============================================== 
+			-->
+
+            <div class="menu-seccion-3">
+              </div>
+ 
+	<!--
+			=====================================================
+               RESERVAR
+       	=====================================================
+			-->
+
+
+
+    <section id="book-a-table" class="book-a-table section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+       
+    <p style="font-family: 'Montserrat Bold', "><span>Reservar</span></p>
+
+      </div>
+
+      <div class="container">
+
+        <div class="row g-0" data-aos="fade-up" data-aos-delay="0">
+
+          <div class="col-lg-4 reservation-img" style="background-image: url(./assets/imagenes/N1.0405.jpg);"></div>
+
+          <div class="col-lg-8 d-flex align-items-center reservation-form-bg" data-aos="fade-up" data-aos-delay="200">
+            <form action="forms/book-a-table.php" method="post" role="form" class="php-email-form">
+              <div class="row gy-4">
+                <div class="col-lg-4 col-md-6">
+                  <input type="text" name="Nombre" class="form-control" id="Nombre" placeholder="Nombre" required="">
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <input type="Email" class="form-control" name="email" id="Email" placeholder="Email" required="">
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <input type="text" class="form-control" name="phone" id="phone" placeholder="Telefono" required="">
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <input type="date" name="date" class="form-control" id="date" placeholder="Date" required="">
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <input type="time" class="form-control" name="time" id="time" placeholder="Time" required="">
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <input type="number" class="form-control" name="people" id="people" placeholder="# Personas" required="">
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="5" placeholder="Mensaje"></textarea>
+              </div>
+              <div class="mb-3">
+                <div class="loading">Cargando</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Tu reserva fue enviada, muchas gracias!</div>
+              </div>
+              <div class="text-center"><button type="submit">Enviar</button></div>
+            </form>
+          </div><!-- End Reservation Form -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Book A Table Section -->
+
+
+
+
+
+
+
+
+
+  
+  <!-------------------
+         footer 
+  ------------------------->
+
+
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+      });
+  </script>
+  
+  <a href="membresia.html">
+  
+
+  </body>
+
+  </html>

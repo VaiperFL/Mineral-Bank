@@ -1,0 +1,341 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body, html {
+    font-family: Arial, sans-serif;
+    height: 100%;
+}
+
+.restaurant-section {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-image: url('./imagenes/31.png'); 
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 1140px;
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.menu-button {
+    display: block;
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 20px auto 0;
+    margin-left: 80px;
+    transition: background-color 0.3s;
+}
+
+.menu-button:hover {
+    background-color: darkred;
+}
+
+
+.menu-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.menu-title h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.title-underline {
+    width: 80px; /* Ajusta el ancho de la línea */
+    height: 3px;
+    background-color: #FF007F; /* Color de la línea */
+    margin: 0 auto;
+}
+
+/*----- menú ----------*/
+.menu-container {
+    width: 80%;
+    margin: 40px auto; /* Agrega margen para separar las secciones */
+}
+
+.menu-categories {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.category-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    margin-left: 10px; /* Ajusta el margen para cada elemento */
+    font-size: 1.2rem; /* Aumenta el tamaño de la fuente */
+
+}
+
+.category-item img {
+    width: 50px;
+    height: 60px;
+}
+
+.category-item span {
+    margin-top: 5px;
+    font-weight: bold;
+    color: #000000;
+}
+
+
+
+
+/* ---Estilo para la categoría -- */
+
+
+
+.menu-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    width: 48%;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #f0f0f0;
+    border-radius: 8px;
+}
+
+.menu-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.item-details {
+    flex-grow: 1;
+}
+
+.item-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+}
+
+
+.item-description {
+    font-size: 0.9em;
+    color: #777;
+}
+
+.item-price {¿
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333;
+}
+
+.menu-categories {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 50px; /* Añade este margen para separación */
+}
+
+
+
+
+ /*------ IMAGEN ---------*/
+
+
+  .menu-seccion-3 {
+    width: 100%;
+    height: 80vh;  
+    background-image: url('./imagenes/3.png'); /* Asegúrate de que la ruta esté correcta */
+    background-size: cover; /* Asegura que la imagen cubra todo el área sin distorsión */
+    background-position: center center; /* Centra la imagen */
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    box-sizing: border-box; 
+  }
+
+
+
+
+
+
+  
+ /*------ RESERVAR ---------*/
+
+:root { 
+  --accent-color: #ce1212; /* COLOR ENVIAR */
+  --contrast-color: #ffffff; 
+}
+
+
+
+
+section,
+.section {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  padding: 0 0 60px 0; /* Espacio inferior conservado */
+  scroll-margin-top: 92px;
+  overflow: clip;
+}
+  /*------ RESERVAR ---------*/
+.section-title {
+  text-align: center;
+  padding-bottom: 60px;
+  position: relative;
+}
+
+
+.section-title p {
+  color: var(--heading-color);
+  margin: 10px 0 0 0;
+  font-size: 48px;
+  font-weight: 550; /* Asegúrate de que esté en negrita */
+}
+
+
+.book-a-table .reservation-img {
+  min-height: 500px;
+  background-size: cover;
+  background-position: center;
+}
+
+.book-a-table .reservation-form-bg {
+  background: color-mix(in srgb, var(--default-color), transparent 97%);
+}
+
+.book-a-table .php-email-form {
+  padding: 30px;
+}
+
+@media (max-width: 575px) {
+  .book-a-table .php-email-form {
+    padding: 20px;
+  }
+}
+
+.book-a-table .php-email-form .error-message {
+  display: none;
+  background: #df1529;
+  color: #ffffff;
+  text-align: left;
+  padding: 15px;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+
+.book-a-table .php-email-form .sent-message {
+  display: none;
+  color: #ffffff;
+  background: #059652;
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+
+.book-a-table .php-email-form .loading {
+  display: none;
+  background: var(--background-color);
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 24px;
+}
+
+.book-a-table .php-email-form .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid var(--accent-color);
+  border-top-color: var(--background-color);
+  animation: animate-loading 1s linear infinite;
+}
+
+.book-a-table .php-email-form input[type=text],
+.book-a-table .php-email-form input[type=email],
+.book-a-table .php-email-form input[type=number],
+.book-a-table .php-email-form input[type=date],
+.book-a-table .php-email-form input[type=time],
+.book-a-table .php-email-form textarea {
+  font-size: 14px;
+  padding: 10px 15px;
+  box-shadow: none;
+  border-radius: 0;
+  color: #000000; /* Cambiado a negro */
+  background-color: color-mix(in srgb, var(--background-color), transparent 20%);
+  border: 1px solid #000000; /* Aumento del grosor del borde a 3px, color celeste */
+}
+
+.book-a-table .php-email-form input[type=text]:focus,
+.book-a-table .php-email-form input[type=email]:focus,
+.book-a-table .php-email-form input[type=number]:focus,
+.book-a-table .php-email-form input[type=date]:focus,
+.book-a-table .php-email-form input[type=time]:focus,
+.book-a-table .php-email-form textarea:focus {
+  border-color: #ff0000; /* Celeste para el borde en foco */
+}
+
+.book-a-table .php-email-form input[type=text]::placeholder,
+.book-a-table .php-email-form input[type=email]::placeholder,
+.book-a-table .php-email-form input[type=number]::placeholder,
+.book-a-table .php-email-form input[type=date]::placeholder,
+.book-a-table .php-email-form input[type=time]::placeholder,
+.book-a-table .php-email-form textarea::placeholder {
+  color: color-mix(in srgb, #000000, transparent 70%); /* Cambiado a negro */
+}
+
+.book-a-table .php-email-form button[type=submit] {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  border: 0;
+  padding: 14px 60px;
+  transition: 0.4s;
+  border-radius: 50px;
+}
