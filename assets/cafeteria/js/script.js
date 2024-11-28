@@ -43,9 +43,7 @@
 				multitoggle: document.querySelectorAll('[data-multitoggle]')
 			};
 
-	// Initialize scripts that require a loaded page
 	$window.on('load', function () {
-		// Page loader & Page transition
 		if (plugins.preloader.length && !isNoviBuilder) {
 			pageTransition({
 				page: $('.page'),
@@ -64,7 +62,7 @@
 			});
 		}
 
-		// Isotope
+	
 		if (plugins.isotope.length) {
 			for (var i = 0; i < plugins.isotope.length; i++) {
 				var isotopeItem = plugins.isotope[i];
@@ -79,16 +77,10 @@
 		}
 	});
 
-	// Initialize scripts that require a finished document
 	$(function () {
 		isNoviBuilder = window.xMode;
 
-		/**
-		 * @desc Calculate the height of swiper slider basing on data attr
-		 * @param {object} object - slider jQuery object
-		 * @param {string} attr - attribute name
-		 * @return {number} slider height
-		 */
+	
 		function getSwiperHeight(object, attr) {
 			var val = object.attr("data-" + attr),
 					dim;
@@ -115,10 +107,7 @@
 			}
 		}
 
-		/**
-		 * @desc Toggle swiper videos on active slides
-		 * @param {object} swiper - swiper slider
-		 */
+	
 		function toggleSwiperInnerVideos(swiper) {
 			var prevSlide = $(swiper.slides[swiper.previousIndex]),
 					nextSlide = $(swiper.slides[swiper.activeIndex]),
@@ -135,10 +124,7 @@
 			}
 		}
 
-		/**
-		 * @desc Toggle swiper animations on active slides
-		 * @param {object} swiper - swiper slider
-		 */
+	
 		function toggleSwiperCaptionAnimation(swiper) {
 			var prevSlide = $(swiper.container).find("[data-caption-animate]"),
 					nextSlide = $(swiper.slides[swiper.activeIndex]).find("[data-caption-animate]"),
@@ -185,10 +171,6 @@
 			}
 		}
 
-		/**
-		 * @desc Initialize owl carousel plugin
-		 * @param {object} c - carousel jQuery object
-		 */
 		function initOwlCarousel(c) {
 			var aliaces = ["-", "-sm-", "-md-", "-lg-", "-xl-", "-xxl-"],
 					values = [0, 576, 768, 992, 1200, 1600],
@@ -209,7 +191,6 @@
 				}
 			}
 
-			// Enable custom pagination
 			if (c.attr('data-dots-custom')) {
 				c.on("initialized.owl.carousel", function (event) {
 					var carousel = $(event.currentTarget),
@@ -239,7 +220,6 @@
 				initLightGalleryItem(c.find('[data-lightgallery="item"]'), 'lightGallery-in-carousel');
 			});
 
-			// Create custom Numbering
 			if (typeof(c.attr("data-numbering")) !== 'undefined') {
 				var numberingObject = $(c.attr("data-numbering"));
 
@@ -295,11 +275,7 @@
 			});
 		}
 
-		/**
-		 * @desc Check the element whas been scrolled into the view
-		 * @param {object} elem - jQuery object
-		 * @return {boolean}
-		 */
+	
 		function isScrolledIntoView(elem) {
 			if (!isNoviBuilder) {
 				return elem.offset().top + elem.outerHeight() >= $window.scrollTop() && elem.offset().top <= $window.scrollTop() + $window.height();
@@ -309,11 +285,7 @@
 			}
 		}
 
-		/**
-		 * @desc Calls a function when element has been scrolled into the view
-		 * @param {object} element - jQuery object
-		 * @param {function} func - callback function
-		 */
+	
 		function lazyInit(element, func) {
 			$document.on('scroll', function () {
 				if ((!element.hasClass('lazy-loaded') && (isScrolledIntoView(element)))) {
@@ -323,12 +295,7 @@
 			}).trigger("scroll");
 		}
 
-		/**
-		 * @desc Attach form validation to elements
-		 * @param {object} elements - jQuery object
-		 */
 		function attachFormValidator(elements) {
-			// Custom validator - phone number
 			regula.custom({
 				name: 'PhoneNumber',
 				defaultMessage: 'Invalid phone number format',
@@ -390,12 +357,7 @@
 			}
 		}
 
-		/**
-		 * @desc Check if all elements pass validation
-		 * @param {object} elements - object of items for validation
-		 * @param {object} captcha - captcha object for validation
-		 * @return {boolean}
-		 */
+	
 		function isValidated(elements, captcha) {
 			var results, errors = 0;
 
@@ -424,11 +386,6 @@
 			return true;
 		}
 
-		/**
-		 * @desc Validate google reCaptcha
-		 * @param {object} captcha - captcha object for validation
-		 * @return {boolean}
-		 */
 		function validateReCaptcha(captcha) {
 			var captchaToken = captcha.find('.g-recaptcha-response').val();
 
@@ -463,9 +420,7 @@
 			return true;
 		}
 
-		/**
-		 * @desc Initialize Google reCaptcha
-		 */
+	
 		window.onloadCaptchaCallback = function () {
 			for (var i = 0; i < plugins.captcha.length; i++) {
 				var $capthcaItem = $(plugins.captcha[i]);
@@ -485,10 +440,6 @@
 			}
 		};
 
-		/**
-		 * @desc Initialize Bootstrap tooltip with required placement
-		 * @param {string} tooltipPlacement
-		 */
 		function initBootstrapTooltip(tooltipPlacement) {
 			plugins.bootstrapTooltip.tooltip('dispose');
 
@@ -499,11 +450,7 @@
 			}
 		}
 
-		/**
-		 * @desc Initialize the gallery with set of images
-		 * @param {object} itemsToInit - jQuery object
-		 * @param {string} [addClass] - additional gallery class
-		 */
+	
 		function initLightGallery ( itemsToInit, addClass ) {
 			if ( !isNoviBuilder ) {
 				$( itemsToInit ).lightGallery( {
@@ -518,11 +465,7 @@
 			}
 		}
 
-		/**
-		 * @desc Initialize the gallery with dynamic addition of images
-		 * @param {object} itemsToInit - jQuery object
-		 * @param {string} [addClass] - additional gallery class
-		 */
+	
 		function initDynamicLightGallery ( itemsToInit, addClass ) {
 			if ( !isNoviBuilder ) {
 				$( itemsToInit ).on( "click", function () {
@@ -541,11 +484,7 @@
 			}
 		}
 
-		/**
-		 * @desc Initialize the gallery with one image
-		 * @param {object} itemToInit - jQuery object
-		 * @param {string} [addClass] - additional gallery class
-		 */
+
 		function initLightGalleryItem ( itemToInit, addClass ) {
 			if ( !isNoviBuilder ) {
 				$( itemToInit ).lightGallery( {
@@ -566,17 +505,14 @@
 			}
 		}
 
-		// Google ReCaptcha
 		if (plugins.captcha.length) {
 			$.getScript("//www.google.com/recaptcha/api.js?onload=onloadCaptchaCallback&render=explicit&hl=en");
 		}
 
-		// Additional class on html if mac os.
 		if (navigator.platform.match(/(Mac)/i)) {
 			$html.addClass("mac-os");
 		}
 
-		// Adds some loosing functionality to IE browsers (IE Polyfills)
 		if (isIE) {
 			if (isIE < 10) {
 				$html.addClass("lt-ie-10");
@@ -599,7 +535,6 @@
 			}
 		}
 
-		// Bootstrap Tooltips
 		if (plugins.bootstrapTooltip.length) {
 			var tooltipPlacement = plugins.bootstrapTooltip.attr('data-placement');
 			initBootstrapTooltip(tooltipPlacement);
@@ -609,12 +544,10 @@
 			})
 		}
 
-		// Bootstrap tabs
 		if (plugins.bootstrapTabs.length) {
 			for (var i = 0; i < plugins.bootstrapTabs.length; i++) {
 				var bootstrapTabsItem = $(plugins.bootstrapTabs[i]);
 
-				//If have slick carousel inside tab - resize slick carousel on click
 				if (bootstrapTabsItem.find('.slick-slider').length) {
 					bootstrapTabsItem.find('.tabs-custom-list > li > a').on('click', $.proxy(function () {
 						var $this = $(this);
@@ -641,33 +574,30 @@
 			}
 		}
 
-		// Copyright Year (Evaluates correct copyright year)
 		if (plugins.copyrightYear.length) {
 			plugins.copyrightYear.text(initialDate.getFullYear());
 		}
 
-		// Page loader
 		if (plugins.preloader.length) {
 			loaderTimeoutId = setTimeout(function () {
 				if (!windowReady && !isNoviBuilder) plugins.preloader.removeClass('loaded');
 			}, 2000);
 		}
 
-		// Add custom styling options for input[type="radio"]
 		if (plugins.radio.length) {
 			for (var i = 0; i < plugins.radio.length; i++) {
 				$(plugins.radio[i]).addClass("radio-custom").after("<span class='radio-custom-dummy'></span>")
 			}
 		}
 
-		// Add custom styling options for input[type="checkbox"]
+
 		if (plugins.checkbox.length) {
 			for (var i = 0; i < plugins.checkbox.length; i++) {
 				$(plugins.checkbox[i]).addClass("checkbox-custom").after("<span class='checkbox-custom-dummy'></span>")
 			}
 		}
 
-		// UI To Top
+
 		if (isDesktop && !isNoviBuilder) {
 			$().UItoTop({
 				easingType: 'easeOutQuad',
@@ -675,7 +605,7 @@
 			});
 		}
 
-		// RD Navbar
+	
 		if (plugins.rdNavbar.length) {
 			var aliaces, i, j, len, value, values, responsiveNavbar;
 
@@ -749,7 +679,7 @@
 			}
 		}
 
-		// Swiper
+
 		if (plugins.swiper.length) {
 			for (var i = 0; i < plugins.swiper.length; i++) {
 				var s = $(plugins.swiper[i]);
@@ -865,7 +795,6 @@
 								$(swiper.container).find('.swiper-button-next .subtitle')[0].innerHTML = swiper.slides[activeSlideIndex +
 								1].getAttribute("data-slide-subtitle");
 							}
-							//Replace btn img
 							if ($(swiper.container).find('.preview__img')[0] !== undefined) {
 								$(swiper.container).find('.swiper-button-prev .preview__img').css("background-image", "url(" +
 										swiper.slides[activeSlideIndex - 1].getAttribute("data-slide-bg") + ")");
@@ -892,7 +821,6 @@
 			return index < 10 ? '0' + index : index;
 		}
 
-		// Owl carousel
 		if (plugins.owl.length) {
 			for (var i = 0; i < plugins.owl.length; i++) {
 				var c = $(plugins.owl[i]);
@@ -902,7 +830,7 @@
 			}
 		}
 
-		// Isotope
+
 		if (plugins.isotope.length) {
 			var isogroup = [];
 			for (var i = 0; i < plugins.isotope.length; i++) {
@@ -935,22 +863,19 @@
 			}).eq(0).trigger("click")
 		}
 
-		// WOW
+	
 		if ($html.hasClass("wow-animation") && plugins.wow.length && !isNoviBuilder && isDesktop) {
 			new WOW().init();
 		}
 
-		// RD Input Label
 		if (plugins.rdInputLabel.length) {
 			plugins.rdInputLabel.RDInputLabel();
 		}
 
-		// Regula
 		if (plugins.regula.length) {
 			attachFormValidator(plugins.regula);
 		}
 
-		// RD Mailform
 		if (plugins.rdMailForm.length) {
 			var i, j, k,
 					msg = {
@@ -986,7 +911,6 @@
 
 						if (isValidated(inputs, captcha)) {
 
-							// veify reCaptcha
 							if (captcha.length) {
 								var captchaToken = captcha.find('.g-recaptcha-response').val(),
 										captchaMsg = {
@@ -1099,16 +1023,13 @@
 			}
 		}
 
-		// lightGallery
 		if (plugins.lightGallery.length) {
 			for (var i = 0; i < plugins.lightGallery.length; i++) {
 				initLightGallery(plugins.lightGallery[i]);
 			}
 		}
 
-		// lightGallery item
 		if (plugins.lightGalleryItem.length) {
-			// Filter carousel items
 			var notCarouselItems = [];
 
 			for (var z = 0; z < plugins.lightGalleryItem.length; z++) {
@@ -1126,19 +1047,16 @@
 			}
 		}
 
-		// Dynamic lightGallery
 		if (plugins.lightDynamicGalleryItem.length) {
 			for (var i = 0; i < plugins.lightDynamicGalleryItem.length; i++) {
 				initDynamicLightGallery(plugins.lightDynamicGalleryItem[i]);
 			}
 		}
 
-		// Material Parallax
 		if (plugins.materialParallax.length) {
 			if (!isNoviBuilder && !isIE && !isMobile) {
 				plugins.materialParallax.parallax();
 
-				// heavy pages fix
 				$window.on('load', function () {
 					setTimeout(function () {
 						$window.scroll();
@@ -1157,7 +1075,6 @@
 			}
 		}
 
-		// Winona buttons
 		if (plugins.buttonWinona.length && !isNoviBuilder) {
 			initWinonaButtons(plugins.buttonWinona);
 		}
@@ -1189,7 +1106,6 @@
 			}
 		}
 
-		// Slick carousel
 		if (plugins.slick.length) {
 			for (var i = 0; i < plugins.slick.length; i++) {
 				var $slickItem = $(plugins.slick[i]);
@@ -1295,7 +1211,6 @@
 			return decimal < 10 && decimal > 0 ? '0' + decimal : decimal;
 		}
 
-		// Multitoggles
 		if (plugins.multitoggle.length) {
 			multitoggles();
 		}

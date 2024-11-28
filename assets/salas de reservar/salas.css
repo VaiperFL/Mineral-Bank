@@ -1,0 +1,350 @@
+/* Reset de algunos márgenes y paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Diseño general */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* Responsivo: ajustando el tamaño de la fuente en pantallas más pequeñas */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 20px;
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    header nav ul li a {
+        font-size: 14px;
+    }
+
+    main {
+        padding: 10px;
+    }
+}
+
+/* Para dispositivos móviles (pantallas pequeñas) */
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    header nav ul li {
+        margin: 5px 0;
+    }
+
+    header nav ul li a {
+        font-size: 12px;
+    }
+
+    main {
+        padding: 5px;
+    }
+
+    footer {
+        padding: 10px;
+    }
+}
+.rectangulo-blanco {
+    width: 100%;             /* Abarca todo el ancho disponible */
+    height: 650px;           /* Altura del rectángulo */
+    background-color: rgb(199, 195, 195); /* Fondo blanco */
+    margin-top: 20px;        /* Espacio entre la imagen y el rectángulo */
+    border: 1px solid #ddd;  /* Borde opcional */
+}
+/* Estilo para la imagen */
+.imagen-calendario {
+    width: 100%;          /* La imagen ocupará el 100% del ancho disponible */
+    max-width: 800px;     /* El ancho máximo será de 600px (ajustable) */
+    margin: 32px auto 20px auto;  /* Separa la imagen 40px arriba y 20px abajo, centrada horizontalmente */
+    display: block;       /* Asegura que la imagen sea un bloque (en lugar de un elemento inline) */
+    border-radius: 10px;  /* Opcional: bordes redondeados */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Opcional: sombra para dar profundidad */
+}
+
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .nuevo-rectangulo {
+        width: 100%;           /* Aumenta el ancho para pantallas pequeñas */
+        padding: 50px 0;      /* Reduce el padding para pantallas pequeñas */
+    }
+}
+/* Contenedor principal donde está el bloque de selección */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    position: absolute; /* Esto permite mover el bloque libremente */
+    top: 430px; /* Ajusta este valor para mover el bloque hacia arriba */
+    left: 50%; /* Centra el bloque horizontalmente */
+    transform: translateX(-50%); /* Para centrar exactamente */
+    z-index: 10; /* Asegura que esté por encima de otros elementos */
+}
+
+/* Ajustes adicionales para los cuadros de selección */
+.selection-box {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    flex: 0 1 250px;
+}
+
+/* Estilo del botón */
+#reserveButton {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #000000;
+    color: white;
+    cursor: pointer;
+    width: 40%;
+    box-sizing: border-box;
+    text-align: center;
+    margin-left: 150px;
+}
+
+#reserveButton:hover {
+    background-color: #ff0000;
+}
+/* Contenedor de las filas de rectángulos */
+.rectangles-row {
+    display: flex;
+    flex-wrap: wrap;               /* Permite que los rectángulos se acomoden en filas */
+    gap: 20px;                     /* Espacio entre los rectángulos */
+    justify-content: space-between; /* Alinea los elementos con espacio entre ellos */
+    margin: 20px auto;
+    width: 800%;                   /* Ocupa el 100% del ancho disponible */
+    max-width: 1600px;             /* Establece un máximo de ancho */
+    box-sizing: border-box;        /* Incluye el padding en el cálculo del ancho total */
+}
+
+/* Rectángulos individuales */
+.rectangle-container {
+    flex: 0 1 calc(33.33% - 20px);  /* Cada rectángulo ocupa un 33% del contenedor, con gap incluido */
+    box-sizing: border-box;         /* Asegura que padding y borde no afecten el tamaño */
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;             /* Bordes redondeados */
+    border: 2px solid #000000;      /* Borde negro */
+    display: flex;
+    flex-direction: column;         /* Asegura que los elementos dentro del rectángulo estén en columna */
+}
+
+
+/* Contenedor de la imagen superior */
+.image-container {
+    width: 100%;
+    height: 200px; /* Altura fija para las imágenes */
+    overflow: hidden;
+    border-radius: 8px 8px 0 0; /* Bordes redondeados solo en la parte superior */
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que las imágenes cubran todo el espacio */
+}
+
+/* Título de la sala */
+.room-name h2 {
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+/* Líneas divisorias */
+.divider, .divider1 {
+    border: none;
+    border-top: 2px solid #000000; /* Línea horizontal negra */
+    margin: 20px 0; /* Espacio alrededor de la línea */
+}
+
+/* Servicios */
+.services-columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Permite que las columnas se ajusten */
+}
+
+.services-column {
+    width: 48%; /* Cada columna ocupa el 48% del ancho */
+}
+
+.services ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.services ul li {
+    font-size: 16px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.services ul li i {
+    font-size: 20px; /* Tamaño del icono */
+    margin-right: 10px; /* Espacio entre el icono y el texto */
+    color: #333; /* Color del icono */
+}
+
+/* Condiciones */
+.conditions-columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.conditions-column {
+    width: 40%;
+}
+
+.conditions ul {
+    list-style: none;
+    padding: 0;
+}
+
+.conditions ul li {
+    font-size: 16px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.conditions ul li i {
+    font-size: 20px;
+    margin-right: 10px;
+    color: #333;
+}
+
+/* Galería de imágenes */
+.image-section {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Espacio entre las imágenes */
+    flex-wrap: wrap; /* Ajusta las imágenes si no caben */
+}
+
+.image-box {
+    width: 30%; /* Cada imagen ocupa el 30% del contenedor */
+    height: 200px; /* Altura fija */
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* Contenedor que agrupa todos los carruseles */
+.carousel-container-wrapper {
+    display: flex;
+    flex-wrap: wrap;   /* Permite que los carruseles se acomoden en varias filas */
+    gap: 20px;         /* Añade espacio entre cada carrusel */
+    justify-content: center; /* Centra los carruseles dentro del contenedor */
+}
+
+
+/* Sección individual de cada carrusel */
+.image-section {
+    width: 100%;        /* Ocupa todo el ancho disponible */
+    max-width: 800px;   /* Ancho máximo para cada carrusel */
+    margin: 20px 0;     /* Añade separación entre los carruseles */
+    text-align: center; /* Centra el contenido dentro de cada sección */
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.carousel-item {
+    display: none; /* Ocultar todas las imágenes */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.carousel-item.active {
+    display: block; /* Mostrar solo la imagen activa */
+    position: relative;
+}
+
+.carousel-item img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Botones de navegación */
+.carousel-prev, .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+    border-radius: 50%;
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}
+
+.carousel-prev:hover, .carousel-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+
+
+
+
+

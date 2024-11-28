@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina</title>
+    <link rel="stylesheet" href="./evento3.css">
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<body>
+
+    <section class="rectangulo">
+        <div class="rectangulo-con-imagen">
+            <img src="Taller.png" alt="invitacion de evento de vino" class="imagen-en-rectangulo">
+        </div>
+    </section>
+
+    <div class="cuadrado">
+        <div class="texto1">Jueves</div>
+        <div class="texto2">24</div>
+        <div class="texto3">Oct 2024</div>
+        <hr class="linea-horizontal">
+        <div class="texto4">13:30hs</div>
+    </div>
+    
+    <div class="nuevo-texto">
+        <p class="zapata">TALLER DE HABILIDADES-24 DE</p>
+        <p class="mes">OCTUBRE</p>
+        <p class="lugar">25 DE MAYO,81 - BUENOS AIRES</p>
+        <p class="precio">$15.000,00</p>
+    </div>
+
+    <!-- Contenedor con los botones de compra -->
+    <div class="compra-contenedor">
+        <button class="boton" onclick="disminuir()">-</button>
+        <span id="cantidad">1</span>
+        <button class="boton" onclick="aumentar()">+</button>
+    </div>
+
+    <!-- Botón de compra -->
+    <button class="boton-comprar" onclick="comprar()">
+        <span>Comprar</span>
+    </button>
+    <div class="descripcion-contenedor">
+        <p class="titulo-descripcion">Descripción</p>
+        <p class="texto-descripcion">Descubre el arte y la ciencia de negociar de manera 
+            efectiva en un taller diseñado para quienes buscan 
+            perfeccionar su destreza en el mundo de los 
+            negocios. Este exclusivo encuentro reúne a 
+            destacados expertos en negociación, quienes 
+            compartirán técnicas avanzadas, estrategias
+             persuasivas y secretos del éxito en acuerdos clave.</p>
+    </div>
+    <div class="events-section">
+        <h2>Otros eventos</h2>
+        <div class="events-container">
+            <div class="event-box">
+                <img src="coffee-563800_1920.jpg" alt="Evento 1" class="event-image">
+                <div class="event-details">
+                    <h3>Nuevos cafés</h3>
+                    <h3>importados</h3>
+                    <p class="event-date">Vie, 25 oct, 15:30</p>
+                    <p class="location-date">25 de mayo,81</p>
+                  <a href="evento5.html" class="event-link">Ver más</a>
+                </div>
+            </div>
+            <div class="event-box">
+                <img src="economia.jpg" alt="Evento 2" class="event-image">
+                <div class="event-details">
+                    <h3>Perspectivas Económicas para Emprendedores</h3>
+                    <p class="event-date1">Mart, 22 oct, 18:30</p>
+                    <p class="location-date1">25 de mayo,81</p>
+                    <a href="evento2.html" class="event-link">Ver más</a>
+                </div>
+            </div>
+            <div class="event-box">
+                <img src="vinos.jpg" alt="Evento 3" class="event-image">
+                <div class="event-details">
+                    <h3>Degustación de Vinos de Catena Zapata</h3>
+                    <p class="event-date2">Vie, 25 oct, 15:30</p>
+                    <p class="location-date2">25 de mayo,81</p>
+                    <a href="evento.html" class="event-link">Ver más</a>
+                </div>
+            </div>
+            <div class="event-box">
+                <img src="nuevoproducto.jpg" alt="Evento 4" class="event-image">
+                <div class="event-details">
+                    <h3>Lanzamiento de producto para Emprendedores</h3>
+                    <p class="event-date3">Vie, 25 oct, 9:30</p>
+                    <p class="location-date3">25 de mayo,81</p>
+                    <a href="evento4.html" class="event-link">Ver más</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- JavaScript para la funcionalidad de los botones -->
+    <script>
+        // Función para aumentar el número
+        function aumentar() {
+            let cantidadElement = document.getElementById('cantidad');
+            let cantidad = parseInt(cantidadElement.textContent);
+            cantidadElement.textContent = cantidad + 1;
+        }
+
+        // Función para disminuir el número
+        function disminuir() {
+            let cantidadElement = document.getElementById('cantidad');
+            let cantidad = parseInt(cantidadElement.textContent);
+            if (cantidad > 1) { // Evita que el número baje de 1
+                cantidadElement.textContent = cantidad - 1;
+            }
+        }
+
+        // Función para redirigir a la página de compra
+        function comprar() {
+    // Cambia 'tu-pagina.html' por la URL de la página que tienes hecha
+    window.location.href = 'pagar3.html';
+}
+    </script>
+</body>
+</html>

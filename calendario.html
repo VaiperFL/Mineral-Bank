@@ -1,0 +1,556 @@
+<!DOCTYPE html> 
+<html lang="es"> 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/calendario pagina/calendario/calendario.css">
+    <link href="./assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="./assets/css/header.css" rel="stylesheet">
+
+</head>
+<body>
+
+
+  
+			<!-- 
+			=============================================
+          HEADER
+			============================================== 
+			-->
+
+
+            <header id="header" class="header d-flex align-items-center sticky-top">
+                <div class="container position-relative d-flex align-items-center justify-content-between">
+                  <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+                    <h1 class="sitename" style="font-family: 'Conneqt', sans-serif;">Mineral Bank</h1>
+                  </a>
+              
+                  <nav id="navmenu" class="navmenu d-flex align-items-center">
+                    <ul>
+                      <li><a href="index.html" class="active">Inicio</a></li>
+                      <li class="dropdown"><a href="#menu"><span>Servicios</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                          <li><a href="cajadeseguridad.html">Cajas de seguridad</a></li>
+                          <li><a href="archivosdigitalessolidos.html">Archivos digitales sólidos</a></li>
+                          <li><a href="archivosescriturales.html">Archivos escriturales</a></li>
+                          <li><a href="archivosjudiciales.html">Archivos judiciales</a></li>
+                          <li><a href="restaurante.html">Restaurante</a></li>
+                          <li><a href="cafeteria.html">Cafetería</a></li>
+                          <li><a href="membresia.html">Membresía</a></li>
+                          <li><a href="saladereunionconfidencial.html">Sala de reunión</a></li>
+                          <li><a href="alianzaproductiva.html">Alianza productiva</a></li>
+                          <li><a href="fideicomisoproductivo.html">Fideicomiso productivo</a></li>
+                          <li><a href="desarollodeproyecto.html">Desarrollo de proyectos</a></li>
+                        </ul>
+                      </li>
+                      <li class="dropdown"><a href=""><span>Eventos / Reservas</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                          <li><a href="calendario.html">Calendario de eventos</a></li>
+                          <li><a href="reservarsalas.html">Reservar sala</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="galeria.html">Galería</a></li>
+                      <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                    <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+                    
+                    <!-- Botón de Inicio de Sesión -->
+                    <a href="login.html" class="btn-login" style="margin-left: 20px; padding: 10px 20px; background-color: #c91212; color: white; border-radius: 5px; text-decoration: none;">Inicio de Sesión</a>
+                  </nav>
+                </div>
+              </header>
+              
+
+    <section class="imagen-contenedor">
+        <div class="intro text move-right">
+            <p>CALENDARIO</p>
+            <p class="mineral bank text">Mineral Bank</p>
+        </div>
+        <img src="Banner 3.png" alt="Descripción de la imagen">
+    </section>
+    
+
+    <div class="texto-container">
+        <h1>Calendario de eventos</h1>
+        <p id="currentMonthText">Noviembre</p>
+    </div>
+
+    <div class="cuadrado-negro">
+        <p class="texto-cuadrado" id="changeButton">CAMBIAR</p>
+    </div>
+    
+    <!-- Contenedor de los meses, inicialmente oculto -->
+    <div id="monthsContainer" style="display:none">
+        <div class="months">
+            <div class="month-option" data-month="1">Enero</div>
+            <div class="month-option" data-month="2">Febrero</div>
+            <div class="month-option" data-month="3">Marzo</div>
+            <div class="month-option" data-month="4">Abril</div>
+            <div class="month-option" data-month="5">Mayo</div>
+            <div class="month-option" data-month="6">Junio</div>
+            <div class="month-option" data-month="7">Julio</div>
+            <div class="month-option" data-month="8">Agosto</div>
+            <div class="month-option" data-month="9">Septiembre</div>
+            <div class="month-option" data-month="10">Octubre</div>
+            <div class="month-option" data-month="11">Noviembre</div>
+            <div class="month-option" data-month="12">Diciembre</div>
+        </div>
+    </div>
+    
+    <!-- Calendario -->
+    <table class="calendar">
+        <thead>
+            <tr>
+                <th>DOMINGO</th>
+                <th>LUNES</th>
+                <th>MARTES</th>
+                <th>MIERCOLES</th>
+                <th>JUEVES</th>
+                <th>VIERNES</th>
+                <th>SABADO</th>
+            </tr>
+        </thead>
+        <tbody id="calendarBody"></tbody>
+    </table>
+    <body>
+               
+        <div id="eventPopup" class="event-popup">
+            <div class="popupContent">
+                <h2>Eventos del Día</h2>
+                <div id="eventList"></div>
+                <!-- Botones de acción -->
+                <div class="popup-buttons">
+                    <button id="closePopup">Cerrar</button>
+                    <!-- Este es el botón de Ver Más general que se puede mover -->
+                    <button id="verMasBtn" style="display:none;">Ver más</button>
+                </div>
+            </div>
+        </div>
+        
+        
+
+
+
+
+    
+    <div class="rectangulo-blanco">
+        <img src="37.png" alt="Imagen relacionada al calendario" class="imagen-calendario">
+    </div>
+
+    <div class="nuevo-rectangulo"></div>
+    
+   <!-- Contenedor para mostrar horas disponibles -->
+   <div id="horasDisponibles"></div>
+    
+    <div class="container">
+            
+        <!-- Cuadro para seleccionar el día -->
+        <div class="selection-box" id="selectDiaBox">
+            <p>Seleccione Día</p>
+            <input type="date" id="selectDia">
+        </div>
+        
+         
+        <div class="selection-box" id="selectHoraBox">
+            <p>Seleccione Hora</p>
+            <select id="horaList">
+                <!-- Generar las horas de 00:00 a 23:00 -->
+                <option value="" disabled selected>Seleccione</option>
+                <option value="00">00</option>
+                <option value="01">01</option>
+                <option value="02">02</option>
+                <option value="03">03</option>
+                <option value="04">04</option>
+                <option value="05">05</option>
+                <option value="06">06</option>
+                <option value="07">07</option>
+                <option value="08">08</option>
+                <option value="09">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+            </select>   
+        </div>
+        <div class="description-box" id="eventDescriptionSection">
+            <label for="eventDescription">Descripción del Evento</label>
+            <textarea id="eventDescription" class="description-input" rows="4" placeholder="Escribe aquí la descripción del evento..."></textarea>
+        </div>
+
+          <!-- Botón para reservar debajo de los cuadros -->
+        <button id="reserveButton">Reservar</button>
+    </div>
+    
+    <div class="events-section">
+        <h2>Próximos Eventos</h2>
+        <div class="events-container">
+            <div class="event-box">
+                <img src="vinos.jpg" alt="Evento 1" class="event-image">
+                <div class="event-details">
+                    <h3>Degustación de Vinos de Catena Zapata</h3>
+                    <p class="event-date">Vie, 25 oct, 15:30</p>
+                    <p class="location-date">25 de mayo,81</p>
+                    <p class="precio-date">A partir de $35.000,00</p>
+                    <p class="nombre-date">Catena Zapata</p>
+                    <a href="evento.html" class="event-link">Ver más</a>
+                </div>
+            </div>
+            <div class="event-box">
+                <img src="economia.jpg" alt="Evento 2" class="event-image">
+                <div class="event-details">
+                    <h3>Perspectivas Económicas para Emprendedores</h3>
+                    <p class="event-date1">Mart, 22 oct, 18:30</p>
+                    <p class="location-date1">25 de mayo,81</p>
+                    <p class="precio-date1">A partir de $17.000,00</p>
+                    <p class="nombre-date1">Leguizamón Kevin</p>
+                    <a href="evento2.html" class="event-link">Ver más</a>
+                </div>
+            </div>
+            <div class="event-box">
+                <img src="taller de habilidades.jpeg" alt="Evento 3" class="event-image">
+                <div class="event-details">
+                    <h3>Taller de Habilidades de Negociación</h3>
+                    <p class="event-date2">Juev, 24 oct, 13:30</p>
+                    <p class="location-date2">25 de mayo,81</p>
+                    <p class="precio-date2">A partir de $13.000,00</p>
+                    <p class="nombre-date2">BDC group</p>
+                    <a href="evento3.html" class="event-link">Ver más</a>
+                </div>
+            </div>
+            <div class="event-box">
+                <img src="nuevoproducto.jpg" alt="Evento 4" class="event-image">
+                <div class="event-details">
+                    <h3>Lanzamiento de producto para Emprendedores</h3>
+                    <p class="event-date3">Vie, 25 oct, 9:30</p>
+                    <p class="location-date3">25 de mayo,81</p>
+                    <p class="precio-date3">A partir de $25.000,00</p>
+                    <p class="nombre-date3">Leguizamón Tecnología Minera</p>
+                    <a href="evento4.html" class="event-link">Ver más</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="networking-container">
+        <!-- Títulos de la sección -->
+        <div class="section-title">
+            <h2>Inscripción</h2>
+            <p>No dejes que te lo cuenten. Regístrate ahora y recibe acceso exclusivo a todas las novedades del evento.</p>
+        </div>
+    <div class="networking-container">
+        <div class="form-container">
+            <div class="name-last-name-container">
+                <label for="name"></label>
+                <input type="text" id="name" name="name" placeholder="Ingresa tu nombre">
+                
+                <label for="last-name"></label>
+                <input type="text" id="last-name" name="last-name" placeholder="Ingresa tu apellido">
+            </div>
+            
+            <label for="email-name"></label>
+            <input type="email" id="email" name="email" placeholder="Ingresa tu correo electrónico">
+        </div>
+        
+        <div class="inscribirse-container">
+            <button id="inscribirse-btn">Inscribirse</button>
+        </div>
+    </div>
+                  
+    <script>
+      const daysInMonth = {
+    1: 31, 2: 28, 3: 31, 4: 30, 5: 31, 6: 30, 
+    7: 31, 8: 31, 9: 30, 10: 31, 11: 30, 12: 31
+};
+
+let currentMonth = new Date().getMonth() + 1; // Mes actual
+let currentYear = new Date().getFullYear(); // Año actual
+
+// Simular una base de datos de reservas
+const reservas = {};
+
+// Función para cargar los días en el calendario
+function loadDays(month, year) {
+    const calendarBody = document.getElementById('calendarBody');
+    calendarBody.innerHTML = ''; // Limpiar el calendario
+
+    const numDays = daysInMonth[month];
+    const firstDay = new Date(year, month - 1, 1).getDay();
+
+    let row = document.createElement('tr'); // Fila de los días
+    // Rellenar los días vacíos antes del primer día
+    for (let i = 0; i < firstDay; i++) {
+        row.appendChild(document.createElement('td'));
+    }
+
+    // Crear celdas para los días del mes
+    for (let i = 1; i <= numDays; i++) {
+        const cell = document.createElement('td');
+        cell.textContent = i;
+        cell.classList.add('celda-con-reserva'); // Agregar clase para personalizar
+
+        // Añadir evento para mostrar las horas de reserva al hacer clic
+        cell.addEventListener('click', function() {
+            mostrarHorasEnCelda(i, cell);
+        });
+
+        // Marcar los días ocupados con reservas
+        const fecha = `${i}-${month}-${year}`;
+        if (reservas[fecha]) {
+            cell.classList.add('ocupado');
+        }
+
+        row.appendChild(cell);
+
+        // Si se llega al sábado, se inicia una nueva fila
+        if ((i + firstDay) % 7 === 0) {
+            calendarBody.appendChild(row);
+            row = document.createElement('tr');
+        }
+    }
+
+    // Añadir la fila si tiene días restantes
+    if (row.children.length > 0) {
+        calendarBody.appendChild(row);
+    }
+}
+
+// Mostrar las horas dentro de la celda
+function mostrarHorasEnCelda(dia, cell) {
+    const fecha = `${dia}-${currentMonth}-${currentYear}`;
+    if (reservas[fecha]) {
+        // Si ya hay un cuadro de horas en esa celda, lo eliminamos
+        const existingBox = cell.querySelector('.horas-reservadas');
+        if (existingBox) {
+            existingBox.remove();
+        }
+
+        // Crear el cuadro para mostrar las horas reservadas
+        const horasBox = document.createElement('div');
+        horasBox.classList.add('horas-reservadas');
+
+        reservas[fecha].forEach(hora => {
+            const btn = document.createElement('button');
+            btn.textContent = `${hora}:00`;
+            horasBox.appendChild(btn);
+        });
+
+        cell.appendChild(horasBox); // Agregar el cuadro dentro de la celda
+    }
+}
+
+// Función para agregar una reserva
+function realizarReserva(dia, hora) {
+    const fecha = `${dia}-${currentMonth}-${currentYear}`;
+    if (!reservas[fecha]) reservas[fecha] = [];
+    reservas[fecha].push(hora);
+}
+
+// Evento de reserva
+document.getElementById('reserveButton').addEventListener('click', function() {
+    const selectedDia = document.getElementById('selectDia').value;
+    const selectedHora = document.getElementById('horaList').value;
+
+    if (selectedDia && selectedHora) {
+        realizarReserva(selectedDia, selectedHora);
+        alert(`Reserva realizada para el ${selectedDia} a las ${selectedHora}:00`);
+        loadDays(currentMonth, currentYear); // Recargar el calendario para reflejar la reserva
+    } else {
+        alert('Por favor seleccione todos los campos.');
+    }
+});
+
+// Marcar los horarios ocupados cuando se carga la página
+loadDays(currentMonth, currentYear);
+
+// Mostrar u ocultar el contenedor de meses
+document.getElementById('changeButton').addEventListener('click', function() {
+    const monthsContainer = document.getElementById('monthsContainer');
+    monthsContainer.style.display = (monthsContainer.style.display === 'none') ? 'block' : 'none';
+});
+
+// Cambiar el mes al hacer clic en un mes
+document.querySelectorAll('.month-option').forEach(month => {
+    month.addEventListener('click', function() {
+        currentMonth = parseInt(month.getAttribute('data-month'));
+        loadDays(currentMonth, currentYear);
+        document.getElementById('monthsContainer').style.display = 'none'; // Ocultar meses
+        document.getElementById('currentMonthText').textContent = month.textContent;
+    });
+});
+
+// Cargar el mes actual al abrir la página
+loadDays(currentMonth, currentYear);
+
+// Cerrar el cuadro de meses cuando se haga clic en cualquier parte de la pantalla
+document.addEventListener('click', function (event) {
+    const monthsContainer = document.getElementById('monthsContainer');
+    const changeButton = document.getElementById('changeButton');
+
+    // Verificar si el clic ocurrió fuera del cuadro de meses y del botón
+    if (!monthsContainer.contains(event.target) && event.target !== changeButton) {
+        monthsContainer.style.display = 'none';
+    }
+});
+
+// Datos de los eventos
+const eventos = {
+    '15-11-2024': [
+        { nombre: 'Reunión de equipo', imagen: 'reunion.jpg', hora: '10:00 AM', pagina: 'evento1.html' },
+    ],
+    '20-11-2024': [
+        { nombre: 'Discurso de politicos', imagen: 'discruso1.jpg', pagina: 'evento2.html' }
+    ],
+    '25-11-2024': [
+        { nombre: 'Degustacion de vinos', imagen: 'vinos.jpg', hora: '15:30-17:00 PM', pagina: 'evento.html' },
+        { nombre: 'Lanzamiento de producto para Emprendedores', imagen: 'nuevoproducto.jpg', hora: '9:30-12:00 AM', pagina: 'evento4.html' },
+    ],
+};
+
+// Función para cargar los días en el calendario
+function loadDays(month, year) {
+    const calendarBody = document.getElementById('calendarBody');
+    calendarBody.innerHTML = ''; // Limpiar el calendario
+
+    const numDays = daysInMonth[month];
+    const firstDay = new Date(year, month - 1, 1).getDay();
+
+    let row = document.createElement('tr'); // Fila de los días
+    // Rellenar los días vacíos antes del primer día
+    for (let i = 0; i < firstDay; i++) {
+        row.appendChild(document.createElement('td'));
+    }
+
+    // Crear celdas para los días del mes
+    for (let i = 1; i <= numDays; i++) {
+        const cell = document.createElement('td');
+        cell.textContent = i;
+        cell.classList.add('celda-con-reserva'); // Agregar clase para personalizar
+
+        // Añadir evento para abrir el popup de eventos al hacer clic
+        cell.addEventListener('click', function() {
+            mostrarEventosEnPopup(i);
+        });
+
+        row.appendChild(cell);
+
+        // Si se llega al sábado, se inicia una nueva fila
+        if ((i + firstDay) % 7 === 0) {
+            calendarBody.appendChild(row);
+            row = document.createElement('tr');
+        }
+    }
+
+    // Añadir la fila si tiene días restantes
+    if (row.children.length > 0) {
+        calendarBody.appendChild(row);
+    }
+}
+
+// Función para mostrar eventos en el popup
+function mostrarEventosEnPopup(dia) {
+    const fecha = `${dia}-${currentMonth}-${currentYear}`;
+    const eventList = document.getElementById('eventList');
+    eventList.innerHTML = ''; // Limpiar los eventos previos
+
+    // Mostrar eventos si existen para ese día
+    if (eventos[fecha] && eventos[fecha].length > 0) {
+        eventos[fecha].forEach((evento, index) => {
+            const eventoElement = document.createElement('div');
+            eventoElement.classList.add('evento');
+
+            // Crear imagen del evento
+            const img = document.createElement('img');
+            img.src = evento.imagen;
+            img.alt = evento.nombre;
+            img.style.width = '150px';  // Tamaño de la imagen
+            img.style.height = '150px'; // Tamaño de la imagen
+            img.style.marginRight = '10px';
+
+            // Crear contenedor para el texto y la imagen
+            const textContainer = document.createElement('div');
+            textContainer.style.display = 'flex';
+            textContainer.style.alignItems = 'center';
+
+            // Agregar la imagen y el nombre del evento al contenedor
+            textContainer.appendChild(img);
+            const nombreEvento = document.createElement('span');
+            nombreEvento.textContent = evento.nombre;
+            textContainer.appendChild(nombreEvento);
+
+            eventoElement.appendChild(textContainer);
+
+            // Crear y mostrar el horario debajo del nombre del evento
+            const horaEvento = document.createElement('div');
+            horaEvento.classList.add('hora-evento');
+            horaEvento.textContent = `Hora: ${evento.hora}`; // Mostrar la hora del evento
+            eventoElement.appendChild(horaEvento);
+
+            // Crear el botón "Ver más" para cada evento si tiene una página
+            if (evento.pagina) {
+                const verMasBtn = document.createElement('button');
+                verMasBtn.classList.add('verMasEventBtn');
+                verMasBtn.textContent = 'Ver más';
+                verMasBtn.id = `verMasBtn-${fecha}-${index}`; // Asignar un ID único basado en la fecha y el índice del evento
+                verMasBtn.addEventListener('click', function() {
+                    window.location.href = evento.pagina; // Redirigir a la página del evento
+                });
+
+                // Añadir el botón al evento
+                eventoElement.appendChild(verMasBtn);
+            }
+
+            eventList.appendChild(eventoElement);
+        });
+    } else {
+        eventList.textContent = 'No hay eventos para este día.';
+    }
+
+    // Mostrar el popup
+    document.getElementById('eventPopup').style.display = 'flex';
+}
+
+
+
+// Obtener el contenedor del popup y el botón de cierre
+const eventPopup = document.getElementById('eventPopup');
+const closePopupBtn = document.getElementById('closePopup');
+
+// Función para cerrar el popup
+function closeEventPopup() {
+    eventPopup.style.display = 'none';
+}
+
+// Asignar el evento al botón de cerrar
+closePopupBtn.addEventListener('click', closeEventPopup);
+
+// Cerrar el popup si el clic es fuera del área del popup
+window.addEventListener('click', function(event) {
+    // Si el clic es fuera del contenedor del popup
+    if (event.target === eventPopup) {
+        closeEventPopup();
+    }
+});
+// Cargar el mes actual al abrir la página
+loadDays(currentMonth, currentYear);
+
+
+
+      
+        
+    </script>
+</body>
+</html>

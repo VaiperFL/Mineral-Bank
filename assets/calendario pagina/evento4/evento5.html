@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina</title>
+    <link rel="stylesheet" href="./evento5.css">
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<body>
+
+    <section class="rectangulo">
+        <div class="rectangulo-con-imagen">
+            <img src="cafe.jpg" alt="invitacion de evento de vino" class="imagen-en-rectangulo">
+        </div>
+    </section>
+
+    <div class="cuadrado">
+        <div class="texto1">Lunes</div>
+        <div class="texto2">21</div>
+        <div class="texto3">Oct 2024</div>
+        <hr class="linea-horizontal">
+        <div class="texto4">20:30hs</div>
+    </div>
+    
+    <div class="nuevo-texto">
+        <p class="zapata">NUEVOS CAFES IMPORTADOS-</p>
+        <p class="mes"> 21 DE OCTUBRE</p>
+        <p class="lugar">25 DE MAYO,81 - BUENOS AIRES</p>
+        <p class="precio">$11.500,00</p>
+    </div>
+
+    <!-- Contenedor con los botones de compra -->
+    <div class="compra-contenedor">
+        <button class="boton" onclick="disminuir()">-</button>
+        <span id="cantidad">1</span>
+        <button class="boton" onclick="aumentar()">+</button>
+    </div>
+
+    <!-- Botón de compra -->
+    <button class="boton-comprar" onclick="comprar()">
+        <span>Comprar</span>
+    </button>
+    <div class="descripcion-contenedor">
+        <p class="titulo-descripcion">Descripción</p>
+        <p class="texto-descripcion">Descubra la esencia de los mejores cafés importados
+            en una velada exclusiva que le llevará por un recorrido 
+            sensorial. Disfrute de catas guiadas de cafés premium
+            de distintas partes del mundo, dirigidas por expertos
+            baristas y catadores. Sumérjase en una experiencia 
+            única donde cada sorbo revela notas y aromas únicos, 
+            acompañados de un maridaje diseñado para realzar 
+            cada perfil de sabor</p>
+    </div>
+    <div class="events-section">
+        <h2>Otros eventos</h2>
+        <div class="events-container">
+            <div class="event-box">
+                <img src="vinos.jpg" alt="Evento 1" class="event-image">
+                <div class="event-details">
+                    <h3>Degustación de Vinos de
+                        Catena Zapata</h3>
+                    <p class="event-date">Vie, 25 oct, 15:30hs</p>
+                    <p class="location-date">25 de mayo,81</p>
+                  <a href="evento1.html" class="event-link">Ver más</a>
+                </div>
+            </div>
+            <div class="event-box">
+                <img src="economia.jpg" alt="Evento 2" class="event-image">
+                <div class="event-details">
+                    <h3>Perspectivas Económicas para Emprendedores</h3>
+                    <p class="event-date1">Mart, 22 oct, 18:30hs</p>
+                    <p class="location-date1">25 de mayo,81</p>
+                    <a href="evento2.html" class="event-link">Ver más</a>
+                </div>
+            </div>
+            <div class="event-box">
+                <img src="taller de habilidades.jpeg" alt="Evento 3" class="event-image">
+                <div class="event-details">
+                    <h3>Taller de Habilidades 
+                        de Negociación
+                        </h3>
+                    <p class="event-date2">Juev, 24 oct, 13:30hs</p>
+                    <p class="location-date2">25 de mayo,81</p>
+                    <a href="evento3.html" class="event-link">Ver más</a>
+                </div>
+            </div>
+            <div class="event-box">
+                <img src="nuevoproducto.jpg" alt="Evento 4" class="event-image">
+                <div class="event-details">
+                    <h3>Lanzamiento de producto para Emprendedores</h3>
+                    <p class="event-date3">Vie, 25 oct, 9:30hs</p>
+                    <p class="location-date3">25 de mayo,81</p>
+                    <a href="evento.html" class="event-link">Ver más</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- JavaScript para la funcionalidad de los botones -->
+    <script>
+        // Función para aumentar el número
+        function aumentar() {
+            let cantidadElement = document.getElementById('cantidad');
+            let cantidad = parseInt(cantidadElement.textContent);
+            cantidadElement.textContent = cantidad + 1;
+        }
+
+        // Función para disminuir el número
+        function disminuir() {
+            let cantidadElement = document.getElementById('cantidad');
+            let cantidad = parseInt(cantidadElement.textContent);
+            if (cantidad > 1) { // Evita que el número baje de 1
+                cantidadElement.textContent = cantidad - 1;
+            }
+        }
+
+        // Función para redirigir a la página de compra
+        function comprar() {
+            window.location.href = "https://www.ejemplo.com/pagina-de-compra"; // URL de la página de compra
+        }
+
+    </script>
+</body>
+</html>

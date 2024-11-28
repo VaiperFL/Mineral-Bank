@@ -12,56 +12,79 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Bebas+Neue&display=swap" rel="stylesheet">
 
    
-   <!-- Google Fonts -->
+   <!--  Fonts -->
    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
   
 
-      <!--- CSS --->
-    <link rel="stylesheet" href="./assets/sala de reunion confidencial/estructura.css" media="screen">
+    <!--- CSS --->
+    
+    <link href="./assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="./assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
 <link rel="stylesheet" href="./assets/sala de reunion confidencial/index.css" media="screen">
-  
-    
-    
-    
-    
-
+<link href="./assets/css/header.css" rel="stylesheet">
 
 
 </head>
-<body class="u-body u-xl-mode">
-  <div id="header-container"></div>
-
-  <script>
-    // Función para cargar el header
-    function loadHeader() {
-        const headerContainer = document.getElementById('header-container');
-
-        fetch('header.html') 
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Error al cargar el header');
-                }
-                return response.text();
-            })
-            .then(data => {
-                headerContainer.innerHTML = data; 
-            })
-            .catch(error => {
-                console.error(error);
-            });
-    }
-
-    loadHeader(); 
-</script>
+<body>
 
 
+<!-- 
+  =============================================
+      HEADER
+  ============================================== 
+  -->
+
+
+      <header id="header" class="header d-flex align-items-center sticky-top">
+          <div class="container position-relative d-flex align-items-center justify-content-between">
+            <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+              <h1 class="sitename" style="font-family: 'Conneqt', sans-serif;">Mineral Bank</h1>
+            </a>
+        
+            <nav id="navmenu" class="navmenu d-flex align-items-center">
+              <ul>
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li class="dropdown"><a href="#menu"><span>Servicios</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li><a href="cajadeseguridad.html">Cajas de seguridad</a></li>
+                    <li><a href="archivosdigitalessolidos.html">Archivos digitales sólidos</a></li>
+                    <li><a href="archivosescriturales.html">Archivos escriturales</a></li>
+                    <li><a href="archivosjudiciales.html">Archivos judiciales</a></li>
+                    <li><a href="restaurante.html">Restaurante</a></li>
+                    <li><a href="cafeteria.html">Cafetería</a></li>
+                    <li><a href="membresia.html">Membresía</a></li>
+                    <li><a href="saladereunionconfidencial.html">Sala de reunión</a></li>
+                    <li><a href="alianzaproductiva.html">Alianza productiva</a></li>
+                    <li><a href="fideicomisoproductivo.html">Fideicomiso productivo</a></li>
+                    <li><a href="desarollodeproyecto.html">Desarrollo de proyectos</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown"><a href=""><span>Eventos</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li><a href="calendariodeevento.html">Calendario de eventos</a></li>
+                    <li><a href="solicitarpromociondeeventos.html">Solicitar promoción de eventos</a></li>
+                  </ul>
+                </li>
+                <li><a href="noticias.html">Noticias</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+              </ul>
+              <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+              
+              <!-- Botón de Inicio de Sesión -->
+              <a href="login.html" class="btn-login" style="margin-left: 20px; padding: 10px 20px; background-color: #c91212; color: white; border-radius: 5px; text-decoration: none;">Inicio de Sesión</a>
+            </nav>
+          </div>
+        </header>
+        
+  
 
 	<!--
 			=====================================================
         Título principal 
      =====================================================
 			-->
-  <body data-home-page="Casa.html" data-home-page-title="Casa" data-path-to-root="/" data-include-products="false" class="u-body u-xl-mode" data-lang="es">
+  <body  data-path-to-root="/" data-include-products="false" class="u-body u-xl-mode" data-lang="es">
     <section class="skrollable skrollable-between u-align-center u-clearfix u-container-align-center u-valign-middle u-white u-section-1" src="" id="carousel_0ac8">
       <img class="u-expanded-width u-image u-image-1" src="./assets/sala de reunion confidencial/imagenes/42.png" data-image-width="1920" data-image-height="1047">
       <h2 class="u-text u-text-default u-text-white u-text-1 bold-highlight">SALA DE REUNION CONFIDENCIAL<br></h2>
@@ -87,7 +110,6 @@
                     <br>
                     <br>Nuestra sala de reunión confidencial está diseñada para resguardar la privacidad, garantizando que cada conversación se mantenga segura y privada.<br>
                   </p>
-                  <a href="membresia.html" class="u-active-none u-align-center u-border-1 u-border-active-palette-2-base u-border-hover-palette-2-base u-border-no-left u-border-no-right u-border-no-top u-border-palette-2-base u-bottom-left-radius-0 u-bottom-right-radius-0 u-btn u-button-style u-hover-none u-none u-radius-0 u-text-active-palette-2-base u-text-body-color u-text-hover-palette-2-base u-top-left-radius-0 u-top-right-radius-0 u-btn-1">más</a>
                 </div>
               </div>
               <div class="u-container-style u-layout-cell u-size-20 u-layout-cell-2">
@@ -98,7 +120,6 @@
                     <br>
                     <br> Con un sistema de videoconferencia de alta definición y pizarras interactivas, la sala está equipada para facilitar presentaciones y colaboración eficaz. 
                   </p>
-                  <a href="membresia.html" class="u-active-none u-align-center u-border-1 u-border-active-palette-2-base u-border-hover-palette-2-base u-border-no-left u-border-no-right u-border-no-top u-border-palette-2-base u-bottom-left-radius-0 u-bottom-right-radius-0 u-btn u-button-style u-hover-none u-none u-radius-0 u-text-active-palette-2-base u-text-body-color u-text-hover-palette-2-base u-top-left-radius-0 u-top-right-radius-0 u-btn-2">más</a>
                 </div>
               </div>
               <div class="u-container-style u-layout-cell u-right-cell u-size-20 u-layout-cell-3">
@@ -109,7 +130,6 @@
                     <br>
                     <br> Diseñada para inspirar, la sala ofrece un entorno cómodo y acogedor que promueve el pensamiento creativo y la toma de decisiones efectivas. 
                   </p>
-                  <a href="membresia.html" class="u-active-none u-align-center u-border-1 u-border-active-palette-2-base u-border-hover-palette-2-base u-border-no-left u-border-no-right u-border-no-top u-border-palette-2-base u-bottom-left-radius-0 u-bottom-right-radius-0 u-btn u-button-style u-hover-none u-none u-radius-0 u-text-active-palette-2-base u-text-body-color u-text-hover-palette-2-base u-top-left-radius-0 u-top-right-radius-0 u-btn-3">más</a>
                 </div>
               </div>
             </div>

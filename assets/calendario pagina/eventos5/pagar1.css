@@ -1,0 +1,333 @@
+/* Configuración general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Fraunces NonWonky, sans-serif;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+.linea-horizontal {
+    width: 50%; /* Ancho de la línea */
+    margin: 20px auto; /* Centrar la línea y espacio alrededor */
+    border: none; /* Elimina el borde por defecto */
+    border-top: 2px solid #000; /* Estilo personalizado */
+   }
+
+.linea-horizontal1 {
+    width: 50%; /* Ancho diferente para la segunda línea */
+    margin: 30px auto; /* Centrado y espacio diferente */
+    border: none; /* Elimina el borde por defecto */
+    border-top: 2px solid #000000; /* Estilo de línea discontinua */
+}
+
+/* Estilos específicos para el contenedor del rectángulo */
+.rectangulo-contenedor {
+    width: 100%; /* Mantener el contenedor al 100% del ancho */
+    height: auto; /* Ajustar dinámicamente según el contenido */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* El rectángulo que contiene la imagen */
+.rectangulo {
+    width: 10vw; /* Reducir el ancho del rectángulo */
+    height: 13.5vw; /* Reducir la altura manteniendo proporción */
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #000;
+    margin: 10px auto; /* Centrar el rectángulo */
+    left: -20%;
+}
+
+/* Imagen dentro del rectángulo */
+.imagen-en-rectangulo {
+    width: 100%; /* Ajustar la imagen al ancho del rectángulo */
+    height: 100%; /* Ajustar la altura al contenedor */
+    object-fit: cover; /* Escalar la imagen correctamente */
+}
+/* Contenedor principal */
+.nuevo-texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2vh; /* Ajuste con unidades relativas */
+}
+
+/* Estilo para los textos */
+.zapata, .mes, .lugar, .precio {
+    font-family: Fraunces NonWonky Ligth;
+    font-size: 1.5vw; /* Ajuste el tamaño con unidades relativas */
+    font-weight: semibold;
+    color: #000000;
+    padding: 2px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.degustacion {
+    margin-left: -15vw; /* Ajuste con unidades relativas */
+    margin-top: -35vh;
+}
+.licores {
+    margin-left: -12vw;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+.precio {
+    margin-left: -18vw;
+    line-height: 1.5;
+}
+/* Estilo para el contenedor principal */
+.compra-contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2vh 5%;
+    width: 10%;
+    height: 5vh;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: -25vh;
+    margin-left: 115vh;
+}
+
+/* Estilo para los botones */
+.boton {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #000000;
+}
+
+/* Estilo del número */
+#cantidad {
+    font-size: 2rem;
+    color: #000000;
+    margin: 0 2vw;
+}
+.precio-total {
+    font-size: 1.5rem;
+    font-weight: semibold;
+    margin-top: -4vh;
+    margin-left: 90vh;
+    text-align: center;
+}
+
+.formulario-pago {
+    background-color: #ffffff;
+    padding: 2vw; /* Ajusta el relleno (espacio interno) */
+    border: 2px solid #cccccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 40%; /* Ancho ajustado */
+    max-width: 600px; /* Limita el tamaño máximo */
+    margin: 5vh auto 0px auto; /* Ajusta el margen superior */
+    position: relative;
+    top: 15vh; /* Ajusta el desplazamiento vertical */
+    left: -20vh; /* Ajusta el desplazamiento horizontal */
+    display: block; /* Asegura que se mantenga como bloque */
+    box-sizing: border-box; /* Incluye el padding y el borde en el tamaño total */
+    height: auto; /* Permite que la altura se ajuste al contenido */
+    max-height: 1100px; /* Limita la altura máxima si es necesario */
+}
+
+
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+select, input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+.campo {
+    margin-bottom: 15px;
+}
+
+/* Alineación horizontal de los campos de nombre y apellido */
+.campo-nombre-apellido {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+/* Estilo para los campos de fecha que estarán uno al lado del otro */
+.campo-fecha {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.campo-dia, .campo-mes-ano {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.campo-mes-ano select {
+    width: calc(50% - 5px);
+    margin-right: 5px;
+}
+
+#mes-vencimiento, #ano-vencimiento {
+    display: inline-block;
+    width: 48%;
+}
+
+/* Ajuste adicional para los campos de facturación */
+.campo select, .campo input[type="text"] {
+    width: 100%;
+}
+
+#pais {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+    border: 1px solid #cccccc;
+}
+
+/* Contenedor principal */
+.nuevo-texto1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    justify-content: flex-start;
+    gap: 1.2vh;
+    position: relative; /* Esto permite usar top y left para moverlo */
+    top: -85vh; /* Ajusta esto para moverlo hacia arriba en lugar de usar -80vh */
+    left: 120%; /* Usar porcentaje en lugar de unidades fijas para moverlo */
+    width: 80%; /* Ajuste el ancho a un porcentaje para que se ajuste con el tamaño de la pantalla */
+    box-sizing: border-box; /* Asegura que el padding y border no se sumen al ancho */
+    max-width: 100%;  /* Limita el contenedor a un ancho máximo */
+}
+
+/* Ajuste para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .nuevo-texto1 {
+        width: 90%; /* Aumentar el ancho en pantallas pequeñas */
+        left: 5%;  /* Ajustar el margen izquierdo */
+        top: 10vh; /* Ajustar el espacio superior para pantallas más pequeñas */
+    }
+}
+
+/* Ajuste para pantallas muy pequeñas, como teléfonos */
+@media screen and (max-width: 480px) {
+    .nuevo-texto1 {
+        width: 95%; /* Asegurar que el contenedor use más espacio en pantallas muy pequeñas */
+        left: 2%; /* Más pequeño margen izquierdo */
+        top: 15vh; /* Ajustar el espacio superior */
+    }
+}
+
+
+
+/* Estilo para los textos */
+.resumen, .subtotal, .precio1, .envio, .total {
+    font-family: Fraunces NonWonky Light;
+    font-size: 1vw; /* Ajuste el tamaño con unidades relativas */
+    font-weight: semibold;
+    color: #000000;
+    padding: 2px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    white-space: nowrap; /* Asegura que el texto se mantenga en una sola línea */
+}
+
+.resumen {
+    margin-left: 0;
+    margin-top: 0;
+}
+
+.subtotal, .precio1, .total {
+    display: flex; 
+    justify-content: flex-start; /* Alinea los elementos a la izquierda */
+    gap: 1vw; /* Espacio entre los elementos */
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.envio {
+    display: flex;
+    flex-direction: column; /* Para poner "Calcular envío" debajo */
+    margin-top: 1vh; /* Espacio entre el subtotal y el cálculo del envío */
+    gap: 0.5vh; /* Espacio entre el "calcular envío" y el botón */
+}
+
+/* Ajuste para precios */
+.precio1, .total {
+    font-size: 1.5vw; /* Puedes aumentar el tamaño para que se vea más grande */
+    font-weight: bold;
+}
+
+.subtotal {
+    font-size: 1.2vw; /* Tamaño para el subtotal */
+}
+
+/* Línea horizontal */
+.hr-line {
+    width: 100%;
+    border: 1px solid #cccccc;
+    margin: 1.5vh 0;
+}
+.precio-total-segundo {
+    font-size: 2rem;
+    font-weight: semibold;
+    margin-top: -5vh;
+    margin-left:18vh;
+    text-align: center;
+}
+.precio-total-tercero {
+    font-size: 2rem;
+    font-weight: semibold;
+    margin-top: -15.5vh;
+    margin-left:18vh;
+    text-align: center;
+}
+/* Contenedor del botón Finalizar Compra */
+.finalizar-compra-container {
+    text-align: center; /* Centrar el botón en su contenedor */
+    margin-top:120px; /* Espacio superior */
+    margin-left: 90px;
+}
+
+/* Estilo para el botón Finalizar Compra */
+#finalizar-compra {
+    background-color: #000000; /* Color de fondo verde */
+    color: white;               /* Color del texto blanco */
+    padding: 12px 24px;         /* Espaciado interno */
+    font-size: 16px;            /* Tamaño del texto */
+    border: none;               /* Sin bordes */
+    border-radius: 8px;         /* Bordes redondeados */
+    cursor: pointer;            /* Manito al pasar el mouse */
+    transition: background-color 0.3s ease; /* Efecto de transición al hacer hover */
+    font-family: Arial, sans-serif; /* Fuente */
+}
+
+/* Efecto hover para el botón */
+#finalizar-compra:hover {
+    background-color: #ff0000; /* Cambia a un verde más oscuro al pasar el mouse */
+}
+
+/* Efecto cuando el botón es presionado */
+#finalizar-compra:active {
+    background-color: #ff0000; /* Aún más oscuro cuando está presionado */
+}

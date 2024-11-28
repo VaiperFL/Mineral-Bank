@@ -62,3 +62,11 @@
   margin-top: 5px;
   font-size: 13px;
 }
+
+:root { 
+  --background-color: hwb(0 100% 0% / 0.014);
+  --default-color: #09a0e6b2; 
+  --heading-color: #000000; 
+  --accent-color: #ce1212;
+  --contrast-color: #ffffff;
+}

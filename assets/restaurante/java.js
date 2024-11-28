@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 selectedSection.classList.add("active");
             }
 
-            // Ajuste de estilo para la categoría seleccionada
+          
             categoryItems.forEach(cat => cat.classList.remove("active"));
             item.classList.add("active");
         });

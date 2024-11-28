@@ -36,11 +36,10 @@ h1 span {
 
 
 :root { 
-  --background-color: hwb(0 100% 0% / 0.014); /* Background color for the entire website, including individual sections */
-  --default-color: #09a0e6b2; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #000000; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #ce1212; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --contrast-color: #ffffff; /* The contrast color is used for elements when the background color is one of the heading, accent, or default colors. Its purpose is to ensure proper contrast and readability when placed over these more dominant colors */
+  --background-color: hwb(0 100% 0% / 0.014); 
+  --default-color: #09a0e6b2;
+  --heading-color: #000000;
+  --contrast-color: #ffffff; 
 }
 
 /* Colores de navegación - Las siguientes variables de color se usan específicamente para el menú de navegación. Son distintas de los colores globales para permitir más opciones de personalización */
@@ -63,7 +62,6 @@ h1 span {
   scroll-behavior: smooth;
 }
 
-/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
   --nav-color: #000000;  /* El color predeterminado de los enlaces principales del menú de navegación */
   --nav-hover-color: #dd0a0a; /* Aplicado a los enlaces principales del menú de navegación cuando se pasa el cursor sobre ellos o están activos */
@@ -475,7 +473,7 @@ section,
   top: -15%;
   left: -15%;
   background: rgba(198, 16, 0, 0);
-  z-index: 999; /* Añadido para que esté por encima */
+  z-index: 999; 
 }
 
 .about .play-btn:after {

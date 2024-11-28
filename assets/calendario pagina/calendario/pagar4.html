@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pag pagar</title> 
+    <link rel="stylesheet" href="./pagar4.css">
+</head>
+<body>
+    
+    
+    <!-- Primera línea -->
+    <hr class="linea-horizontal">
+    
+    <section class="rectangulo">
+        <div class="rectangulo-con-imagen">
+            <img src="Prducto.png" alt="invitacion de evento de vino" class="imagen-en-rectangulo">
+        </div>
+    </section>
+    <div class="nuevo-texto">
+        <p class="degustacion">LANZAMIENTO DE NUEVO</p>
+        <p class="licores">PRODUCTO</p>
+        <p class="precio">$25.000,00</p>
+    </div>
+          <!-- Segunda línea -->
+    <hr class="linea-horizontal1">
+      <!-- Contenedor con los botones de compra -->
+      <div class="compra-contenedor">
+        <button class="boton" onclick="disminuir()">-</button>
+        <span id="cantidad">1</span>
+        <button class="boton" onclick="aumentar()">+</button>
+    </div>
+    <!-- JavaScript para la funcionalidad de los botones -->
+       <!-- Precio total -->
+    <div class="precio-total">
+        <span id="precio">$25.000,00</span>
+    </div>
+    
+
+    <div class="formulario-pago">
+        <!-- Selección de método de pago -->
+        <div class="campo-formulario">
+            <label for="metodo-pago">Seleccione un método de pago:</label>
+            <select id="metodo-pago">
+                <option value="" disabled selected>Seleccione...</option>
+                <option value="visa">Visa</option>
+                <option value="mastercard">Mastercard</option>
+                <option value="american-express">American Express</option>
+                <option value="paypal">PayPal</option>
+                <option value="mercado pago">Mercado pago</option>
+            </select>
+        </div>
+
+        <!-- Número de tarjeta -->
+        <div class="campo-formulario">
+            <label for="numero-tarjeta">Número de Tarjeta:</label>
+            <input type="text" id="numero-tarjeta" maxlength="16" placeholder="Ingrese su número de tarjeta">
+        </div>
+
+        <!-- Fecha de vencimiento -->
+        <div class="campo-formulario fecha-vencimiento">
+            <label for="mes">Mes de Vencimiento:</label>
+            <select id="mes">
+                <option value="" disabled selected>Mes...</option>
+                <!-- Opciones de mes en números -->
+                <option value="01">01</option>
+                <option value="02">02</option>
+                <option value="03">03</option>
+                <option value="04">04</option>
+                <option value="05">05</option>
+                <option value="06">06</option>
+                <option value="07">07</option>
+                <option value="08">08</option>
+                <option value="09">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select>
+            
+            <label for="anio">Año:</label>
+            <select id="anio">
+                <option value="" disabled selected>Año...</option>
+                <!-- Opciones de años del 2015 al 2030 -->
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
+                <option value="2027">2027</option>
+                <option value="2028">2028</option>
+                <option value="2029">2029</option>
+                <option value="2030">2030</option>
+            </select>
+        </div>
+
+        <!-- Código de seguridad -->
+        <div class="campo-formulario">
+            <label for="codigo-seguridad">Código de Seguridad (CVV):</label>
+            <input type="text" id="codigo-seguridad" maxlength="3" placeholder="CVV">
+
+            <h2>Información de Facturación</h2>
+    
+            <div class="campo-nombre-apellido">
+                <div class="campo">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" placeholder="Nombre">
+                </div>
+                <div class="campo">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" id="apellido" placeholder="Apellido">
+                </div>
+            </div>
+        
+            <div class="campo">
+                <label for="direccion">Dirección de Facturación</label>
+                <input type="text" id="direccion" placeholder="Dirección de Facturación">
+            </div>
+        
+            <div class="campo">
+                <label for="pais">País</label>
+                <select id="pais">
+                    <option value="">Seleccione un país</option>
+                    <!-- Lista de países -->
+                    <option value="ar">Argentina</option>
+                    <option value="es">España</option>
+                    <option value="us">Estados Unidos</option>
+                    <option value="mx">México</option>
+                    <!-- Agregar más países aquí -->
+                </select>
+            </div>
+        
+            <div class="campo">
+                <label for="localidad">Localidad</label>
+                <input type="text" id="localidad" placeholder="Localidad">
+            </div>
+        
+            <div class="campo">
+                <label for="codigo-postal">Código Postal</label>
+                <input type="text" id="codigo-postal" placeholder="Código Postal">
+            </div>
+        
+            <div class="campo">
+                <label for="telefono">Teléfono</label>
+                <input type="text" id="telefono" placeholder="Teléfono">    
+        </div>
+    </div>
+
+    
+<!-- Contenedor de resumen de pedido -->
+<div class="nuevo-texto1">
+    <!-- Resumen del pedido -->
+    <div class="resumen">Resumen del Pedido</div>
+    
+    <!-- Línea horizontal debajo de "Resumen del Pedido" -->
+    <hr class="hr-line">
+    
+    <!-- Subtotal y precio -->
+    <div class="subtotal">
+        Subtotal: <span class="precio1"></span>
+    </div>
+        <!-- Línea horizontal debajo de "Calcular Envío" -->
+    <hr class="hr-line">
+    <!-- Total -->
+     
+    <div class="total">
+        Total: <span class="precio1" id="total"></span>
+    </div>
+    <div class="precio-total-segundo">
+        <span id="precio-segundo">$25.000,00</span>
+    </div>
+    <div class="precio-total-tercero">
+        <span id="precio-tercero">$25.000,00</span>
+    </div>
+    <div class="finalizar-compra-container">
+        <button id="finalizar-compra">Finalizar Compra</button>
+    </div>
+
+
+
+
+          <script>
+          // Precio base
+        const precioBase = 25000;
+
+        // Función para formatear el precio como moneda
+        function formatearPrecio(precio) {
+            return "$" + precio.toLocaleString('es-ES', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        
+         // Actualizar el segundo precio total
+         document.getElementById('precio-segundo').textContent = formatearPrecio(precioTotal);
+        }
+
+        // Función para actualizar ambos precios totales
+        function actualizarPrecio(cantidad) {
+            const precioTotal = precioBase * cantidad;
+
+            // Actualizar el primer precio total
+            document.getElementById('precio').textContent = formatearPrecio(precioTotal);
+
+            // Actualizar el segundo precio total
+            document.getElementById('precio-segundo').textContent = formatearPrecio(precioTotal);
+
+             // Actualizar el tercero precio total
+             document.getElementById('precio-tercero').textContent = formatearPrecio(precioTotal);
+        }
+        
+
+        // Función para aumentar el número
+        function aumentar() {
+            let cantidadElement = document.getElementById('cantidad');
+            let cantidad = parseInt(cantidadElement.textContent);
+            cantidad += 1;
+            cantidadElement.textContent = cantidad;
+            actualizarPrecio(cantidad);
+        }
+
+        // Función para disminuir el número
+        function disminuir() {
+            let cantidadElement = document.getElementById('cantidad');
+            let cantidad = parseInt(cantidadElement.textContent);
+            if (cantidad > 1) { // Evita que el número baje de 1
+                cantidad -= 1;
+                cantidadElement.textContent = cantidad;
+                actualizarPrecio(cantidad);
+            }
+        }
+        // Evento para el botón de "Finalizar Compra"
+document.getElementById('finalizar-compra').addEventListener('click', function() {
+    // Acción al hacer clic en el botón
+    alert('¡Compra finalizada! Gracias por su compra.');
+
+    // Aquí puedes agregar la lógica que necesites, como redirigir a otra página:
+    // window.location.href = 'pagina-de-confirmacion.html';
+});
+        </script>
+    
+</body>
+</html>

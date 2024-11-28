@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./calendario.css">
+</head>
+<body>
+
+    <header>
+        <h1>Mineral Bank</h1>   
+        <nav>
+            <ul>
+                <li><a href="">Inicio</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Eventos</a></li>
+                <li><a href="#">Noticias</a></li>
+                <li><a href="#">Galeria</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="#">Inicio de sesion</a></li>
+            </ul>
+        </nav>
+        
+    </header> 
+    <section class="imagen-contenedor">
+        <div class="intro text move-right">
+            <p>CALENDARIO</p>
+            <p class="mineral bank text">Mineral Bank</p>
+        </div>
+        <img src="Banner 3.png" alt="Descripción de la imagen">
+    </section>
+    
+
+    <div class="texto-container">
+        <h1>Calendario programado</h1>
+        <p id="currentMonthText">Noviembre</p>
+    </div>
+
+    <div class="cuadrado-negro">
+        <p class="texto-cuadrado" id="changeButton">CAMBIAR</p>
+    </div>
+    
+    <!-- Contenedor de los meses, inicialmente oculto -->
+    <div id="monthsContainer" style="display:none">
+        <div class="months">
+            <div class="month-option" data-month="1">Enero</div>
+            <div class="month-option" data-month="2">Febrero</div>
+            <div class="month-option" data-month="3">Marzo</div>
+            <div class="month-option" data-month="4">Abril</div>
+            <div class="month-option" data-month="5">Mayo</div>
+            <div class="month-option" data-month="6">Junio</div>
+            <div class="month-option" data-month="7">Julio</div>
+            <div class="month-option" data-month="8">Agosto</div>
+            <div class="month-option" data-month="9">Septiembre</div>
+            <div class="month-option" data-month="10">Octubre</div>
+            <div class="month-option" data-month="11">Noviembre</div>
+            <div class="month-option" data-month="12">Diciembre</div>
+        </div>
+    </div>
+    
+    <!-- Calendario -->
+    <table class="calendar">
+        <thead>
+            <tr>
+                <th>DOMINGO</th>
+                <th>LUNES</th>
+                <th>MARTES</th>
+                <th>MIERCOLES</th>
+                <th>JUEVES</th>
+                <th>VIERNES</th>
+                <th>SABADO</th>
+            </tr>
+        </thead>
+        <tbody id="calendarBody"></tbody>
+    </table>
+    <div class="rectangulo-blanco">
+        <img src="37.png" alt="Imagen relacionada al calendario" class="imagen-calendario">
+    </div>
+
+    <div class="nuevo-rectangulo"></div>
+    
+    <div class="container">
+        <!-- Cuadro para seleccionar la sala -->
+        <div class="selection-box" id="selectSalaBox">
+            <p>Seleccione Sala</p>
+            <select id="selectSala">
+                <option value="" disabled selected>Seleccione</option>
+                <option value="sala1">Sala 1</option>
+                <option value="sala2">Sala 2</option>
+                <option value="sala3">Sala 3</option>
+                <option value="sala4">Sala 4</option>
+            </select>
+        </div>
+    
+        <!-- Cuadro para seleccionar el día -->
+        <div class="selection-box" id="selectDiaBox">
+            <p>Seleccione Día</p>
+            <input type="date" id="selectDia">
+        </div>
+                    <!-- Cuadro para seleccionar el motivo -->
+        <div class="selection-box" id="selectMotivoBox">
+            <p>Seleccione Motivo</p>
+            <select id="selectMotivo">
+                <option value="" disabled selected>Seleccione</option>
+                <option value="reunion">Reunión</option>
+                <option value="evento">Evento</option>
+            </select>
+        </div>
+        <div class="selection-box" id="selectHoraBox">
+            <p>Seleccione Hora</p>
+            <select id="horaList">
+                <!-- Generar las horas de 00:00 a 23:00 -->
+                <option value="" disabled selected>Seleccione</option>
+                <option value="00">00</option>
+                <option value="01">01</option>
+                <option value="02">02</option>
+                <option value="03">03</option>
+                <option value="04">04</option>
+                <option value="05">05</option>
+                <option value="06">06</option>
+                <option value="07">07</option>
+                <option value="08">08</option>
+                <option value="09">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+            </select>   
+        </div>
+        
+            <!-- Botón para reservar debajo de los cuadros -->
+        <button id="reserveButton">Reservar</button>
+    </div>
+    
+    <div class="events-section">
+        <h2>Próximos Eventos</h2>
+        <div class="events-container">
+            <div class="event-box">
+                <img src="vinos.jpg" alt="Evento 1" class="event-image">
+                <div class="event-details">
+                    <h3>Degustación de Vinos de Catena Zapata</h3>
+                    <p class="event-date">Vie, 25 oct, 15:30</p>
+                    <p class="location-date">25 de mayo,81</p>
+                    <p class="precio-date">A partir de $35.000,00</p>
+                    <p class="nombre-date">Catena Zapata</p>
+                    <a href="evento.html" class="event-link">Ver más</a>
+                </div>
+            </div>
+            <div class="event-box">
+                <img src="economia.jpg" alt="Evento 2" class="event-image">
+                <div class="event-details">
+                    <h3>Perspectivas Económicas para Emprendedores</h3>
+                    <p class="event-date1">Mart, 22 oct, 18:30</p>
+                    <p class="location-date1">25 de mayo,81</p>
+                    <p class="precio-date1">A partir de $17.000,00</p>
+                    <p class="nombre-date1">Leguizamón Kevin</p>
+                    <a href="evento2.html" class="event-link">Ver más</a>
+                </div>
+            </div>
+            <div class="event-box">
+                <img src="taller de habilidades.jpeg" alt="Evento 3" class="event-image">
+                <div class="event-details">
+                    <h3>Taller de Habilidades de Negociación</h3>
+                    <p class="event-date2">Juev, 24 oct, 13:30</p>
+                    <p class="location-date2">25 de mayo,81</p>
+                    <p class="precio-date2">A partir de $13.000,00</p>
+                    <p class="nombre-date2">BDC group</p>
+                    <a href="evento3.html" class="event-link">Ver más</a>
+                </div>
+            </div>
+            <div class="event-box">
+                <img src="nuevoproducto.jpg" alt="Evento 4" class="event-image">
+                <div class="event-details">
+                    <h3>Lanzamiento de producto para Emprendedores</h3>
+                    <p class="event-date3">Vie, 25 oct, 9:30</p>
+                    <p class="location-date3">25 de mayo,81</p>
+                    <p class="precio-date3">A partir de $25.000,00</p>
+                    <p class="nombre-date3">Leguizamón Tecnología Minera</p>
+                    <a href="evento4.html" class="event-link">Ver más</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="networking-container">
+        <!-- Títulos de la sección -->
+        <div class="section-title">
+            <h2>Inscripción</h2>
+            <p>No dejes que te lo cuenten. Regístrate ahora y recibe acceso exclusivo a todas las novedades del evento.</p>
+        </div>
+    <div class="networking-container">
+        <div class="form-container">
+            <div class="name-last-name-container">
+                <label for="name"></label>
+                <input type="text" id="name" name="name" placeholder="Ingresa tu nombre">
+                
+                <label for="last-name"></label>
+                <input type="text" id="last-name" name="last-name" placeholder="Ingresa tu apellido">
+            </div>
+            
+            <label for="email-name"></label>
+            <input type="email" id="email" name="email" placeholder="Ingresa tu correo electrónico">
+        </div>
+        
+        <div class="inscribirse-container">
+            <button id="inscribirse-btn">Inscribirse</button>
+        </div>
+    </div>
+    
+    
+            
+    <script>
+        const daysInMonth = {
+            1: 31, 2: 28, 3: 31, 4: 30, 5: 31, 6: 30, 
+            7: 31, 8: 31, 9: 30, 10: 31, 11: 30, 12: 31
+        };
+
+        let currentMonth = new Date().getMonth() + 1; // Mes actual
+        let currentYear = new Date().getFullYear(); // Año actual
+
+        // Función para cargar los días en el calendario
+        function loadDays(month, year) {
+            const calendarBody = document.getElementById('calendarBody');
+            calendarBody.innerHTML = ''; // Limpiar el calendario
+
+            const numDays = daysInMonth[month];
+            const firstDay = new Date(year, month - 1, 1).getDay();
+
+            let row = document.createElement('tr'); // Fila de los días
+            // Rellenar los días vacíos antes del primer día
+            for (let i = 0; i < firstDay; i++) {
+                row.appendChild(document.createElement('td'));
+            }
+
+            // Crear celdas para los días del mes
+            for (let i = 1; i <= numDays; i++) {
+                const cell = document.createElement('td');
+                cell.textContent = i;
+                row.appendChild(cell);
+
+                // Si se llega al sábado, se inicia una nueva fila
+                if ((i + firstDay) % 7 === 0) {
+                    calendarBody.appendChild(row);
+                    row = document.createElement('tr');
+                }
+            }
+
+            // Añadir la fila si tiene días restantes
+            if (row.children.length > 0) {
+                calendarBody.appendChild(row);
+            }
+        }
+
+        // Mostrar u ocultar el contenedor de meses
+        document.getElementById('changeButton').addEventListener('click', function() {
+            const monthsContainer = document.getElementById('monthsContainer');
+            monthsContainer.style.display = (monthsContainer.style.display === 'none') ? 'block' : 'none';
+        });
+
+        // Cambiar el mes al hacer clic en un mes
+        document.querySelectorAll('.month-option').forEach(month => {
+            month.addEventListener('click', function() {
+                currentMonth = parseInt(month.getAttribute('data-month'));
+                loadDays(currentMonth, currentYear);
+                document.getElementById('monthsContainer').style.display = 'none'; // Ocultar meses
+                document.getElementById('currentMonthText').textContent = month.textContent;
+            });
+        });
+
+        // Cargar el mes actual al abrir la página
+        loadDays(currentMonth, currentYear);
+
+        // Cerrar el cuadro de meses cuando se haga clic en cualquier parte de la pantalla
+        document.addEventListener('click', function (event) {
+            const monthsContainer = document.getElementById('monthsContainer');
+            const changeButton = document.getElementById('changeButton');
+
+            // Verificar si el clic ocurrió fuera del cuadro de meses y del botón
+            if (!monthsContainer.contains(event.target) && event.target !== changeButton) {
+                monthsContainer.style.display = 'none';
+            }
+        });
+    </script>
+
+</body>
+</html>
